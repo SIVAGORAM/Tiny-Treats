@@ -14,11 +14,8 @@ export function BrandPromiseSection() {
           src="/story/story-hero-bg.jpg"
           alt="Artisan raw nuts and freshly baked almond cookies on a rustic linen table"
           fill
-          priority
-          unoptimized
           sizes="100vw"
           className="object-cover object-center opacity-35 lg:opacity-65"
-          style={{ imageRendering: "-webkit-optimize-contrast" }}
         />
         {/* Soft Organic Vignette & Cream Wash for Perfect Contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#FFF8ED]/85 via-[#FFF8ED]/70 to-[#FFF8ED] pointer-events-none" />

@@ -47,11 +47,9 @@ export function Hero() {
               src={s.image}
               alt={s.productTag}
               fill
-              priority
-              unoptimized
-              sizes="60vw"
+              priority={idx === 0}
+              sizes="(max-width: 1024px) 100vw, 60vw"
               className="object-cover object-center lg:object-right"
-              style={{ imageRendering: "-webkit-optimize-contrast" }}
             />
             {/* Soft Organic Edge Blend into Cream Surface */}
             <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#FFF8ED] via-[#FFF8ED]/80 to-transparent pointer-events-none" />
@@ -105,11 +103,9 @@ export function Hero() {
                     src={s.image}
                     alt={s.productTag}
                     fill
-                    priority
-                    unoptimized
-                    sizes="100vw"
+                    priority={idx === 0}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 100vw"
                     className="object-cover object-center"
-                    style={{ imageRendering: "-webkit-optimize-contrast" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none" />
                 </div>

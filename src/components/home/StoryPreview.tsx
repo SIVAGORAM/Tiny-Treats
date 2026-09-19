@@ -122,7 +122,7 @@ export function StoryPreview() {
 
           {/* Center — Main Image + Stats */}
           <div className="lg:col-span-5 flex flex-col gap-6">
-            <div className="relative flex-1 min-h-[260px] sm:min-h-[320px] rounded-2xl sm:rounded-3xl overflow-hidden group">
+            <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto lg:flex-1 min-h-[240px] sm:min-h-[300px] rounded-2xl sm:rounded-3xl overflow-hidden group">
               <Image
                 src="/story/story-kitchen-warmth.jpg"
                 alt="Freshly baked cookies cooling on a rack with honey and almonds"

@@ -113,6 +113,7 @@ export function CartDrawer() {
                           src={item.product.image}
                           alt={item.product.name}
                           fill
+                          sizes="72px"
                           className="object-cover"
                         />
                       ) : (

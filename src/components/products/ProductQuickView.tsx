@@ -62,18 +62,19 @@ export function ProductQuickView({ product, isOpen, onClose }: ProductQuickViewP
         <button
           onClick={onClose}
           aria-label="Close product details"
-          className="absolute top-3.5 right-3.5 z-30 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#5A321B] shadow-sm flex items-center justify-center transition-transform hover:scale-105"
+          className="absolute top-3.5 right-3.5 z-30 w-10 h-10 rounded-full bg-white/95 hover:bg-white text-[#5A321B] shadow-sm flex items-center justify-center transition-transform hover:scale-105 active:scale-95 cursor-pointer"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Left: Product Media (Fixed / Scrollable on mobile) */}
-        <div className="relative w-full md:w-1/2 bg-[#F3E2C4]/40 min-h-[240px] md:min-h-[440px] flex items-center justify-center p-6 overflow-hidden shrink-0">
+        <div className="relative w-full md:w-1/2 bg-[#F3E2C4]/40 aspect-square md:aspect-auto md:min-h-[440px] flex items-center justify-center p-6 overflow-hidden shrink-0">
           {product.image ? (
             <Image
               src={product.image}
               alt={product.name}
               fill
+              sizes="(max-width: 768px) 100vw, 420px"
               className="object-cover"
             />
           ) : (

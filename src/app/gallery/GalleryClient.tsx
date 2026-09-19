@@ -135,7 +135,7 @@ export function GalleryClient() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                   className="object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
                 />
                 
@@ -236,7 +236,7 @@ export function GalleryClient() {
             <button
               onClick={() => setActiveItem(null)}
               aria-label="Close photo"
-              className="absolute top-3.5 right-3.5 z-20 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#5A321B] shadow-sm flex items-center justify-center transition-transform hover:scale-105"
+              className="absolute top-3.5 right-3.5 z-20 w-10 h-10 rounded-full bg-white/95 hover:bg-white text-[#5A321B] shadow-sm flex items-center justify-center transition-transform hover:scale-105 active:scale-95 cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
@@ -246,6 +246,7 @@ export function GalleryClient() {
                 src={activeItem.image}
                 alt={activeItem.title}
                 fill
+                sizes="(max-width: 672px) 100vw, 672px"
                 className="object-cover"
               />
             </div>

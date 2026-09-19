@@ -57,7 +57,7 @@ export function ProductCard({ product, priorityImage = false }: ProductCardProps
               alt={product.name}
               fill
               priority={priorityImage}
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
               className="object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
             />
           ) : (
@@ -89,7 +89,7 @@ export function ProductCard({ product, priorityImage = false }: ProductCardProps
                 setIsWishlisted(!isWishlisted);
               }}
               aria-label={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
-              className="w-8 h-8 rounded-full bg-white/90 backdrop-blur-md text-[#5A321B] hover:text-[#B9573F] flex items-center justify-center shadow-xs transition-colors hover:scale-110 active:scale-95"
+              className="w-9 h-9 sm:w-8 sm:h-8 rounded-full bg-white/95 backdrop-blur-md text-[#5A321B] hover:text-[#B9573F] flex items-center justify-center shadow-xs transition-colors hover:scale-110 active:scale-95 cursor-pointer"
             >
               <Heart
                 className={`w-4 h-4 transition-transform ${
