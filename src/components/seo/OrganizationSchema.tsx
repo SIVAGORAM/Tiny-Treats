@@ -4,7 +4,7 @@ export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Bakery",
-    name: "Tiny Treats by Shweta",
+    name: "Tiny Treats by Swetha",
     alternateName: "Tiny Treats",
     url: "https://www.tinytreats.in",
     logo: "https://www.tinytreats.in/favicon.png",

@@ -34,7 +34,7 @@ This guide is meant to be used alongside the [Technical README](./README.md) and
 | Goal | Why it matters for Tiny Treats |
 |---|---|
 | Rank for "homemade [product] + city/area" searches | Highest-intent traffic — people ready to order |
-| Rank for brand name "Tiny Treats by Shweta" | Protects brand searches from competitors |
+| Rank for brand name "Tiny Treats by Swetha" | Protects brand searches from competitors |
 | Drive qualified WhatsApp order clicks | The website's real conversion event is a WhatsApp chat, not a checkout — SEO should optimize for that click |
 | Build long-term organic visibility without paid ads | V1 has no ad budget assumption; SEO + Instagram is the primary discovery channel |
 | Keep every claim compliant with the brand's content rules | See [Section 16](#16-seo-content-rules-do-not-invent) — no invented health/medical claims, even for keyword targeting |
@@ -51,7 +51,7 @@ This guide is meant to be used alongside the [Technical README](./README.md) and
 | Laddus | dry fruit laddu, homemade laddu online, protein laddu, calcium laddu | Keep wording aligned with Section 16 — avoid "high-protein" style nutrition claims not supplied by the client |
 | Cakes & Brownies | homemade cakes online, homemade brownies, birthday cake home baker | Strong local-intent category — pair with location keywords |
 | Seed Crackers | homemade seed crackers, savoury snacks homemade | Smaller search volume but low competition |
-| Brand / navigational | Tiny Treats by Shweta, Tiny Treats homemade snacks | Always include exact brand name in title tags |
+| Brand / navigational | Tiny Treats by Swetha, Tiny Treats homemade snacks | Always include exact brand name in title tags |
 
 ### 2.2 Modifier keywords to combine with the above
 
@@ -74,7 +74,7 @@ These map well to FAQ content and blog posts (see [Section 11](#11-content--blog
 
 | Page | Primary keyword focus |
 |---|---|
-| Home | Tiny Treats by Shweta, homemade cookies laddus and treats |
+| Home | Tiny Treats by Swetha, homemade cookies laddus and treats |
 | Menu | homemade cookies laddus brownies cakes seed crackers online |
 | Product pages / Quick View (if given own URLs) | individual product name + "homemade" (e.g. "almond cookies homemade") |
 | About | Tiny Treats story, homemade brand story |
@@ -124,11 +124,11 @@ These are the production-ready title tags and meta descriptions (from the Conten
 
 | Page | Title Tag | Meta Description |
 |---|---|---|
-| Home | `Tiny Treats by Shweta \| Homemade Cookies, Laddus & Treats` | Discover Tiny Treats by Shweta — homemade cookies, laddus, brownies, cakes and seed crackers prepared in small batches with care and thoughtfully selected ingredients. |
-| Menu | `Menu \| Tiny Treats by Shweta` | Explore the Tiny Treats menu featuring Almond Cookies, Ragi Cookies, Dry Fruit Laddus, Calcium Laddus, Protein Laddus, Brownies, Cakes and Seed Crackers. |
-| About | `Our Story \| Tiny Treats by Shweta` | Discover the story behind Tiny Treats — a home-baking journey that began with a mother's desire to make homemade treats for her children. |
-| Gallery | `Gallery \| Tiny Treats by Shweta` | Take a glimpse into the Tiny Treats kitchen, homemade creations and freshly prepared treats. |
-| Contact | `Contact Tiny Treats \| Order Homemade Treats` | Get in touch with Tiny Treats by Shweta through WhatsApp or phone for orders, availability, quantities and custom orders. |
+| Home | `Tiny Treats by Swetha \| Homemade Cookies, Laddus & Treats` | Discover Tiny Treats by Swetha — homemade cookies, laddus, brownies, cakes and seed crackers prepared in small batches with care and thoughtfully selected ingredients. |
+| Menu | `Menu \| Tiny Treats by Swetha` | Explore the Tiny Treats menu featuring Almond Cookies, Ragi Cookies, Dry Fruit Laddus, Calcium Laddus, Protein Laddus, Brownies, Cakes and Seed Crackers. |
+| About | `Our Story \| Tiny Treats by Swetha` | Discover the story behind Tiny Treats — a home-baking journey that began with a mother's desire to make homemade treats for her children. |
+| Gallery | `Gallery \| Tiny Treats by Swetha` | Take a glimpse into the Tiny Treats kitchen, homemade creations and freshly prepared treats. |
+| Contact | `Contact Tiny Treats \| Order Homemade Treats` | Get in touch with Tiny Treats by Swetha through WhatsApp or phone for orders, availability, quantities and custom orders. |
 
 ### On-page checklist per page
 
@@ -154,15 +154,15 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.tinytreats.in"),
   title: {
-    default: "Tiny Treats by Shweta | Homemade Cookies, Laddus & Treats",
-    template: "%s | Tiny Treats by Shweta",
+    default: "Tiny Treats by Swetha | Homemade Cookies, Laddus & Treats",
+    template: "%s | Tiny Treats by Swetha",
   },
   description:
-    "Discover Tiny Treats by Shweta — homemade cookies, laddus, brownies, cakes and seed crackers prepared in small batches with care and thoughtfully selected ingredients.",
+    "Discover Tiny Treats by Swetha — homemade cookies, laddus, brownies, cakes and seed crackers prepared in small batches with care and thoughtfully selected ingredients.",
   openGraph: {
     type: "website",
-    siteName: "Tiny Treats by Shweta",
-    title: "Tiny Treats by Shweta | Homemade Cookies, Laddus & Treats",
+    siteName: "Tiny Treats by Swetha",
+    title: "Tiny Treats by Swetha | Homemade Cookies, Laddus & Treats",
     description:
       "Homemade cookies, laddus, brownies, cakes and seed crackers made in small batches with love.",
     url: "https://www.tinytreats.in",
@@ -171,13 +171,13 @@ export const metadata: Metadata = {
         url: "/og/tiny-treats-og.jpg", // 1200x630, add once client supplies imagery
         width: 1200,
         height: 630,
-        alt: "Tiny Treats by Shweta — homemade treats",
+        alt: "Tiny Treats by Swetha — homemade treats",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tiny Treats by Shweta",
+    title: "Tiny Treats by Swetha",
     description: "Homemade cookies, laddus, brownies, cakes and seed crackers.",
     images: ["/og/tiny-treats-og.jpg"],
   },
@@ -205,7 +205,7 @@ export const metadata: Metadata = {
 ```
 
 Because `title.template` is set in the root layout, this automatically renders as:
-`Menu | Tiny Treats by Shweta`
+`Menu | Tiny Treats by Swetha`
 
 ### 5.3 Dynamic metadata (if product pages are added later)
 
@@ -227,7 +227,7 @@ export async function generateMetadata({
     description: product.description,
     alternates: { canonical: `/menu/${product.id}` },
     openGraph: {
-      title: `${product.name} | Tiny Treats by Shweta`,
+      title: `${product.name} | Tiny Treats by Swetha`,
       description: product.description,
       images: [{ url: product.image }],
     },
@@ -249,7 +249,7 @@ export function OrganizationSchema() {
   const data = {
     "@context": "https://schema.org",
     "@type": "Bakery",
-    name: "Tiny Treats by Shweta",
+    name: "Tiny Treats by Swetha",
     url: "https://www.tinytreats.in",
     // logo: "https://www.tinytreats.in/logo/tiny-treats-logo.svg", // add once finalized
     sameAs: [
@@ -294,7 +294,7 @@ const productSchema = {
   image: "https://www.tinytreats.in/products/almond-cookies.webp",
   brand: {
     "@type": "Brand",
-    name: "Tiny Treats by Shweta",
+    name: "Tiny Treats by Swetha",
   },
   // offers: only include once real price + availability are supplied by the client
   // offers: {
@@ -432,7 +432,7 @@ Tiny Treats is a home-based bakery brand, so local discovery matters even withou
 
 **Once the client confirms these, implement them:**
 
-1. **Google Business Profile** — create/verify a listing under "Tiny Treats by Shweta" with category "Bakery" or "Home Bakery." Requires the client to confirm a public phone number and service area (a home address does not need to be publicly displayed — Google allows service-area businesses to hide the exact address).
+1. **Google Business Profile** — create/verify a listing under "Tiny Treats by Swetha" with category "Bakery" or "Home Bakery." Requires the client to confirm a public phone number and service area (a home address does not need to be publicly displayed — Google allows service-area businesses to hide the exact address).
 2. **NAP consistency** (Name, Address, Phone) — once a public phone number exists, it must match exactly across the website footer, Google Business Profile, and social bios.
 3. **LocalBusiness schema** — populate the commented-out `telephone`/`address` fields in [Section 6.1](#61-organization--localbusiness-bakery--site-wide-in-root-layout) once available.
 4. **Location keywords** — layer the confirmed service area/city into the Home and Contact meta descriptions and body copy (e.g. "homemade cookies in [City]") once known.
@@ -561,4 +561,4 @@ SEO copy must follow the exact same rules as the rest of the site's content (Con
 
 ---
 
-Built for **Tiny Treats by Shweta** — No Junk, Just Goodness. 🍪
+Built for **Tiny Treats by Swetha** — No Junk, Just Goodness. 🍪

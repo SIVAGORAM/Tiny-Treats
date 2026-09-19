@@ -1,8 +1,8 @@
-# 🍪 Tiny Treats by Shweta
+# 🍪 Tiny Treats by Swetha
 
 > **No Junk, Just Goodness.**
 
-A premium, modern, responsive frontend website for **Tiny Treats by Shweta**, a homemade wholesome treats brand offering cookies, brownies, nutritious laddus, seed crackers and other homemade snacks.
+A premium, modern, responsive frontend website for **Tiny Treats by Swetha**, a homemade wholesome treats brand offering cookies, brownies, nutritious laddus, seed crackers and other homemade snacks.
 
 The website is designed as a **premium digital storefront and brand experience**, allowing customers to:
 
@@ -15,7 +15,7 @@ The website is designed as a **premium digital storefront and brand experience**
 - Persist the cart locally
 - Review the complete order
 - Place the order through WhatsApp
-- Learn about the brand and Shweta
+- Learn about the brand and Swetha
 - Explore the gallery
 - Contact the business
 - Access Instagram and other social channels
@@ -73,7 +73,7 @@ The application is intentionally kept **simple, lightweight and maintainable**.
 
 ### Brand
 
-**Tiny Treats by Shweta**
+**Tiny Treats by Swetha**
 
 #### Primary Tagline
 
@@ -176,7 +176,7 @@ WhatsApp Opens
      ↓
 Customer Sends Order
      ↓
-Shweta Receives Order
+Swetha Receives Order
 ```
 
 Secondary journeys:
@@ -608,7 +608,7 @@ Alternative:
 
 Script fonts should be used sparingly.
 
-Primary use: **By Shweta**
+Primary use: **By Swetha**
 
 Typography must create a strong hierarchy:
 
@@ -829,7 +829,7 @@ Actual categories must be based on the client's final product list.
 
 The About page communicates:
 
-- Shweta's story
+- Swetha's story
 - Why Tiny Treats started
 - Homemade philosophy
 - Family inspiration
@@ -1449,7 +1449,7 @@ Implement:
 Implement:
 
 - Brand story
-- Shweta story
+- Swetha story
 - Brand philosophy
 - Values
 - CTA
@@ -2217,7 +2217,7 @@ Deployment      ░░░░░░░░░░░░░░░░░░░░   0
 
 ---
 
-## 🍪 Tiny Treats by Shweta
+## 🍪 Tiny Treats by Swetha
 
 **No Junk, Just Goodness.**
 

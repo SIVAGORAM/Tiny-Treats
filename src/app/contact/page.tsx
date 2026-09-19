@@ -24,22 +24,11 @@ import {
   LinkedInIcon,
   WhatsAppIcon,
 } from "@/components/ui/SocialIcons";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { constructMetadata, ROUTES_SEO } from "@/lib/seo";
 import { getWhatsAppUrl, BRAND_PHONE, BRAND_EMAIL, BRAND_SOCIALS } from "@/lib/whatsapp";
 
-export const metadata: Metadata = {
-  title: "Contact & Direct Orders",
-  description:
-    "Get in touch with Tiny Treats by Shweta through WhatsApp or phone (+91 93953 24365) or email for fresh homemade treats, bespoke gift hampers, and dietary custom orders.",
-  alternates: {
-    canonical: "/contact",
-  },
-  openGraph: {
-    title: "Contact Tiny Treats | Order Fresh Homemade Treats",
-    description:
-      "Get in touch with Tiny Treats by Shweta through WhatsApp (+91 93953 24365) for fresh small-batch cookies, laddus, brownies, and cakes.",
-    url: "https://www.tinytreats.in/contact",
-  },
-};
+export const metadata: Metadata = constructMetadata(ROUTES_SEO.contact);
 
 const orderSteps = [
   {
@@ -85,6 +74,7 @@ const dietaryAssurances = [
 export default function ContactPage() {
   return (
     <div className="pt-3 sm:pt-4 pb-6 sm:pb-8 bg-[#FFF8ED] min-h-screen select-none">
+      <BreadcrumbSchema items={[{ name: "Contact & Direct Orders", url: "/contact" }]} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3.5 sm:space-y-4">
         
         {/* ── 1. Breadcrumb ── */}

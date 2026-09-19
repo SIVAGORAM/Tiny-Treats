@@ -15,22 +15,11 @@ import {
   Home,
 } from "lucide-react";
 import { BrandPromiseSection } from "@/components/story/BrandPromiseSection";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { constructMetadata, ROUTES_SEO } from "@/lib/seo";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
-export const metadata: Metadata = {
-  title: "Our Story",
-  description:
-    "Discover the story behind Tiny Treats — a home-baking journey that began with a mother's desire to make wholesome homemade treats for her children.",
-  alternates: {
-    canonical: "/about",
-  },
-  openGraph: {
-    title: "Our Story | Tiny Treats by Shweta",
-    description:
-      "A home-baking journey inspired by family, wholesome ingredients, and motherly care.",
-    url: "https://www.tinytreats.in/about",
-  },
-};
+export const metadata: Metadata = constructMetadata(ROUTES_SEO.about);
 
 const timelineSteps = [
   {
@@ -117,11 +106,12 @@ const customerStories = [
 export default function AboutPage() {
   return (
     <div className="bg-[#FFF8ED] text-[#2B211B] min-h-screen">
+      <BreadcrumbSchema items={[{ name: "Our Story", url: "/about" }]} />
 
       {/* ========================================================================= */}
       {/* 1. TOP BRAND PROMISE HERO (EXACT REFERENCE UI)                            */}
       {/* ========================================================================= */}
-      <BrandPromiseSection />
+      <BrandPromiseSection headingLevel="h1" />
 
       {/* ========================================================================= */}
       {/* 2. THE ARTISAN KITCHEN STORY (LAYERED COLLAGE & EMOTIONAL NARRATIVE)       */}
@@ -143,7 +133,7 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-[#FAF3EA] shadow-xl border-2 border-[#EADBCA] z-10 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
                   <Image
                     src="/story/kitchen-baking-artisan.jpg"
-                    alt="Shweta handcrafting wholesome treats in her home kitchen"
+                    alt="Swetha handcrafting wholesome treats in her home kitchen"
                     fill
                     sizes="(max-width: 768px) 100vw, 500px"
                     className="object-cover"
@@ -251,7 +241,7 @@ export default function AboutPage() {
               <span>THE TINY TREATS STANDARD</span>
             </div>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3D2314]">
-              Inside Shweta&apos;s Kitchen
+              Inside Swetha&apos;s Kitchen
             </h2>
             <p className="text-sm sm:text-base text-[#7C6B5E] font-light leading-relaxed">
               Every single treat is made with uncompromised attention to purity, texture, and taste.

@@ -34,7 +34,7 @@ export function CategoryCard({
       <div className="relative aspect-[16/10] overflow-hidden bg-[#FAF3EA]">
         <Image
           src={image}
-          alt={`${category.name} - Tiny Treats by Shweta`}
+          alt={`${category.name} - Tiny Treats by Swetha`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 380px"
           className="object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
@@ -66,7 +66,7 @@ export function CategoryCard({
 
       {/* Card Body Details */}
       <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4 bg-gradient-to-b from-white to-[#FFF9F0]/60">
-        
+
         <div className="space-y-3">
           {/* Description */}
           <p className="text-xs sm:text-[13px] text-[#6E5A4E] leading-relaxed font-light line-clamp-2">

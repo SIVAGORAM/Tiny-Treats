@@ -6,7 +6,7 @@
 
 ## 1. Content
 
-- [ ] Every price, weight, and ingredient list on the live site comes from Shweta's confirmed data — no placeholders (`₹XXX`, `TBD`) remain in production ([CLIENT-DATA-CHECKLIST.md](./CLIENT-DATA-CHECKLIST.md))
+- [ ] Every price, weight, and ingredient list on the live site comes from Swetha's confirmed data — no placeholders (`₹XXX`, `TBD`) remain in production ([CLIENT-DATA-CHECKLIST.md](./CLIENT-DATA-CHECKLIST.md))
 - [ ] No invented claims anywhere (nutrition, medical, certifications, "high protein," etc.) — every dietary claim is confirmed per-product
 - [ ] No fake testimonials, reviews, ratings, or customer counts
 - [ ] All copy matches [CONTENT.md](./CONTENT.md) — no unapproved text substitutions
@@ -97,6 +97,6 @@ Test at minimum: 320px, 375px, 390px, 414px, 768px, 1024px, 1280px, 1440px, 1920
 | Reviewer | Date | Approved? |
 |---|---|---|
 | Developer (Siva) | | ☐ |
-| Client (Shweta) | | ☐ |
+| Client (Swetha) | | ☐ |
 
 Once both boxes are checked, the site is ready to go live.

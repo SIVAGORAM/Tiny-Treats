@@ -3,21 +3,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Cookie, ChevronRight, CheckCircle2, ShieldCheck, Settings2, Sparkles } from "lucide-react";
 import { CookiePreferencesTrigger } from "@/components/ui/CookiePreferencesTrigger";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { constructMetadata, ROUTES_SEO } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Cookie Policy",
-  description:
-    "Learn about the cookies and storage technologies used on Tiny Treats by Shweta to enhance your browsing experience and store your cart preferences.",
-  alternates: {
-    canonical: "/cookie-policy",
-  },
-};
+export const metadata: Metadata = constructMetadata(ROUTES_SEO.cookiePolicy);
 
 export default function CookiePolicyPage() {
   return (
     <div className="py-8 sm:py-12 bg-[#FFF8ED] min-h-screen">
+      <BreadcrumbSchema items={[{ name: "Cookie Policy", url: "/cookie-policy" }]} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-        
+
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#5A321B]/70">
           <Link href="/" className="hover:text-[#B9573F] transition-colors">
@@ -48,7 +44,7 @@ export default function CookiePolicyPage() {
 
         {/* Policy Content */}
         <div className="bg-white rounded-3xl border border-[#D99A45]/25 p-6 sm:p-10 shadow-sm space-y-8 text-[#5A321B]">
-          
+
           <section className="space-y-3">
             <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#3A1E0E] flex items-center gap-2.5">
               <span className="w-7 h-7 rounded-lg bg-[#FAF0EC] text-[#B9573F] text-xs flex items-center justify-center font-sans font-bold">1</span>
@@ -64,7 +60,7 @@ export default function CookiePolicyPage() {
               <span className="w-7 h-7 rounded-lg bg-[#FAF0EC] text-[#B9573F] text-xs flex items-center justify-center font-sans font-bold">2</span>
               Categories of Cookies We Use
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-4 rounded-2xl bg-[#FFF8ED] border border-[#D99A45]/30 space-y-2">
                 <div className="flex items-center justify-between">

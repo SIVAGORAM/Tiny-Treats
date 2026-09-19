@@ -1,6 +1,6 @@
 # Tiny Treats — Asset Checklist
 
-> Every image/media slot the website needs, mapped to the file paths already defined in the [Technical README](./README.md)'s project structure. Use this to brief a photographer, organize a photo shoot, or track what Shweta still needs to send.
+> Every image/media slot the website needs, mapped to the file paths already defined in the [Technical README](./README.md)'s project structure. Use this to brief a photographer, organize a photo shoot, or track what Swetha still needs to send.
 
 **Format reminder** (per the [Design System](./DESIGN-SYSTEM.md)): WebP or AVIF preferred, natural daylight, warm tones, real texture (wood/linen/ceramic), no over-saturation, no generic stock photography.
 
@@ -14,7 +14,7 @@
 | Icon/mark only | `tiny-treats-icon.svg` | ☐ Needed | Used for favicon and compact spaces |
 | Favicon | `favicon.ico` / `icon.png` | ☐ Needed | Derived from the icon mark |
 | Open Graph share image | `/og/tiny-treats-og.jpg` | ☐ Needed | 1200×630px, used for social link previews (referenced in [SEO-GUIDE.md](./SEO-GUIDE.md)) |
-| Brand signature / script asset for "By Shweta" | — | ☐ Optional | Only if not simply typeset in the script font |
+| Brand signature / script asset for "By Swetha" | — | ☐ Optional | Only if not simply typeset in the script font |
 
 ## 2. Botanical Illustration Set — used throughout (per Design System §15)
 

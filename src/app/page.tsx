@@ -9,10 +9,12 @@ import { CustomerReviews } from "@/components/home/CustomerReviews";
 import { GalleryPreview } from "@/components/home/GalleryPreview";
 import { InstagramSection } from "@/components/home/InstagramSection";
 import { FinalCTA } from "@/components/home/FinalCTA";
+import { FAQSchema } from "@/components/seo/FAQSchema";
 
 export default function HomePage() {
   return (
     <>
+      <FAQSchema />
       <Hero />
       <BrandPromiseSection />
       <FeaturedCategories />

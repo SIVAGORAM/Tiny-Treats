@@ -4,11 +4,9 @@ import Link from "next/link";
 import { CheckCircle2, MessageCircle, ShoppingBag, ArrowRight, Heart, Sparkles } from "lucide-react";
 import { getWhatsAppUrl, BRAND_PHONE } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "@/components/ui/SocialIcons";
+import { constructMetadata, ROUTES_SEO } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Thank You — Tiny Treats",
-  description: "Thank you for reaching out to Tiny Treats. We look forward to baking fresh for you!",
-};
+export const metadata: Metadata = constructMetadata(ROUTES_SEO.thankYou);
 
 export default function ThankYouPage() {
   return (

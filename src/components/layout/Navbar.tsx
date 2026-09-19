@@ -9,6 +9,7 @@ import { MobileMenu } from "./MobileMenu";
 import { SearchModal } from "./SearchModal";
 import { CartDrawer } from "@/components/cart/CartDrawer";
 import { CartNotificationToast } from "@/components/cart/CartNotificationToast";
+import logoImg from "@/../public/logo.png";
 import { getWhatsAppUrl, BRAND_SOCIALS } from "@/lib/whatsapp";
 import {
   InstagramIcon,
@@ -114,7 +115,7 @@ export function Navbar() {
       {/* ========================================================================= */}
       <div className="w-full bg-gradient-to-r from-[#341A0B] via-[#2A1408] to-[#341A0B] text-[#FFF6EB] text-xs py-1.5 px-3 sm:px-6 lg:px-8 select-none relative z-50 font-sans border-b border-[#D99A45]/30 overflow-hidden shadow-xs">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 text-[11px] sm:text-[12px]">
-          
+
           {/* Left Brand Values: Responsive Badges */}
           <div className="flex items-center gap-2 sm:gap-3 min-w-0 overflow-hidden font-medium">
             <div className="flex items-center gap-1.5 shrink-0 text-[#FFF3E0]">
@@ -223,11 +224,10 @@ export function Navbar() {
       {/* 2. MAIN STICKY NAVBAR                                                     */}
       {/* ========================================================================= */}
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-300 relative ${
-          isScrolled
+        className={`sticky top-0 z-40 w-full transition-all duration-300 relative ${isScrolled
             ? "bg-[#FFF9F0]/95 backdrop-blur-md shadow-sm border-b border-[#EADBCA] py-2 sm:py-2.5"
             : "bg-[#FFF9F0] border-b border-[#EADBCA]/80 py-2.5 sm:py-3.5"
-        }`}
+          }`}
       >
         {/* Decorative corner botanical flourish */}
         <div
@@ -254,7 +254,7 @@ export function Navbar() {
         </div>
 
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 sm:gap-4 lg:gap-6 relative">
-          
+
           {/* Brand Logo */}
           <Link
             href="/"
@@ -262,14 +262,12 @@ export function Navbar() {
           >
             <div className="relative h-11 xs:h-12 sm:h-14 md:h-15 lg:h-16 w-auto flex items-center">
               <Image
-                src="/logo.png"
-                alt="Tiny Treats by Shweta - Small Treats, Big Smiles"
-                width={300}
-                height={95}
+                src={logoImg}
+                alt="Tiny Treats by Swetha - No Junk, Just Goodness"
                 priority
                 className="h-10 xs:h-11 sm:h-13 md:h-14 lg:h-15.5 w-auto object-contain mix-blend-multiply group-hover:scale-103 transition-transform duration-300"
               />
-              <span className="sr-only">Tiny Treats by Shweta</span>
+              <span className="sr-only">Tiny Treats by Swetha</span>
             </div>
           </Link>
 
@@ -281,11 +279,10 @@ export function Navbar() {
             {/* Home */}
             <Link
               href="/"
-              className={`font-medium transition-all relative py-1 focus-visible:outline-ring rounded tracking-normal ${
-                pathname === "/"
+              className={`font-medium transition-all relative py-1 focus-visible:outline-ring rounded tracking-normal ${pathname === "/"
                   ? "text-[#B9573F] font-semibold"
                   : "text-[#4A2E1C]/90 hover:text-[#B9573F]"
-              }`}
+                }`}
             >
               Home
               {pathname === "/" && (
@@ -301,17 +298,15 @@ export function Navbar() {
             >
               <Link
                 href="/menu"
-                className={`flex items-center gap-1 font-medium transition-all relative py-1 focus-visible:outline-ring rounded tracking-normal group ${
-                  pathname?.startsWith("/menu")
+                className={`flex items-center gap-1 font-medium transition-all relative py-1 focus-visible:outline-ring rounded tracking-normal group ${pathname?.startsWith("/menu")
                     ? "text-[#B9573F] font-semibold"
                     : "text-[#4A2E1C]/90 hover:text-[#B9573F]"
-                }`}
+                  }`}
               >
                 <span>Menu</span>
                 <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform duration-200 text-[#4A2E1C]/70 group-hover:text-[#B9573F] ${
-                    menuDropdownOpen ? "rotate-180 text-[#B9573F]" : ""
-                  }`}
+                  className={`w-3.5 h-3.5 transition-transform duration-200 text-[#4A2E1C]/70 group-hover:text-[#B9573F] ${menuDropdownOpen ? "rotate-180 text-[#B9573F]" : ""
+                    }`}
                 />
                 {pathname?.startsWith("/menu") && (
                   <span className="absolute -bottom-1.5 left-0 right-0 h-[2.5px] bg-[#B9573F] rounded-full animate-in fade-in" />
@@ -370,11 +365,10 @@ export function Navbar() {
             {/* Our Story */}
             <Link
               href="/about"
-              className={`font-medium transition-all relative py-1 focus-visible:outline-ring rounded tracking-normal ${
-                pathname === "/about"
+              className={`font-medium transition-all relative py-1 focus-visible:outline-ring rounded tracking-normal ${pathname === "/about"
                   ? "text-[#B9573F] font-semibold"
                   : "text-[#4A2E1C]/90 hover:text-[#B9573F]"
-              }`}
+                }`}
             >
               Our Story
               {pathname === "/about" && (
@@ -385,11 +379,10 @@ export function Navbar() {
             {/* Gallery */}
             <Link
               href="/gallery"
-              className={`font-medium transition-all relative py-1 focus-visible:outline-ring rounded tracking-normal ${
-                pathname === "/gallery"
+              className={`font-medium transition-all relative py-1 focus-visible:outline-ring rounded tracking-normal ${pathname === "/gallery"
                   ? "text-[#B9573F] font-semibold"
                   : "text-[#4A2E1C]/90 hover:text-[#B9573F]"
-              }`}
+                }`}
             >
               Gallery
               {pathname === "/gallery" && (
@@ -400,11 +393,10 @@ export function Navbar() {
             {/* Contact */}
             <Link
               href="/contact"
-              className={`font-medium transition-all relative py-1 focus-visible:outline-ring rounded tracking-normal ${
-                pathname === "/contact"
+              className={`font-medium transition-all relative py-1 focus-visible:outline-ring rounded tracking-normal ${pathname === "/contact"
                   ? "text-[#B9573F] font-semibold"
                   : "text-[#4A2E1C]/90 hover:text-[#B9573F]"
-              }`}
+                }`}
             >
               Contact
               {pathname === "/contact" && (
@@ -415,7 +407,7 @@ export function Navbar() {
 
           {/* Right Action Cluster: Search, Cart & WhatsApp */}
           <div className="flex items-center gap-1.5 xs:gap-2 sm:gap-3 shrink-0">
-            
+
             {/* 1. Large Search Bar Pill (Desktop Only) */}
             <button
               onClick={() => setSearchModalOpen(true)}

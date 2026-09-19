@@ -2,7 +2,7 @@
 
 > Complete content reference for Home, Menu, Product UI, Cart, About, Gallery, Contact, Footer, WhatsApp ordering, microcopy and SEO.
 
-This document is the **content layer** for the Tiny Treats by Shweta website. It should be handed to the design/development team alongside the [technical documentation](./README.md).
+This document is the **content layer** for the Tiny Treats by Swetha website. It should be handed to the design/development team alongside the [technical documentation](./README.md).
 
 ---
 
@@ -57,7 +57,7 @@ This document is the **content layer** for the Tiny Treats by Shweta website. It
 | Field | Content |
 |---|---|
 | **Brand Name** | Tiny Treats |
-| **Byline** | By Shweta |
+| **Byline** | By Swetha |
 | **Primary Tagline** | No Junk, Just Goodness |
 | **Supporting Tagline** | Homemade Goodness. Made with Love. |
 | **Brand Closing Line** | Small Treats. Big Love. |
@@ -780,28 +780,28 @@ The page you're looking for isn't here — but there are plenty of delicious tre
 
 **Home**
 
-- *Title:* Tiny Treats by Shweta | Homemade Cookies, Laddus & Treats
-- *Description:* Discover Tiny Treats by Shweta — homemade cookies, laddus, brownies, cakes and seed crackers prepared in small batches with care and thoughtfully selected ingredients.
+- *Title:* Tiny Treats by Swetha | Homemade Cookies, Laddus & Treats
+- *Description:* Discover Tiny Treats by Swetha — homemade cookies, laddus, brownies, cakes and seed crackers prepared in small batches with care and thoughtfully selected ingredients.
 
 **Menu**
 
-- *Title:* Menu | Tiny Treats by Shweta
+- *Title:* Menu | Tiny Treats by Swetha
 - *Description:* Explore the Tiny Treats menu featuring Almond Cookies, Ragi Cookies, Dry Fruit Laddus, Calcium Laddus, Protein Laddus, Brownies, Cakes and Seed Crackers.
 
 **About**
 
-- *Title:* Our Story | Tiny Treats by Shweta
+- *Title:* Our Story | Tiny Treats by Swetha
 - *Description:* Discover the story behind Tiny Treats — a home-baking journey that began with a mother's desire to make homemade treats for her children.
 
 **Gallery**
 
-- *Title:* Gallery | Tiny Treats by Shweta
+- *Title:* Gallery | Tiny Treats by Swetha
 - *Description:* Take a glimpse into the Tiny Treats kitchen, homemade creations and freshly prepared treats.
 
 **Contact**
 
 - *Title:* Contact Tiny Treats | Order Homemade Treats
-- *Description:* Get in touch with Tiny Treats by Shweta through WhatsApp or phone for orders, availability, quantities and custom orders.
+- *Description:* Get in touch with Tiny Treats by Swetha through WhatsApp or phone for orders, availability, quantities and custom orders.
 
 ---
 
@@ -834,7 +834,7 @@ This is the part strongly recommended to hand to the AI coding agent along with 
 
 The supplied documents contain stronger statements such as "perfect for growing children and expectant mothers," "nutritionist-friendly," "protein-packed," and specific ingredient/nutrition descriptions.
 
-For the production website, keep the wording product-focused and non-medical unless Shweta provides verified ingredient/nutrition information.
+For the production website, keep the wording product-focused and non-medical unless Swetha provides verified ingredient/nutrition information.
 
 | Instead of | Use |
 |---|---|

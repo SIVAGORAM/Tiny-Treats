@@ -2,22 +2,18 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ShieldCheck, ChevronRight, Mail, Phone, Lock, Eye, FileText } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { constructMetadata, ROUTES_SEO } from "@/lib/seo";
 import { BRAND_PHONE, BRAND_EMAIL } from "@/lib/whatsapp";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description:
-    "Read the Privacy Policy for Tiny Treats by Shweta. Learn how we handle your contact information, order details, and data with complete privacy.",
-  alternates: {
-    canonical: "/privacy-policy",
-  },
-};
+export const metadata: Metadata = constructMetadata(ROUTES_SEO.privacyPolicy);
 
 export default function PrivacyPolicyPage() {
   return (
     <div className="py-8 sm:py-12 bg-[#FFF8ED] min-h-screen">
+      <BreadcrumbSchema items={[{ name: "Privacy Policy", url: "/privacy-policy" }]} />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-        
+
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#5A321B]/70">
           <Link href="/" className="hover:text-[#B9573F] transition-colors">
@@ -37,7 +33,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p className="text-xs sm:text-sm text-[#786B61] leading-relaxed max-w-2xl">
-            Last Updated: January 2026. This policy outlines how Tiny Treats by Shweta collects, utilizes, and safeguards the personal and order information you share with us.
+            Last Updated: January 2026. This policy outlines how Tiny Treats by Swetha collects, utilizes, and safeguards the personal and order information you share with us.
           </p>
           <div className="p-3 rounded-xl bg-[#FAF0EC] border border-[#B9573F]/20 text-[11px] text-[#863B28] leading-relaxed">
             <strong>Note for Legal Review:</strong> This policy constitutes a preliminary operational statement of our small-batch artisanal bakery privacy practices. It is subject to review by legal counsel for statutory compliance under applicable Indian and local data protection regulations.
@@ -46,7 +42,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Policy Content Sections */}
         <div className="bg-white rounded-3xl border border-[#D99A45]/25 p-6 sm:p-10 shadow-sm space-y-8 text-[#5A321B]">
-          
+
           <section className="space-y-3">
             <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#3A1E0E] flex items-center gap-2.5">
               <span className="w-7 h-7 rounded-lg bg-[#FAF0EC] text-[#B9573F] text-xs flex items-center justify-center font-sans font-bold">1</span>

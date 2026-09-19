@@ -1,6 +1,6 @@
 # Tiny Treats — Documentation Index
 
-> A map of every document in the Tiny Treats by Shweta project. Read this first to find what you need.
+> A map of every document in the Tiny Treats by Swetha project. Read this first to find what you need.
 
 ---
 
@@ -14,7 +14,7 @@
 | 4 | [SEO-GUIDE.md](./SEO-GUIDE.md) | Keyword strategy, Next.js metadata code, JSON-LD schema, sitemap/robots, Core Web Vitals, launch/maintenance checklists | Implement metadata, schema markup, or plan ongoing SEO work |
 | 5 | [MASTER-PROMPT.md](./MASTER-PROMPT.md) | The operating brief for an AI coding agent (or engineer): role, build order, non-negotiable rules | Brief an AI tool or a new developer on how to build the site |
 | 6 | [SKILL-ORCHESTRATION.md](./SKILL-ORCHESTRATION.md) | Which AI skills/tools to load for which kind of task (design, components, motion, mobile, review) | Decide which AI skill to reach for mid-build |
-| 7 | [CLIENT-DATA-CHECKLIST.md](./CLIENT-DATA-CHECKLIST.md) | Every placeholder across all docs, consolidated into one list to send to Shweta | Collect real prices, ingredients, contact details, and photos before launch |
+| 7 | [CLIENT-DATA-CHECKLIST.md](./CLIENT-DATA-CHECKLIST.md) | Every placeholder across all docs, consolidated into one list to send to Swetha | Collect real prices, ingredients, contact details, and photos before launch |
 | 8 | [LEGAL-PAGES.md](./LEGAL-PAGES.md) | Draft Privacy Policy, Terms & Conditions, and Cookie Policy content | Publish the footer's legal links |
 | 9 | [ASSET-CHECKLIST.md](./ASSET-CHECKLIST.md) | Every image/asset slot the site needs, mapped to file paths and naming convention | Request or organize photography and image assets |
 | 10 | [LAUNCH-CHECKLIST.md](./LAUNCH-CHECKLIST.md) | Consolidated pre-launch sign-off sheet (functional, content, legal, performance, SEO) | Do the final go/no-go check before pointing the domain live |
@@ -38,7 +38,7 @@
 
 | | |
 |---|---|
-| **Brand** | Tiny Treats by Shweta |
+| **Brand** | Tiny Treats by Swetha |
 | **Tagline** | No Junk, Just Goodness |
 | **Domain** | [www.tinytreats.in](https://www.tinytreats.in) |
 | **Stack** | Next.js (App Router), TypeScript, Tailwind CSS, shadcn/ui, Motion, Lucide React, Zustand |

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { X, ChevronRight, Phone, Search, Sparkles, Heart, Wheat, Star, ShieldCheck } from "lucide-react";
 import { InstagramIcon, FacebookIcon, XTwitterIcon, LinkedInIcon, WhatsAppIcon } from "@/components/ui/SocialIcons";
+import logoImg from "@/../public/logo.png";
 import { getWhatsAppUrl, BRAND_SOCIALS } from "@/lib/whatsapp";
 
 interface MobileMenuProps {
@@ -17,7 +18,7 @@ interface MobileMenuProps {
 const navLinks = [
   { href: "/", label: "Home", description: "Welcome & signature treats" },
   { href: "/menu", label: "Our Menu", description: "17+ wholesome homemade treats" },
-  { href: "/about", label: "Our Story", description: "Shweta's artisan baking journey" },
+  { href: "/about", label: "Our Story", description: "Swetha's artisan baking journey" },
   { href: "/gallery", label: "Gallery", description: "Kitchen moments & customer smiles" },
   { href: "/contact", label: "Contact", description: "Custom gifting & orders" },
 ];
@@ -33,13 +34,12 @@ export function MobileMenu({ isOpen, onClose, onOpenSearch }: MobileMenuProps) {
       <div className="flex items-center justify-between px-5 py-3.5 border-b border-[#EADBCA] bg-[#FFF9F0]">
         <Link href="/" onClick={onClose} className="flex items-center">
           <Image
-            src="/logo.png"
-            alt="Tiny Treats by Shweta"
-            width={240}
-            height={75}
+            src={logoImg}
+            alt="Tiny Treats by Swetha - No Junk, Just Goodness"
+            priority
             className="h-11 w-auto object-contain mix-blend-multiply"
           />
-          <span className="sr-only">Tiny Treats by Shweta</span>
+          <span className="sr-only">Tiny Treats by Swetha</span>
         </Link>
         <button
           onClick={onClose}
@@ -78,24 +78,21 @@ export function MobileMenu({ isOpen, onClose, onOpenSearch }: MobileMenuProps) {
                   key={link.href}
                   href={link.href}
                   onClick={onClose}
-                  className={`flex items-center justify-between p-3.5 rounded-2xl transition-all ${
-                    isActive
+                  className={`flex items-center justify-between p-3.5 rounded-2xl transition-all ${isActive
                       ? "bg-[#B9573F] text-white shadow-sm"
                       : "bg-white border border-[#EADBCA]/70 hover:bg-[#FFF8ED] text-[#4A2E1C]"
-                  }`}
+                    }`}
                 >
                   <div>
                     <span
-                      className={`block font-serif text-base font-bold ${
-                        isActive ? "text-white" : "text-[#4A2E1C]"
-                      }`}
+                      className={`block font-serif text-base font-bold ${isActive ? "text-white" : "text-[#4A2E1C]"
+                        }`}
                     >
                       {link.label}
                     </span>
                     <span
-                      className={`block text-[11px] mt-0.5 ${
-                        isActive ? "text-white/85" : "text-[#8C6D53]"
-                      }`}
+                      className={`block text-[11px] mt-0.5 ${isActive ? "text-white/85" : "text-[#8C6D53]"
+                        }`}
                     >
                       {link.description}
                     </span>

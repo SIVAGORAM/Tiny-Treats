@@ -1,12 +1,12 @@
 # Tiny Treats — Client Data Checklist
 
-> Every other project doc says, in some form, "do not invent this — get it from Shweta." This document collects all of those placeholders into one list. Send this to the client; nothing on it should be guessed or estimated.
+> Every other project doc says, in some form, "do not invent this — get it from Swetha." This document collects all of those placeholders into one list. Send this to the client; nothing on it should be guessed or estimated.
 
 ---
 
 ## 📌 How to use this doc
 
-- [ ] Send this checklist to Shweta as-is, or turn it into a shared form/spreadsheet.
+- [ ] Send this checklist to Swetha as-is, or turn it into a shared form/spreadsheet.
 - [ ] As each item is confirmed, update the relevant file (`data/products.ts`, `.env`, footer component, schema, etc.) and check it off here.
 - [ ] Nothing in this list should be filled in with a guess "to keep moving" — every doc in this project (Content, Design System, SEO Guide, Master Prompt) repeats the same rule: placeholder facts never reach production.
 
@@ -16,10 +16,10 @@
 
 | Field | Status | Notes |
 |---|---|---|
-| Public WhatsApp number (for `NEXT_PUBLIC_WHATSAPP_NUMBER` and the WhatsApp CTA) | ☐ Needed | Must be the number Shweta actually monitors for orders |
+| Public WhatsApp number (for `NEXT_PUBLIC_WHATSAPP_NUMBER` and the WhatsApp CTA) | ☐ Needed | Must be the number Swetha actually monitors for orders |
 | Public phone number (if different from WhatsApp) | ☐ Needed | Used in Contact page "Call Us" and LocalBusiness schema |
 | Business email (if a contact form/email routing is added) | ☐ Needed | Only required if the optional contact form ships |
-| Business address | ☐ Needed — confirm privacy preference | Home-based businesses can register as a "service area business" on Google and keep the exact address hidden; confirm what Shweta is comfortable publishing |
+| Business address | ☐ Needed — confirm privacy preference | Home-based businesses can register as a "service area business" on Google and keep the exact address hidden; confirm what Swetha is comfortable publishing |
 | Service area / delivery city or radius | ☐ Needed | Drives local SEO keywords and the Contact page's delivery info |
 
 ## 2. Product Data (per product)
@@ -53,8 +53,8 @@ For **every** product in the menu (Almond Cookies, Ragi Cookies, Dry Fruit Laddu
 
 | Field | Status |
 |---|---|
-| Registered business name (for footer copyright and legal pages) — confirm if different from "Tiny Treats by Shweta" | ☐ Needed |
-| GST number, FSSAI license number, or other food-business registration details, if the client wants them displayed | ☐ Optional — only if Shweta has them and wants them public |
+| Registered business name (for footer copyright and legal pages) — confirm if different from "Tiny Treats by Swetha" | ☐ Needed |
+| GST number, FSSAI license number, or other food-business registration details, if the client wants them displayed | ☐ Optional — only if Swetha has them and wants them public |
 | Final say on Privacy Policy / Terms / Cookie Policy wording (drafted in [LEGAL-PAGES.md](./LEGAL-PAGES.md)) | ☐ Needed — client sign-off, ideally reviewed by a professional before publishing |
 
 ## 5. Social Proof (only if it becomes real)
@@ -73,8 +73,8 @@ For **every** product in the menu (Almond Cookies, Ragi Cookies, Dry Fruit Laddu
 |---|---|
 | Final logo files (SVG preferred) — wordmark + icon | ☐ Needed |
 | Favicon | ☐ Needed |
-| Brand signature/script asset for "By Shweta," if not typeset | ☐ Optional |
-| Analytics/Search Console access (or confirmation to set up under Shweta's Google account) | ☐ Needed before launch |
+| Brand signature/script asset for "By Swetha," if not typeset | ☐ Optional |
+| Analytics/Search Console access (or confirmation to set up under Swetha's Google account) | ☐ Needed before launch |
 
 ---
 

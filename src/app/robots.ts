@@ -1,11 +1,13 @@
 import type { MetadataRoute } from "next";
+import { SITE_CONFIG } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: ["/cart/"],
     },
-    sitemap: "https://www.tinytreats.in/sitemap.xml",
+    sitemap: `${SITE_CONFIG.siteUrl}/sitemap.xml`,
   };
 }

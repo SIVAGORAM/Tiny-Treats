@@ -1,6 +1,6 @@
 # Tiny Treats — Legal Pages (Draft)
 
-> ⚠️ **Not legal advice.** I'm not a lawyer, and this isn't a substitute for one. These are practical starting drafts written to match what the Tiny Treats site actually does (no user accounts, no online payments, no data storage beyond a local shopping cart). Have a professional — ideally one familiar with Indian e-commerce/consumer-protection and data-protection rules (the IT Act 2000 and the Digital Personal Data Protection Act, 2023) — review and finalize before publishing, and adapt anything in `[brackets]` to Shweta's actual business details.
+> ⚠️ **Not legal advice.** I'm not a lawyer, and this isn't a substitute for one. These are practical starting drafts written to match what the Tiny Treats site actually does (no user accounts, no online payments, no data storage beyond a local shopping cart). Have a professional — ideally one familiar with Indian e-commerce/consumer-protection and data-protection rules (the IT Act 2000 and the Digital Personal Data Protection Act, 2023) — review and finalize before publishing, and adapt anything in `[brackets]` to Swetha's actual business details.
 
 These three pages are referenced in the Footer section of the [Design System](./DESIGN-SYSTEM.md) doc. Only publish links to pages that actually exist — don't link a policy page until its content is live.
 
@@ -26,7 +26,7 @@ Privacy Policy
 
 Last updated: [date]
 
-Tiny Treats by Shweta ("Tiny Treats," "we," "us") operates the website
+Tiny Treats by Swetha ("Tiny Treats," "we," "us") operates the website
 www.tinytreats.in (the "Site"). This policy explains what information we
 collect when you visit or use the Site, and how we use it.
 
@@ -105,7 +105,7 @@ following terms.
 
 1. About Us
 
-Tiny Treats by Shweta is a home-based bakery offering homemade cookies,
+Tiny Treats by Swetha is a home-based bakery offering homemade cookies,
 laddus, cakes, brownies, and seed crackers, prepared in small batches.
 
 2. Products & Availability
@@ -154,17 +154,17 @@ laddus, cakes, brownies, and seed crackers, prepared in small batches.
 - Because items are freshly prepared to order, cancellation and refund
   requests will be handled on a case-by-case basis. Please contact us as
   soon as possible if you need to cancel or change an order.
-- [Add specific refund/cancellation policy once Shweta confirms one.]
+- [Add specific refund/cancellation policy once Swetha confirms one.]
 
 8. Intellectual Property
 
 All content on the Site — including text, images, logos, and design — is
-the property of Tiny Treats by Shweta and may not be reproduced without
+the property of Tiny Treats by Swetha and may not be reproduced without
 permission.
 
 9. Limitation of Liability
 
-To the extent permitted by law, Tiny Treats by Shweta is not liable for
+To the extent permitted by law, Tiny Treats by Swetha is not liable for
 any indirect or consequential loss arising from your use of the Site or
 our products, beyond the value of the order in question.
 
@@ -230,7 +230,7 @@ Questions about this Cookie Policy can be sent to:
 
 ## ✅ Before publishing
 
-- [ ] Replace every `[bracketed placeholder]` with Shweta's confirmed details
+- [ ] Replace every `[bracketed placeholder]` with Swetha's confirmed details
 - [ ] Have someone with relevant legal knowledge review all three, particularly the refund/cancellation section and any food-safety/FSSAI-related language
 - [ ] Only link a policy from the footer once its final content is live at its URL
 - [ ] If a contact form, Google Analytics, or any other data-collecting feature is added later, update the Privacy Policy and Cookie Policy to reflect it

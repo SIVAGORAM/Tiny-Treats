@@ -1,21 +1,17 @@
 import type { Metadata } from "next";
 import { MenuClient } from "./MenuClient";
+import { MenuProductsSchema } from "@/components/seo/MenuProductsSchema";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { constructMetadata, ROUTES_SEO } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Menu",
-  description:
-    "Explore the Tiny Treats menu featuring Almond Cookies, Ragi Cookies, Dry Fruit Laddus, Calcium Laddus, Protein Laddus, Brownies, Cakes and Seed Crackers.",
-  alternates: {
-    canonical: "/menu",
-  },
-  openGraph: {
-    title: "Menu | Tiny Treats by Shweta",
-    description:
-      "Explore homemade cookies, laddus, brownies, cakes and seed crackers prepared with care and thoughtfully selected ingredients.",
-    url: "https://www.tinytreats.in/menu",
-  },
-};
+export const metadata: Metadata = constructMetadata(ROUTES_SEO.menu);
 
 export default function MenuPage() {
-  return <MenuClient />;
+  return (
+    <>
+      <BreadcrumbSchema items={[{ name: "Menu", url: "/menu" }]} />
+      <MenuProductsSchema />
+      <MenuClient />
+    </>
+  );
 }

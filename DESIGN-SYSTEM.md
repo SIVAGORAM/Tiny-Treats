@@ -1,6 +1,6 @@
-# Tiny Treats by Shweta — End-to-End UI/UX Design System
+# Tiny Treats by Swetha — End-to-End UI/UX Design System
 
-> **Brand:** Tiny Treats by Shweta
+> **Brand:** Tiny Treats by Swetha
 > **Tagline:** No Junk, Just Goodness
 > **Design Direction:** Warm editorial + premium boutique food brand + modern D2C commerce
 
@@ -69,7 +69,7 @@ The goal is to make every page feel like one cohesive premium brand.
 ### Brand
 
 **Tiny Treats**
-**By Shweta**
+**By Swetha**
 
 ### Primary tagline
 
@@ -260,7 +260,7 @@ Recommended weights:
 
 Use one consistent handwritten/script style only for:
 
-- By Shweta
+- By Swetha
 - Short brand signatures
 - Small editorial annotations
 - Decorative phrases
@@ -1184,7 +1184,7 @@ The footer should be quieter than the homepage.
 
 ```text
 Tiny Treats
-By Shweta
+By Swetha
 
 Homemade with love,
 using simple ingredients,
@@ -1233,7 +1233,7 @@ A Kinder Tomorrow
 Bottom:
 
 ```text
-© Tiny Treats By Shweta. All rights reserved.
+© Tiny Treats By Swetha. All rights reserved.
 Privacy Policy · Terms & Conditions · Cookie Policy
 Made with ♥ in India
 ```
@@ -1652,7 +1652,7 @@ No Added Sugar
 No Artificial Colours
 ```
 
-must only appear for products where Shweta confirms they are accurate.
+must only appear for products where Swetha confirms they are accurate.
 
 A product named **Protein Laddu** may use that actual product name, but do not automatically add claims such as "High Protein" or "Muscle Building" without verified supporting information.
 

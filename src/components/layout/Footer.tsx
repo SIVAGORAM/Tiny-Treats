@@ -23,6 +23,7 @@ import {
   WhatsAppIcon,
 } from "@/components/ui/SocialIcons";
 import { CookiePreferencesTrigger } from "@/components/ui/CookiePreferencesTrigger";
+import logoImg from "@/../public/logo.png";
 import {
   BRAND_PHONE,
   BRAND_EMAIL,
@@ -33,22 +34,22 @@ import {
 export function Footer() {
   return (
     <footer className="relative bg-gradient-to-b from-[#341A0B] via-[#2A1408] to-[#1C0D05] text-[#FFF8ED] pt-5 sm:pt-7 pb-5 sm:pb-6 overflow-hidden border-t-2 border-[#D99A45]/40 font-sans select-none">
-      
+
       {/* ── Warm Background Radial Glows & Textures ── */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[850px] h-[320px] bg-[radial-gradient(ellipse_at_top,rgba(217,154,69,0.2),transparent_70%)] pointer-events-none" />
       <div className="absolute top-1/3 -left-32 w-80 h-80 bg-[#B9573F]/12 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#D99A45]/08 rounded-full blur-[160px] pointer-events-none" />
-      
+
       {/* Top Gold Accent Shimmer Line */}
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D99A45]/70 to-transparent pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-        
+
         {/* ========================================================================= */}
         {/* 1. TOP VALUE PILLARS (4 LUXURY GLASS TRUST CARDS)                         */}
         {/* ========================================================================= */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 pb-5 sm:pb-6 border-b border-white/[0.12]">
-          
+
           {/* Card 1 */}
           <div className="flex items-center gap-3.5 p-3.5 sm:p-4 rounded-2xl bg-white/[0.05] border border-white/[0.1] hover:bg-white/[0.08] hover:border-[#66723A]/50 transition-all duration-300 shadow-sm group">
             <div className="w-10 h-10 rounded-xl bg-[#66723A]/25 border border-[#66723A]/40 flex items-center justify-center text-[#9FD468] shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
@@ -115,20 +116,18 @@ export function Footer() {
         {/* 2. MAIN FOOTER NAVIGATION & BRAND IDENTITY GRID                           */}
         {/* ========================================================================= */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 py-5 sm:py-6 border-b border-white/[0.12]">
-          
+
           {/* Column 1: Brand Info & Direct Contacts (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            
+
             {/* Logo Badge with Illuminated Card Backing */}
             <Link
               href="/"
               className="inline-flex items-center bg-gradient-to-br from-[#FFFDF9] via-[#FFF8ED] to-[#F5EAD6] rounded-2xl px-4 py-1.5 sm:px-5 sm:py-2 shadow-md border-2 border-[#D99A45]/50 hover:border-[#D99A45] hover:scale-[1.02] transition-all duration-300 group"
             >
               <Image
-                src="/logo.png"
-                alt="Tiny Treats by Shweta"
-                width={260}
-                height={70}
+                src={logoImg}
+                alt="Tiny Treats by Swetha - No Junk, Just Goodness"
                 className="w-auto h-8 sm:h-10 md:h-11 max-w-[200px] sm:max-w-[240px] object-contain group-hover:brightness-105 transition-all"
               />
             </Link>
@@ -290,13 +289,13 @@ export function Footer() {
               <span className="w-1.5 h-3.5 bg-[#66723A] rounded-full" />
               <span>Our Tiny Promise</span>
             </h3>
-            
+
             {/* Guarantee Box */}
             <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-transparent border border-[#D99A45]/30 space-y-2.5 shadow-lg">
               <p className="text-[11px] text-[#FFF8ED]/85 leading-relaxed font-light">
                 Every order is prepared with care in small batches in our home kitchen. We make treats we are proud to serve our own family.
               </p>
-              
+
               <div className="space-y-1 text-[11px] text-[#D99A45]">
                 <div className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#D99A45] shrink-0" />
@@ -346,7 +345,7 @@ export function Footer() {
         {/* ========================================================================= */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#FFF8ED]/75 pt-1">
           <p className="text-center md:text-left">
-            © 2026 Tiny Treats by Shweta. All rights reserved.
+            © 2026 Tiny Treats by Swetha. All rights reserved.
           </p>
 
           <div className="flex items-center gap-2 font-script text-base sm:text-lg text-[#D99A45]">

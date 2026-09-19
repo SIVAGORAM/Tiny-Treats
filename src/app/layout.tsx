@@ -2,13 +2,15 @@ import React, { Suspense } from "react";
 import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Manrope, Caveat } from "next/font/google";
 import "./globals.css";
-import { OrganizationSchema } from "@/components/seo/OrganizationSchema";
+import { BakerySchema } from "@/components/seo/BakerySchema";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { NavigationProgressBar } from "@/components/ui/NavigationProgressBar";
 import { OfflineBanner } from "@/components/ui/OfflineBanner";
 import { CookieConsentBanner } from "@/components/ui/CookieConsentBanner";
 import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
+
+import { SITE_CONFIG, getCanonicalUrl } from "@/lib/seo";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -35,50 +37,46 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.tinytreats.in"),
+  metadataBase: new URL(SITE_CONFIG.siteUrl),
   title: {
-    default: "Tiny Treats by Shweta | Homemade Cookies, Laddus & Treats",
-    template: "%s | Tiny Treats by Shweta",
+    default: SITE_CONFIG.defaultTitle,
+    template: SITE_CONFIG.titleTemplate,
   },
-  description:
-    "Discover Tiny Treats by Shweta — homemade cookies, laddus, brownies, cakes and seed crackers prepared in small batches with care and thoughtfully selected ingredients.",
-  keywords: [
-    "Tiny Treats",
-    "Tiny Treats by Shweta",
-    "homemade cookies",
-    "dry fruit laddu",
-    "ragi cookies",
-    "seed crackers",
-    "homemade brownies",
-    "wholesome snacks",
-    "no maida cookies",
-  ],
-  authors: [{ name: "Shweta", url: "https://www.tinytreats.in" }],
-  creator: "Tiny Treats by Shweta",
+  description: SITE_CONFIG.defaultDescription,
+  keywords: SITE_CONFIG.defaultKeywords,
+  authors: [{ name: SITE_CONFIG.siteName, url: SITE_CONFIG.siteUrl }],
+  creator: SITE_CONFIG.siteName,
+  publisher: SITE_CONFIG.siteName,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: getCanonicalUrl(""),
+  },
   openGraph: {
     type: "website",
-    locale: "en_IN",
-    siteName: "Tiny Treats by Shweta",
-    title: "Tiny Treats by Shweta | Homemade Cookies, Laddus & Treats",
-    description:
-      "Homemade cookies, laddus, brownies, cakes and seed crackers made in small batches with love and wholesome ingredients.",
-    url: "https://www.tinytreats.in",
+    locale: SITE_CONFIG.locale,
+    siteName: SITE_CONFIG.siteName,
+    title: SITE_CONFIG.defaultTitle,
+    description: SITE_CONFIG.defaultDescription,
+    url: getCanonicalUrl(""),
     images: [
       {
-        url: "/og/tiny-treats-og.jpg",
+        url: `${SITE_CONFIG.siteUrl}${SITE_CONFIG.defaultOgImage}`,
         width: 1200,
         height: 630,
-        alt: "Tiny Treats by Shweta — homemade treats",
+        alt: `${SITE_CONFIG.siteName} — Fresh Homemade Wholesome Treats`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tiny Treats by Shweta",
-    description:
-      "Homemade cookies, laddus, brownies, cakes and seed crackers made in small batches with love.",
-    images: ["/og/tiny-treats-og.jpg"],
-    creator: "@tinytreatsbys",
+    title: SITE_CONFIG.defaultTitle,
+    description: SITE_CONFIG.defaultDescription,
+    images: [`${SITE_CONFIG.siteUrl}${SITE_CONFIG.defaultOgImage}`],
+    creator: SITE_CONFIG.twitterHandle,
   },
   icons: {
     icon: [
@@ -91,6 +89,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -126,7 +131,7 @@ export default function RootLayout({
         {/* Offline Connectivity Detector Banner */}
         <OfflineBanner />
 
-        <OrganizationSchema />
+        <BakerySchema />
         <Navbar />
 
         {/* Main Content Area */}

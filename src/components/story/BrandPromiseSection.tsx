@@ -4,7 +4,13 @@ import React from "react";
 import Image from "next/image";
 import { Leaf, Heart, Home, Sprout, Sparkles, Users, Star } from "lucide-react";
 
-export function BrandPromiseSection() {
+export function BrandPromiseSection({
+  headingLevel = "h2",
+}: {
+  headingLevel?: "h1" | "h2";
+}) {
+  const HeadingTag = headingLevel;
+
   return (
     <section className="relative overflow-hidden pt-2 sm:pt-3 pb-3 sm:pb-4 bg-[#FFF8ED] select-none">
       
@@ -28,7 +34,7 @@ export function BrandPromiseSection() {
         {/* ========================================================================= */}
         {/* 2. CENTER HERO PHILOSOPHY HEADLINE & ANNOTATIONS                          */}
         {/* ========================================================================= */}
-        <div className="max-w-3xl mx-auto text-center space-y-2.5 sm:space-y-3 relative">
+        <div className="text-center space-y-2 max-w-3xl mx-auto relative z-10">
           
           {/* Left Script Annotation (Visible on Desktop / Tablets) */}
           <div className="hidden lg:block absolute -left-36 xl:-left-44 top-2 text-left transform -rotate-6 pointer-events-none">
@@ -76,7 +82,7 @@ export function BrandPromiseSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-extrabold text-[#3D2314] tracking-tight leading-[1.12]">
+          <HeadingTag className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-extrabold text-[#3D2314] tracking-tight leading-[1.12]">
             Because What We Give <br />
             Our Family{" "}
             <span className="text-[#B85843] font-serif italic font-normal">
@@ -85,7 +91,7 @@ export function BrandPromiseSection() {
             <span className="font-script text-3xl sm:text-4xl lg:text-5xl text-[#B85843] font-normal inline ml-1">
               ♡
             </span>
-          </h1>
+          </HeadingTag>
 
           {/* Subtitle */}
           <p className="text-sm sm:text-base lg:text-[16px] text-[#5A3825]/90 font-light leading-relaxed max-w-2xl mx-auto">

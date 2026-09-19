@@ -1,6 +1,6 @@
 # Tiny Treats — Master AI Development Prompt
 
-> This is the operating brief for any AI coding agent (or engineer) building the Tiny Treats by Shweta website. It defines role, workflow, architecture, and non-negotiable rules. Read it in full before writing code.
+> This is the operating brief for any AI coding agent (or engineer) building the Tiny Treats by Swetha website. It defines role, workflow, architecture, and non-negotiable rules. Read it in full before writing code.
 
 **Companion documents (read these too):**
 - [Technical README](./README.md) — stack, architecture, phases, deployment
@@ -59,7 +59,7 @@ We are building a premium, production-ready website for:
 
 | | |
 |---|---|
-| **Brand** | Tiny Treats by Shweta |
+| **Brand** | Tiny Treats by Swetha |
 | **Tagline** | "No Junk, Just Goodness" |
 | **Project folder** | Tiny Treats |
 
