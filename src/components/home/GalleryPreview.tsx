@@ -9,11 +9,11 @@ export function GalleryPreview() {
   const items = GALLERY_ITEMS.slice(0, 4);
 
   return (
-    <section className="py-20 sm:py-28 bg-white border-t border-[#5A321B]/10 select-none">
+    <section className="pt-2.5 sm:pt-3 pb-3 sm:pb-4 bg-white border-t border-[#5A321B]/10 select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-5 mb-4 sm:mb-6">
           <div className="space-y-3 max-w-xl text-center md:text-left">
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#FFF8ED] border border-[#D99A45]/30 text-xs font-bold uppercase tracking-widest text-[#B9573F] shadow-2xs">
               <Camera className="w-3.5 h-3.5 text-[#D99A45]" />

@@ -126,14 +126,14 @@ export default function AboutPage() {
       {/* ========================================================================= */}
       {/* 2. THE ARTISAN KITCHEN STORY (LAYERED COLLAGE & EMOTIONAL NARRATIVE)       */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 bg-white/70 border-y border-[#EADBCA]/80 relative overflow-hidden">
+      <section className="pt-3 sm:pt-4 pb-4 sm:pb-6 bg-white/70 border-y border-[#EADBCA]/80 relative overflow-hidden">
 
         {/* Soft Ambient Background Elements */}
         <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-[#FAF3EA]/80 blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-[#F3E2C4]/40 blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
 
             {/* Left Column: Layered Artisan Collage */}
             <div className="lg:col-span-5 relative order-2 lg:order-1">
@@ -242,10 +242,10 @@ export default function AboutPage() {
       {/* ========================================================================= */}
       {/* 3. INSIDE OUR CRAFT: 3 ARTISAN QUALITY SHOWCASE CARDS                     */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 bg-[#FFF8ED]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
+      <section className="pt-3 sm:pt-4 pb-4 sm:pb-6 bg-[#FFF8ED]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-5">
 
-          <div className="max-w-2xl mx-auto text-center space-y-3">
+          <div className="max-w-2xl mx-auto text-center space-y-2">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF3EA] border border-[#EADBCA] text-[11px] font-bold uppercase tracking-widest text-[#8C6D53]">
               <ShieldCheck className="w-3.5 h-3.5 text-[#586E3C]" />
               <span>THE TINY TREATS STANDARD</span>
@@ -258,7 +258,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
             {craftsmanshipPillars.map((item, idx) => (
               <div
                 key={idx}
@@ -279,7 +279,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-4">
+                <div className="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-3">
                   <div className="space-y-2">
                     <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#3D2314] group-hover:text-[#B85843] transition-colors">
                       {item.title}
@@ -301,10 +301,10 @@ export default function AboutPage() {
       {/* ========================================================================= */}
       {/* 4. VISUAL ROADMAP TIMELINE (CONNECTING MILESTONES 01, 02, 03)             */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 bg-white/70 border-y border-[#EADBCA]/80 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
+      <section className="pt-3 sm:pt-4 pb-4 sm:pb-6 bg-white/70 border-y border-[#EADBCA]/80 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-5">
 
-          <div className="max-w-2xl mx-auto text-center space-y-3">
+          <div className="max-w-2xl mx-auto text-center space-y-2">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF3EA] border border-[#EADBCA] text-[11px] font-bold uppercase tracking-widest text-[#8C6D53]">
               <Clock className="w-3.5 h-3.5 text-[#D49942]" />
               <span>THE JOURNEY</span>
@@ -317,13 +317,13 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 relative">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 relative">
             {timelineSteps.map((step, idx) => (
               <div
                 key={idx}
-                className="p-7 sm:p-8 rounded-3xl bg-[#FFF9F0] border border-[#EADBCA] shadow-2xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-5 relative group"
+                className="p-6 sm:p-7 rounded-3xl bg-[#FFF9F0] border border-[#EADBCA] shadow-2xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-4 relative group"
               >
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {/* Top Step Number & Badge */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
@@ -361,8 +361,8 @@ export default function AboutPage() {
           </div>
 
           {/* Sweet Script Signature */}
-          <div className="text-center pt-2">
-            <p className="font-script text-2xl sm:text-3xl text-[#5A3825] font-bold">
+          <div className="text-center pt-0.5">
+            <p className="font-script text-xl sm:text-2xl text-[#5A3825] font-bold">
               From our little kitchen to your home, every Tiny Treat carries a piece of our story. ♡
             </p>
           </div>
@@ -373,10 +373,10 @@ export default function AboutPage() {
       {/* ========================================================================= */}
       {/* 5. VERIFIED MOTHER & CUSTOMER EXPERIENCES                                 */}
       {/* ========================================================================= */}
-      <section className="py-20 sm:py-28 bg-[#FFF8ED]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
+      <section className="pt-3 sm:pt-4 pb-2 sm:pb-3 bg-[#FFF8ED]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-5">
 
-          <div className="max-w-2xl mx-auto text-center space-y-3">
+          <div className="max-w-2xl mx-auto text-center space-y-2">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FAF3EA] border border-[#EADBCA] text-[11px] font-bold uppercase tracking-widest text-[#B85843]">
               <Star className="w-3.5 h-3.5 fill-[#D49942] text-[#D49942]" />
               <span>LOVED BY FAMILIES</span>
@@ -389,14 +389,14 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
             {customerStories.map((cust, idx) => (
               <div
                 key={idx}
-                className="p-8 sm:p-9 rounded-3xl bg-white border border-[#EADBCA] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-6"
+                className="p-5 sm:p-7 rounded-3xl bg-white border border-[#EADBCA] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between space-y-4"
               >
                 {/* 5 Stars & Quote Mark */}
-                <div className="space-y-4">
+                <div className="space-y-2.5">
                   <div className="flex items-center justify-between">
                     <div className="flex text-[#D49942] gap-1">
                       {[...Array(cust.stars)].map((_, i) => (
@@ -414,7 +414,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Customer Info Footer */}
-                <div className="pt-4 border-t border-[#F0E4D4] flex items-center justify-between">
+                <div className="pt-2.5 border-t border-[#F0E4D4] flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className={`w-10 h-10 rounded-full ${cust.avatarBg} text-[#FFF8ED] border-2 border-white flex items-center justify-center font-serif text-sm font-bold shadow-2xs`}>
                       {cust.initials}
@@ -439,15 +439,15 @@ export default function AboutPage() {
       {/* ========================================================================= */}
       {/* 6. GRAND EMOTIONAL BANNER (THE GOLDEN MOTHER'S PROMISE)                   */}
       {/* ========================================================================= */}
-      <section className="py-16 sm:py-24 bg-[#FFF8ED]">
+      <section className="pt-1 sm:pt-2 pb-3 sm:pb-4 bg-[#FFF8ED]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl bg-[#3D2314] text-[#FFF8ED] p-8 sm:p-14 lg:p-16 text-center space-y-7 shadow-2xl relative overflow-hidden">
+          <div className="rounded-3xl bg-[#3D2314] text-[#FFF8ED] p-6 sm:p-10 lg:p-12 text-center space-y-5 shadow-2xl relative overflow-hidden">
 
             {/* Background Texture & Glow */}
             <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-[#D49942]/10 blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-[#B85843]/15 blur-3xl pointer-events-none" />
 
-            <div className="max-w-3xl mx-auto space-y-5 relative z-10">
+            <div className="max-w-3xl mx-auto space-y-4 relative z-10">
 
               <span className="font-script text-xl sm:text-2xl text-[#E7CA9F] font-bold block">
                 Good Food, Happier Families ♡
@@ -461,10 +461,10 @@ export default function AboutPage() {
                 Tiny Treats is more than a home-baking venture. It is a mother&apos;s passion that grew from love, shared with families who value mindful, wholesome everyday snacking.
               </p>
 
-              <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+              <div className="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3.5">
                 <Link
                   href="/menu"
-                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto h-12 sm:h-13 px-8 rounded-full bg-[#B85843] hover:bg-[#A34B35] text-white font-semibold text-sm shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto h-11 sm:h-12 px-7 rounded-full bg-[#B85843] hover:bg-[#A34B35] text-white font-semibold text-sm shadow-lg hover:shadow-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <span>Explore Our Full Menu</span>
                   <ArrowRight className="w-4 h-4" />
@@ -474,7 +474,7 @@ export default function AboutPage() {
                   href={getWhatsAppUrl("Hello Shweta! 👋 I read your story and would love to place an order for fresh homemade treats.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto h-12 sm:h-13 px-8 rounded-full bg-[#526A3A] hover:bg-[#43592D] text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all transform hover:scale-[1.02] active:scale-[0.98]"
+                  className="inline-flex items-center justify-center gap-2 w-full sm:w-auto h-11 sm:h-12 px-7 rounded-full bg-[#526A3A] hover:bg-[#43592D] text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all transform hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Order on WhatsApp</span>

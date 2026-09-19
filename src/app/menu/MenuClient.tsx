@@ -108,8 +108,8 @@ function MenuContent() {
   }, [selectedCategory, selectedDietary, searchQuery]);
 
   return (
-    <div className="py-6 sm:py-10 bg-[#FFF8ED] min-h-screen select-none">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
+    <div className="pt-3 sm:pt-4 pb-6 sm:pb-8 bg-[#FFF8ED] min-h-screen select-none">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3.5 sm:space-y-4">
         
         {/* ── 1. Breadcrumb ── */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#5A321B]/70">
@@ -129,12 +129,12 @@ function MenuContent() {
         </nav>
 
         {/* ── 2. Compact Artisan Header & Control Bar ── */}
-        <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#FFFDF9] via-[#FAF2E4] to-[#FFF8ED] border border-[#D99A45]/35 p-6 sm:p-8 shadow-[0_4px_20px_rgba(90,50,27,0.05)] overflow-hidden space-y-6">
+        <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#FFFDF9] via-[#FAF2E4] to-[#FFF8ED] border border-[#D99A45]/35 p-4 sm:p-6 shadow-[0_4px_20px_rgba(90,50,27,0.05)] overflow-hidden space-y-3.5">
           <div className="absolute top-0 right-0 w-80 h-40 bg-[radial-gradient(ellipse_at_top_right,rgba(217,154,69,0.12),transparent_70%)] pointer-events-none" />
 
           {/* Header Title & Tagline */}
-          <div className="max-w-2xl space-y-2 relative z-10">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFF8ED] border border-[#D99A45]/40 text-[#5A321B] text-[11px] font-bold uppercase tracking-widest shadow-2xs">
+          <div className="max-w-2xl space-y-1.5 relative z-10">
+            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-[#FFF8ED] border border-[#D99A45]/40 text-[#5A321B] text-[11px] font-bold uppercase tracking-widest shadow-2xs">
               <Sparkles className="w-3 h-3 text-[#D99A45]" />
               <span>Fresh Small Batches • Baked to Order</span>
             </div>
@@ -149,7 +149,7 @@ function MenuContent() {
           </div>
 
           {/* Search & Filter Controls */}
-          <div className="pt-2 border-t border-[#5A321B]/10 space-y-3.5 relative z-10">
+          <div className="pt-2 border-t border-[#5A321B]/10 space-y-2.5 relative z-10">
             
             {/* Search Input Bar */}
             <div className="max-w-md relative">

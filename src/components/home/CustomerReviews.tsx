@@ -61,14 +61,14 @@ export function CustomerReviews() {
   );
 
   return (
-    <section id="reviews" className="py-16 sm:py-20 lg:py-24 bg-[#FFF8ED] relative overflow-hidden border-t border-brand-brown/10">
+    <section id="reviews" className="pt-3 sm:pt-4 pb-4 sm:pb-6 bg-[#FFF8ED] relative overflow-hidden border-t border-brand-brown/10">
       {/* Ambient background glows */}
       <div className="absolute top-10 right-0 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-10 left-0 w-96 h-96 bg-brand-terracotta/5 rounded-full blur-3xl pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
         {/* Section Header */}
-        <div className="max-w-2xl mx-auto text-center space-y-3">
+        <div className="max-w-2xl mx-auto text-center space-y-2">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-brand-brown/10 shadow-2xs text-[11px] font-semibold uppercase tracking-widest text-brand-terracotta">
             <Heart className="w-3 h-3 text-brand-terracotta fill-brand-terracotta" />
             <span>Loved by Our Customers</span>
@@ -85,7 +85,7 @@ export function CustomerReviews() {
       </div>
 
       {/* Infinite Moving Carousel Tracks with Gradient Side Fades */}
-      <div className="relative w-full overflow-hidden mt-8 space-y-4">
+      <div className="relative w-full overflow-hidden mt-4 space-y-2.5">
         {/* Left & Right Smooth Fade Masks */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-[#FFF8ED] to-transparent z-20" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#FFF8ED] to-transparent z-20" />
@@ -105,9 +105,9 @@ export function CustomerReviews() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-14 space-y-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 space-y-8">
         {/* Why Customers Love Tiny Treats Pillars */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           <div className="text-center space-y-1.5 max-w-xl mx-auto">
             <span className="text-[11px] font-bold uppercase tracking-widest text-brand-gold">
               The Tiny Treats Difference
@@ -152,9 +152,9 @@ export function CustomerReviews() {
         </div>
 
         {/* Real People. Real Feedback. Closing Tribute Banner */}
-        <div className="rounded-3xl bg-gradient-to-br from-[#5A321B] via-[#4A2613] to-[#3B1C0B] text-[#FFF8ED] p-6 sm:p-10 text-center space-y-5 shadow-hover relative overflow-hidden">
+        <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#5A321B] via-[#4A2613] to-[#3B1C0B] text-[#FFF8ED] p-5 sm:p-6 text-center space-y-3.5 shadow-hover relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-brand-gold/10 rounded-full blur-2xl pointer-events-none" />
-          <div className="relative z-10 max-w-2xl mx-auto space-y-3">
+          <div className="relative z-10 max-w-2xl mx-auto space-y-2.5">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[11px] font-bold text-brand-gold uppercase tracking-wider">
               <Sparkles className="w-3 h-3" />
               Real People. Real Feedback.
@@ -169,18 +169,18 @@ export function CustomerReviews() {
               Every review represents someone&apos;s personal experience with our homemade treats. We are grateful for every review and recommendation.
             </p>
 
-            <div className="pt-2">
+            <div className="pt-1">
               <span className="font-script text-lg sm:text-xl text-brand-gold block">
                 Healthy Choices. Homemade Happiness. ♡
               </span>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-1.5">
               <a
                 href={getWhatsAppUrl("Hello Tiny Treats! 👋 I was reading customer reviews and would love to order fresh treats.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-brand-sage text-white font-semibold text-xs sm:text-sm shadow-subtle hover:bg-brand-sage-dark transition-all"
+                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-brand-sage text-white font-semibold text-xs sm:text-sm shadow-subtle hover:bg-brand-sage-dark transition-all"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Order on WhatsApp</span>

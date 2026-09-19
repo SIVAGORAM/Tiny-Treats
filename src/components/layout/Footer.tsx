@@ -25,7 +25,7 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#5A321B] text-[#FFF8ED] pt-16 sm:pt-20 pb-12 overflow-hidden border-t-2 border-[#D99A45]/30 font-sans select-none">
+    <footer className="relative bg-[#5A321B] text-[#FFF8ED] pt-5 sm:pt-7 pb-5 sm:pb-6 overflow-hidden border-t-2 border-[#D99A45]/30 font-sans select-none">
       {/* ── Background Aesthetics & Warm Ambient Lighting ── */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[radial-gradient(ellipse_at_top,rgba(217,154,69,0.18),transparent_70%)] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#B9573F]/10 rounded-full blur-[140px] pointer-events-none" />
@@ -41,7 +41,7 @@ export function Footer() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         
         {/* ── 1. Top Value Pillars / Artisan Promise Strip ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pb-12 border-b border-white/10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 pb-4 sm:pb-5 border-b border-white/10">
           <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.06] border border-white/10 hover:border-[#D99A45]/40 transition-colors">
             <div className="w-11 h-11 rounded-xl bg-[#D99A45]/20 flex items-center justify-center text-[#D99A45] shrink-0">
               <Leaf className="w-5 h-5" />
@@ -84,7 +84,7 @@ export function Footer() {
         </div>
 
         {/* ── 2. Main Footer Navigation Grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 py-12 border-b border-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 py-5 sm:py-6 border-b border-white/10">
           
           {/* Brand Info & Contact Column (5 cols) */}
           <div className="lg:col-span-4 space-y-5">
@@ -306,8 +306,8 @@ export function Footer() {
         </div>
 
         {/* ── 3. Botanical Divider ── */}
-        <div className="py-6">
-          <BotanicalDivider className="text-[#D99A45]/60" />
+        <div className="py-3 sm:py-3.5">
+          <BotanicalDivider className="text-[#D99A45]/60 scale-90" />
         </div>
 
         {/* ── 4. Bottom Signature & Legal Bar ── */}

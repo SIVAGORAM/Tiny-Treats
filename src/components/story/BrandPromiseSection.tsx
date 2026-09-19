@@ -6,7 +6,7 @@ import { Leaf, Heart, Home, Sprout, Sparkles, Users, Star } from "lucide-react";
 
 export function BrandPromiseSection() {
   return (
-    <section className="relative overflow-hidden pt-8 sm:pt-12 pb-16 sm:pb-24 bg-[#FFF8ED] select-none">
+    <section className="relative overflow-hidden pt-2 sm:pt-3 pb-3 sm:pb-4 bg-[#FFF8ED] select-none">
       
       {/* 1. SEAMLESS TABLETOP PHOTOGRAPHY SIDES (DESKTOP & TABLET) */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
@@ -19,16 +19,16 @@ export function BrandPromiseSection() {
         />
         {/* Soft Organic Vignette & Cream Wash for Perfect Contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#FFF8ED]/85 via-[#FFF8ED]/70 to-[#FFF8ED] pointer-events-none" />
-        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#FFF8ED] to-transparent pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#FFF8ED] to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#FFF8ED] to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#FFF8ED] to-transparent pointer-events-none" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full space-y-10 sm:space-y-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full space-y-4 sm:space-y-5">
         
         {/* ========================================================================= */}
         {/* 2. CENTER HERO PHILOSOPHY HEADLINE & ANNOTATIONS                          */}
         {/* ========================================================================= */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 sm:space-y-5 relative">
+        <div className="max-w-3xl mx-auto text-center space-y-2.5 sm:space-y-3 relative">
           
           {/* Left Script Annotation (Visible on Desktop / Tablets) */}
           <div className="hidden lg:block absolute -left-36 xl:-left-44 top-2 text-left transform -rotate-6 pointer-events-none">
@@ -57,7 +57,7 @@ export function BrandPromiseSection() {
 
           {/* Right Kraft Paper Tag Annotation on Cookies (Visible on Desktop) */}
           <div className="hidden lg:block absolute -right-32 xl:-right-40 top-4 text-center transform rotate-6 pointer-events-none">
-            <div className="p-3.5 rounded-xl bg-[#FAF3EA] border border-[#D5C2AB] shadow-md">
+            <div className="p-3 rounded-xl bg-[#FAF3EA] border border-[#D5C2AB] shadow-md">
               <span className="font-script text-base xl:text-lg font-bold text-[#5A3825] block leading-tight">
                 Good Food <br />
                 Brighter Days
@@ -76,7 +76,7 @@ export function BrandPromiseSection() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold text-[#3D2314] tracking-tight leading-[1.12]">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-extrabold text-[#3D2314] tracking-tight leading-[1.12]">
             Because What We Give <br />
             Our Family{" "}
             <span className="text-[#B85843] font-serif italic font-normal">
@@ -88,15 +88,15 @@ export function BrandPromiseSection() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-sm sm:text-base lg:text-[17px] text-[#5A3825]/90 font-light leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-[16px] text-[#5A3825]/90 font-light leading-relaxed max-w-2xl mx-auto">
             We believe choosing a snack shouldn&apos;t mean choosing between taste and
             thoughtfully selected ingredients.
           </p>
 
           {/* Central Signature Philosophy Quote Card */}
-          <div className="pt-2">
+          <div className="pt-1">
             <div className="inline-flex flex-col items-center">
-              <div className="inline-flex items-center gap-2 px-6 sm:px-9 py-3 sm:py-3.5 rounded-full bg-[#F6ECE2]/95 border border-[#E8D9CB] shadow-xs">
+              <div className="inline-flex items-center gap-2 px-5 sm:px-8 py-2.5 sm:py-3 rounded-full bg-[#F6ECE2]/95 border border-[#E8D9CB] shadow-xs">
                 <span className="text-xl sm:text-2xl font-serif text-[#B85843]/80 font-bold leading-none">
                   &ldquo;
                 </span>
@@ -107,7 +107,7 @@ export function BrandPromiseSection() {
                   &rdquo;
                 </span>
               </div>
-              <p className="text-xs sm:text-[13px] text-[#7C6B5E] mt-2.5 font-medium">
+              <p className="text-xs sm:text-[13px] text-[#7C6B5E] mt-1.5 font-medium">
                 If the answer is yes, it belongs at Tiny Treats.
               </p>
             </div>
@@ -229,10 +229,10 @@ export function BrandPromiseSection() {
         {/* ========================================================================= */}
         {/* 4. BOTTOM VALUE PILLARS STRIP                                             */}
         {/* ========================================================================= */}
-        <div className="pt-4 sm:pt-6 space-y-4">
+        <div className="pt-1 sm:pt-2 space-y-2.5">
           
           {/* Main 4 Pillars Banner Bar */}
-          <div className="rounded-2xl sm:rounded-full bg-[#FAF3EA]/95 backdrop-blur-md border border-[#EADBCA] p-4 sm:p-5 shadow-xs max-w-5xl mx-auto">
+          <div className="rounded-2xl sm:rounded-full bg-[#FAF3EA]/95 backdrop-blur-md border border-[#EADBCA] p-3.5 sm:p-4 shadow-xs max-w-5xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-[#EADBCA]">
               
               {/* Pillar 1 */}
@@ -291,7 +291,7 @@ export function BrandPromiseSection() {
           </div>
 
           {/* Centered Script Tagline */}
-          <div className="text-center pt-2">
+          <div className="text-center pt-0.5">
             <p className="font-script text-xl sm:text-2xl font-bold text-[#5A3825] inline-flex items-center gap-2">
               <span>Small Treats Big Smiles</span>
               <span className="text-[#B85843]">♡</span>

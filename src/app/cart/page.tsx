@@ -30,10 +30,10 @@ export default function CartPage() {
   const whatsAppUrl = getCartWhatsAppUrl(items, subtotal);
 
   return (
-    <div className="py-12 lg:py-20 bg-[#FFF8ED] min-h-[70vh]">
+    <div className="py-8 sm:py-12 bg-[#FFF8ED] min-h-[60vh]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center space-y-3 mb-12">
+        <div className="text-center space-y-2.5 mb-6 sm:mb-8">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-brand-brown/10 shadow-2xs text-xs font-semibold uppercase tracking-widest text-brand-terracotta">
             <ShoppingBag className="w-3.5 h-3.5" />
             <span>Review Your Basket</span>

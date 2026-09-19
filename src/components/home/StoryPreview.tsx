@@ -62,12 +62,12 @@ export function StoryPreview() {
       {/* ── Top Gold Line ── */}
       <div className="h-px bg-gradient-to-r from-transparent via-[#D49942]/40 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-7 lg:py-9">
         {/* ── HEADER ROW ── */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 sm:mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 sm:gap-6 mb-8 sm:mb-10">
           <div className="max-w-2xl">
             {/* Tag */}
-            <div className="inline-flex items-center gap-2.5 mb-5">
+            <div className="inline-flex items-center gap-2.5 mb-3">
               <span className="w-8 h-px bg-[#D49942]" />
               <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#D49942]">
                 Our Story
@@ -75,7 +75,7 @@ export function StoryPreview() {
             </div>
 
             {/* Headline */}
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-[56px] font-extrabold text-white tracking-tight leading-[1.1]">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-[52px] font-extrabold text-white tracking-tight leading-[1.1]">
               Small Kitchen.
               <br />
               <span className="bg-gradient-to-r from-[#D49942] via-[#F0C674] to-[#D49942] bg-clip-text text-transparent">
@@ -93,7 +93,7 @@ export function StoryPreview() {
         </div>
 
         {/* ── IMAGE MOSAIC + CONTENT ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 mb-8 sm:mb-10">
           {/* Left — Tall Image */}
           <div className="lg:col-span-4">
             <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] rounded-2xl sm:rounded-3xl overflow-hidden group">

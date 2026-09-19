@@ -68,13 +68,13 @@ export function FeaturedCategories() {
   const displayCategories = CATEGORIES.filter((c) => c.id !== "all");
 
   return (
-    <section className="py-20 sm:py-28 bg-[#FFF8ED] relative overflow-hidden">
+    <section className="pt-3 sm:pt-4 pb-4 sm:pb-6 bg-[#FFF8ED] relative overflow-hidden">
 
       {/* Background Ambience */}
       <div className="absolute top-1/2 -left-40 w-80 h-80 rounded-full bg-[#FAF0EC]/60 blur-3xl pointer-events-none" />
       <div className="absolute top-1/3 -right-40 w-80 h-80 rounded-full bg-[#F0F5EB]/60 blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12 sm:space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4 sm:space-y-5">
 
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -134,7 +134,7 @@ export function FeaturedCategories() {
         </div>
 
         {/* Bottom Banner Note */}
-        <div className="text-center pt-2">
+        <div className="text-center pt-0.5">
           <p className="font-script text-xl sm:text-2xl text-[#5A3825]">
             Every batch is baked fresh in our home kitchen. No artificial colours, no preservatives. ♡
           </p>

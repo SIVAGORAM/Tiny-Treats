@@ -47,8 +47,8 @@ export function GalleryClient() {
   }, [selectedCategory]);
 
   return (
-    <div className="py-8 sm:py-12 lg:py-16 bg-[#FFF8ED] min-h-screen select-none">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-14">
+    <div className="pt-3 sm:pt-4 pb-6 sm:pb-8 bg-[#FFF8ED] min-h-screen select-none">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3 sm:space-y-4">
         
         {/* ── 1. Breadcrumb ── */}
         <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-[#5A321B]/70">
@@ -68,33 +68,32 @@ export function GalleryClient() {
         </nav>
 
         {/* ── 2. Hero Header ── */}
-        <div className="relative rounded-3xl sm:rounded-[2.5rem] bg-gradient-to-br from-white via-[#FFFDF9] to-[#FAF2E4] border-2 border-[#D99A45]/30 p-8 sm:p-12 text-center space-y-5 shadow-[0_12px_40px_rgba(90,50,27,0.06)] overflow-hidden">
+        <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white via-[#FFFDF9] to-[#FAF2E4] border-2 border-[#D99A45]/30 p-4 sm:p-6 text-center space-y-2.5 sm:space-y-3 shadow-[0_12px_40px_rgba(90,50,27,0.06)] overflow-hidden">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-40 bg-[radial-gradient(ellipse_at_top,rgba(217,154,69,0.15),transparent_70%)] pointer-events-none" />
 
-          <div className="relative z-10 max-w-3xl mx-auto space-y-4">
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#F3E2C4]/80 border border-[#D99A45]/40 text-[#5A321B] text-xs font-bold uppercase tracking-widest shadow-2xs">
+          <div className="relative z-10 max-w-2xl mx-auto space-y-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F3E2C4]/80 border border-[#D99A45]/40 text-[#5A321B] text-xs font-bold uppercase tracking-widest shadow-2xs">
               <Camera className="w-3.5 h-3.5 text-[#D99A45]" />
               <span>Real Kitchen Moments • Artisan Stories</span>
             </div>
 
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#3A1E0E] tracking-tight leading-tight">
-              Little Moments. <br className="hidden sm:inline" />
-              <span className="text-[#B9573F] italic font-normal">Freshly Baked with Love.</span>
+            <h1 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#3A1E0E] tracking-tight leading-snug">
+              Little Moments. <span className="text-[#B9573F] italic font-normal">Freshly Baked with Love.</span>
             </h1>
 
-            <p className="text-sm sm:text-base text-[#5A321B]/80 font-light leading-relaxed max-w-xl mx-auto">
+            <p className="text-xs sm:text-sm text-[#5A321B]/80 font-light leading-relaxed max-w-xl mx-auto">
               Step inside our home kitchen. A photographic celebration of wholesome ingredients, warm oven aromas, and homemade treats made to be shared.
             </p>
 
-            <div className="flex items-center justify-center gap-2 font-script text-xl text-[#D99A45] pt-1">
+            <div className="flex items-center justify-center gap-2 font-script text-lg text-[#D99A45] pt-0.5">
               <span>Pure ingredients. Honest preparation. Big Love.</span>
-              <Heart className="w-4 h-4 text-[#B9573F] fill-[#B9573F] inline" />
+              <Heart className="w-3.5 h-3.5 text-[#B9573F] fill-[#B9573F] inline" />
             </div>
           </div>
         </div>
 
         {/* ── 3. Category Filter Tabs ── */}
-        <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-2 scrollbar-none px-1">
+        <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-1 scrollbar-none px-1">
           {galleryCategories.map((cat) => {
             const isActive = selectedCategory === cat.id;
             const count = categoryCounts[cat.id] || 0;
@@ -181,16 +180,16 @@ export function GalleryClient() {
         </div>
 
         {/* ── 5. Instagram Community Callout Card ── */}
-        <div className="rounded-3xl sm:rounded-[2.5rem] bg-gradient-to-br from-[#5A321B] via-[#4A2816] to-[#381F12] text-[#FFF8ED] p-8 sm:p-12 text-center space-y-6 shadow-[0_20px_60px_rgba(90,50,27,0.2)] relative overflow-hidden border border-[#D99A45]/30">
+        <div className="max-w-3xl mx-auto w-full rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#5A321B] via-[#4A2816] to-[#381F12] text-[#FFF8ED] p-5 sm:p-7 text-center space-y-3.5 shadow-[0_16px_40px_rgba(90,50,27,0.18)] relative overflow-hidden border border-[#D99A45]/30">
           <div className="absolute top-0 right-1/4 w-80 h-80 bg-[#D99A45]/15 rounded-full blur-3xl pointer-events-none" />
           
-          <div className="max-w-2xl mx-auto space-y-4 relative z-10">
+          <div className="max-w-xl mx-auto space-y-2.5 relative z-10">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-[#D99A45]/30 text-xs font-bold uppercase tracking-widest text-[#D99A45]">
               <InstagramIcon className="w-3.5 h-3.5" />
               <span>Join Our Baking Community</span>
             </div>
 
-            <h2 className="font-serif text-2xl sm:text-4xl font-bold text-[#FFF8ED]">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#FFF8ED]">
               Follow Along on Instagram
             </h2>
 
@@ -198,12 +197,12 @@ export function GalleryClient() {
               Watch live oven pulls, behind-the-scenes ingredient prep, and customer unboxing moments on our official Instagram page.
             </p>
 
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <div className="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
                 href="https://www.instagram.com/tinytreatsbyswetha"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl bg-[#B9573F] hover:bg-[#A34B35] text-white font-semibold text-xs sm:text-sm shadow-md transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-[#B9573F] hover:bg-[#A34B35] text-white font-semibold text-xs sm:text-sm shadow-md transition-all"
               >
                 <InstagramIcon className="w-4 h-4" />
                 <span>@tinytreatsbyswetha</span>
@@ -213,7 +212,7 @@ export function GalleryClient() {
                 href={getWhatsAppUrl("Hello Tiny Treats! 👋 I browsed your gallery and would like to order fresh treats.")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl bg-[#66723A] hover:bg-[#566331] text-white font-semibold text-xs sm:text-sm shadow-md transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-[#66723A] hover:bg-[#566331] text-white font-semibold text-xs sm:text-sm shadow-md transition-all"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Order on WhatsApp</span>

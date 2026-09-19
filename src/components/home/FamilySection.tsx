@@ -46,18 +46,18 @@ const familyStages = [
 
 export function FamilySection() {
   return (
-    <section className="py-20 sm:py-28 bg-white/60 border-y border-[#EADBCA]/80 relative overflow-hidden select-none">
+    <section className="pt-3 sm:pt-4 pb-4 sm:pb-6 bg-white/60 border-y border-[#EADBCA]/80 relative overflow-hidden select-none">
       
       {/* Background Ambience */}
       <div className="absolute top-1/3 -left-32 w-80 h-80 rounded-full bg-[#FAF0EC]/60 blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 -right-32 w-80 h-80 rounded-full bg-[#F0F5EB]/60 blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12 sm:space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4 sm:space-y-5">
         
         {/* ========================================================================= */}
         {/* 1. SECTION HEADER                                                         */}
         {/* ========================================================================= */}
-        <div className="max-w-3xl mx-auto text-center space-y-4">
+        <div className="max-w-3xl mx-auto text-center space-y-2.5 sm:space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF3EA] border border-[#EADBCA] text-xs font-bold uppercase tracking-widest text-[#B85843] shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-[#D49942]" />
             <span>FOR LITTLE ONES & GROWING FAMILIES</span>
@@ -152,7 +152,7 @@ export function FamilySection() {
         {/* ========================================================================= */}
         {/* 3. BOTTOM FAMILY PROMISE & ACTION BANNER                                  */}
         {/* ========================================================================= */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-[#FAF3EA]/90 border border-[#EADBCA] shadow-xs max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="p-4 sm:p-5 rounded-2xl sm:rounded-3xl bg-[#FAF3EA]/90 border border-[#EADBCA] shadow-xs max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
           <div className="space-y-1.5 text-center sm:text-left">
             <h4 className="font-serif text-lg sm:text-xl font-bold text-[#3D2314]">
               Looking for Custom Family or Gifting Boxes?

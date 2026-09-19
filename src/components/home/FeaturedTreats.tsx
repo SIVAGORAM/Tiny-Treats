@@ -8,10 +8,10 @@ export function FeaturedTreats() {
   const featured = PRODUCTS.filter((p) => p.featured).slice(0, 4);
 
   return (
-    <section className="py-20 lg:py-24 bg-[#FFF8ED] border-t border-brand-brown/10">
+    <section className="pt-3 sm:pt-4 pb-4 sm:pb-6 bg-[#FFF8ED] border-t border-brand-brown/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
           <div className="space-y-3 max-w-xl">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-brand-brown/10 text-xs font-bold uppercase tracking-widest text-brand-terracotta">
               <Sparkles className="w-3.5 h-3.5 text-brand-gold" />

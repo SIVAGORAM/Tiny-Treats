@@ -30,7 +30,7 @@ export function Hero() {
 
   return (
     <section
-      className="relative overflow-hidden pt-4 sm:pt-6 pb-12 sm:pb-16 lg:pt-8 lg:pb-20 bg-[#FFF8ED] min-h-[580px] lg:min-h-[640px] flex items-center"
+      className="relative overflow-hidden pt-4 sm:pt-6 pb-6 sm:pb-8 lg:pt-6 lg:pb-10 bg-[#FFF8ED] flex items-center"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

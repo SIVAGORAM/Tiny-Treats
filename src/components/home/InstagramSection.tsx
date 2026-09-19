@@ -39,18 +39,18 @@ const instagramPosts = [
 
 export function InstagramSection() {
   return (
-    <section className="py-20 sm:py-28 bg-[#FFF8ED] border-t border-[#EADBCA]/80 relative overflow-hidden select-none">
+    <section className="pt-2.5 sm:pt-3 pb-3 sm:pb-4 bg-[#FFF8ED] border-t border-[#EADBCA]/80 relative overflow-hidden select-none">
       
       {/* Background Ambience */}
       <div className="absolute top-1/2 -left-32 w-80 h-80 rounded-full bg-[#FAF0EC]/60 blur-3xl pointer-events-none" />
       <div className="absolute top-1/4 -right-32 w-80 h-80 rounded-full bg-[#F0F5EB]/60 blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-10 sm:space-y-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-3.5 sm:space-y-4">
         
         {/* ========================================================================= */}
         {/* 1. SECTION HEADER                                                         */}
         {/* ========================================================================= */}
-        <div className="max-w-2xl mx-auto text-center space-y-3.5">
+        <div className="max-w-2xl mx-auto text-center space-y-2">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#EADBCA] text-xs font-bold uppercase tracking-widest text-[#B85843] shadow-2xs">
             <InstagramIcon className="w-3.5 h-3.5" />
             <span>@TINYTREATSBYSWETHA</span>
@@ -124,18 +124,18 @@ export function InstagramSection() {
         {/* ========================================================================= */}
         {/* 3. BOTTOM INSTAGRAM PROFILE CTA BUTTON                                    */}
         {/* ========================================================================= */}
-        <div className="text-center pt-2">
+        <div className="text-center pt-1">
           <a
             href={BRAND_SOCIALS.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 h-12 sm:h-13 px-7 sm:px-8 rounded-full bg-gradient-to-r from-[#B85843] via-[#9F4833] to-[#B85843] hover:from-[#A34B35] hover:to-[#8E3B27] text-white text-xs sm:text-sm font-semibold shadow-md hover:shadow-lg transition-all transform hover:scale-[1.02] active:scale-[0.98]"
+            className="inline-flex items-center justify-center gap-2.5 h-11 sm:h-12 px-6 sm:px-7 rounded-full bg-gradient-to-r from-[#B85843] via-[#9F4833] to-[#B85843] hover:from-[#A34B35] hover:to-[#8E3B27] text-white text-xs sm:text-sm font-semibold shadow-md hover:shadow-lg transition-all transform hover:scale-[1.02] active:scale-[0.98]"
           >
             <InstagramIcon className="w-4 h-4" />
             <span>Follow @tinytreatsbyswetha on Instagram</span>
             <ArrowUpRight className="w-4 h-4 text-white/80" />
           </a>
-          <p className="text-xs text-[#8C6D53] mt-2.5 font-medium">
+          <p className="text-xs text-[#8C6D53] mt-1.5 font-medium">
             Join 2,400+ food lovers enjoying clean homemade treats ♡
           </p>
         </div>
