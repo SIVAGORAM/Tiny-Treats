@@ -4,9 +4,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { MessageCircle, X, ChevronRight, Phone, Search, Sparkles, Heart, Wheat, Star, ShieldCheck } from "lucide-react";
-import { InstagramIcon, FacebookIcon } from "@/components/ui/SocialIcons";
-import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { X, ChevronRight, Phone, Search, Sparkles, Heart, Wheat, Star, ShieldCheck } from "lucide-react";
+import { InstagramIcon, FacebookIcon, XTwitterIcon, LinkedInIcon, WhatsAppIcon } from "@/components/ui/SocialIcons";
+import { getWhatsAppUrl, BRAND_SOCIALS } from "@/lib/whatsapp";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -182,7 +182,7 @@ export function MobileMenu({ isOpen, onClose, onOpenSearch }: MobileMenuProps) {
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 w-full h-11 rounded-full bg-[#526A3A] hover:bg-[#43592D] text-white font-semibold shadow-sm transition-all text-sm"
         >
-          <MessageCircle className="w-4 h-4" />
+          <WhatsAppIcon className="w-4 h-4 text-white" />
           <span>Order on WhatsApp</span>
         </a>
 
@@ -193,22 +193,42 @@ export function MobileMenu({ isOpen, onClose, onOpenSearch }: MobileMenuProps) {
           >
             <Phone className="w-3.5 h-3.5 text-[#D99A45]" /> +91 93953 24365
           </a>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 text-[#4A2E1C]">
             <a
-              href="https://www.instagram.com/tinytreatsbyswetha"
+              href={BRAND_SOCIALS.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-[#4A2E1C] hover:text-[#B9573F]"
+              aria-label="Instagram"
+              className="p-1 hover:text-[#B9573F] transition-colors"
             >
               <InstagramIcon className="w-3.5 h-3.5" />
             </a>
             <a
-              href="https://facebook.com"
+              href={BRAND_SOCIALS.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1 text-[#4A2E1C] hover:text-[#B9573F]"
+              aria-label="Facebook"
+              className="p-1 hover:text-[#B9573F] transition-colors"
             >
               <FacebookIcon className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href={BRAND_SOCIALS.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (Twitter)"
+              className="p-1 hover:text-[#B9573F] transition-colors"
+            >
+              <XTwitterIcon className="w-3 h-3" />
+            </a>
+            <a
+              href={BRAND_SOCIALS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="p-1 hover:text-[#B9573F] transition-colors"
+            >
+              <LinkedInIcon className="w-3.5 h-3.5" />
             </a>
           </div>
         </div>

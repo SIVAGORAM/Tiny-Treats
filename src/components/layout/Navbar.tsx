@@ -8,8 +8,14 @@ import { useCartStore } from "@/store/cart-store";
 import { MobileMenu } from "./MobileMenu";
 import { SearchModal } from "./SearchModal";
 import { CartDrawer } from "@/components/cart/CartDrawer";
-import { getWhatsAppUrl } from "@/lib/whatsapp";
-import { InstagramIcon, FacebookIcon } from "@/components/ui/SocialIcons";
+import { getWhatsAppUrl, BRAND_SOCIALS } from "@/lib/whatsapp";
+import {
+  InstagramIcon,
+  FacebookIcon,
+  XTwitterIcon,
+  LinkedInIcon,
+  WhatsAppIcon,
+} from "@/components/ui/SocialIcons";
 import {
   ShoppingBag,
   Menu,
@@ -103,66 +109,109 @@ export function Navbar() {
   return (
     <>
       {/* ========================================================================= */}
-      {/* 1. TOP ANNOUNCEMENT RIBBON — FULLY RESPONSIVE                             */}
+      {/* 1. TOP ANNOUNCEMENT RIBBON — FULLY RESPONSIVE & PREMIUM SOCIALS          */}
       {/* ========================================================================= */}
-      <div className="w-full bg-[#3D2415] text-[#FFF6EB] text-xs py-1.5 sm:py-2 px-3 sm:px-6 lg:px-8 select-none relative z-50 font-sans border-b border-[#54331E] overflow-hidden">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 text-[11px] sm:text-[12px]">
+      <div className="w-full bg-gradient-to-r from-[#341A0B] via-[#2A1408] to-[#341A0B] text-[#FFF6EB] text-xs py-1.5 px-3 sm:px-6 lg:px-8 select-none relative z-50 font-sans border-b border-[#D99A45]/30 overflow-hidden shadow-xs">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 text-[11px] sm:text-[12px]">
           
-          {/* Left Brand Values: Responsive Scaling */}
-          <div className="flex items-center gap-2 sm:gap-3.5 min-w-0 overflow-hidden font-medium">
+          {/* Left Brand Values: Responsive Badges */}
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0 overflow-hidden font-medium">
             <div className="flex items-center gap-1.5 shrink-0 text-[#FFF3E0]">
               <Sparkles className="w-3.5 h-3.5 text-[#E5B56E]" />
-              <span className="truncate max-w-[200px] xs:max-w-[260px] sm:max-w-none">
+              <span className="hidden sm:inline">
                 Freshly baked homemade treats in small batches
+              </span>
+              <span className="inline sm:hidden">
+                Freshly baked treats
               </span>
             </div>
 
-            <span className="hidden sm:inline text-[#845E44] select-none">|</span>
+            <span className="hidden md:inline text-[#D99A45]/40 select-none">|</span>
 
-            <div className="hidden sm:flex items-center gap-1.5 shrink-0 text-[#FFF3E0]">
+            <div className="hidden md:flex items-center gap-1.5 shrink-0 text-[#FFF3E0]">
               <Wheat className="w-3.5 h-3.5 text-[#E5B56E]" />
               <span>No Maida</span>
             </div>
 
-            <span className="hidden md:inline text-[#845E44] select-none">|</span>
+            <span className="hidden lg:inline text-[#D99A45]/40 select-none">|</span>
 
-            <div className="hidden md:flex items-center gap-1.5 shrink-0 text-[#FFF3E0]">
+            <div className="hidden lg:flex items-center gap-1.5 shrink-0 text-[#FFF3E0]">
               <Heart className="w-3.5 h-3.5 text-[#E5B56E] fill-[#E5B56E]/20" />
               <span>No Added Sugar</span>
             </div>
 
-            <span className="hidden lg:inline text-[#845E44] select-none">|</span>
+            <span className="hidden xl:inline text-[#D99A45]/40 select-none">|</span>
 
-            <div className="hidden lg:flex items-center gap-1.5 shrink-0 text-[#FFF3E0]">
+            <div className="hidden xl:flex items-center gap-1.5 shrink-0 text-[#FFF3E0]">
               <ShieldCheck className="w-3.5 h-3.5 text-[#E5B56E]" />
               <span>No Artificial Colours</span>
             </div>
           </div>
 
-          {/* Right Script Tagline & Socials */}
-          <div className="flex items-center gap-2 sm:gap-4 shrink-0">
-            <span className="font-script text-[11.5px] xs:text-xs sm:text-sm text-[#E7CA9F] font-bold tracking-wide whitespace-nowrap">
-              Good Food Brighter Days ♡
+          {/* Right Script Tagline & Premium Social Media Cluster */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <span className="font-script text-[12.5px] xs:text-[13.5px] sm:text-[14.5px] text-[#F3C47A] font-bold tracking-wide whitespace-nowrap drop-shadow-sm flex items-center gap-1">
+              <span>Good Food, Brighter Days</span>
+              <span className="text-[#F6957E] animate-pulse">♡</span>
             </span>
 
-            <div className="hidden md:flex items-center gap-2 text-[#D3B48C]">
+            <span className="inline-block w-px h-3.5 bg-white/20 select-none" />
+
+            {/* Social Media Interactive Pills */}
+            <div className="flex items-center gap-1.5 sm:gap-2">
               <a
-                href="https://www.instagram.com/tinytreatsbyswetha"
+                href={BRAND_SOCIALS.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Follow Tiny Treats on Instagram"
-                className="p-1 hover:text-[#FFF3E0] hover:scale-110 transition-transform"
+                aria-label="Tiny Treats on Instagram"
+                title="Instagram"
+                className="w-5.5 h-5.5 sm:w-6 sm:h-6 rounded-full bg-white/[0.08] hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF] text-[#F3E2C4] hover:text-white flex items-center justify-center border border-white/[0.14] hover:border-transparent transition-all duration-200 shadow-2xs hover:scale-115 active:scale-95"
               >
-                <InstagramIcon className="w-3.5 h-3.5" />
+                <InstagramIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               </a>
+
               <a
-                href="https://facebook.com"
+                href={BRAND_SOCIALS.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Follow Tiny Treats on Facebook"
-                className="p-1 hover:text-[#FFF3E0] hover:scale-110 transition-transform"
+                aria-label="Tiny Treats on Facebook"
+                title="Facebook"
+                className="w-5.5 h-5.5 sm:w-6 sm:h-6 rounded-full bg-white/[0.08] hover:bg-[#1877F2] text-[#F3E2C4] hover:text-white flex items-center justify-center border border-white/[0.14] hover:border-transparent transition-all duration-200 shadow-2xs hover:scale-115 active:scale-95"
               >
-                <FacebookIcon className="w-3.5 h-3.5" />
+                <FacebookIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+              </a>
+
+              <a
+                href={BRAND_SOCIALS.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Tiny Treats on X"
+                title="X (Twitter)"
+                className="w-5.5 h-5.5 sm:w-6 sm:h-6 rounded-full bg-white/[0.08] hover:bg-black/90 text-[#F3E2C4] hover:text-white flex items-center justify-center border border-white/[0.14] hover:border-transparent transition-all duration-200 shadow-2xs hover:scale-115 active:scale-95"
+              >
+                <XTwitterIcon className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+              </a>
+
+              <a
+                href={BRAND_SOCIALS.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Tiny Treats on LinkedIn"
+                title="LinkedIn"
+                className="hidden xs:flex w-5.5 h-5.5 sm:w-6 sm:h-6 rounded-full bg-white/[0.08] hover:bg-[#0A66C2] text-[#F3E2C4] hover:text-white items-center justify-center border border-white/[0.14] hover:border-transparent transition-all duration-200 shadow-2xs hover:scale-115 active:scale-95"
+              >
+                <LinkedInIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+              </a>
+
+              <a
+                href={getWhatsAppUrl("Hello Tiny Treats! 👋 I'm contacting you from your website top bar.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with Baker on WhatsApp"
+                title="WhatsApp Direct"
+                className="w-5.5 h-5.5 sm:w-6 sm:h-6 rounded-full bg-[#66723A]/80 hover:bg-[#25D366] text-white flex items-center justify-center border border-[#66723A]/50 hover:border-transparent transition-all duration-200 shadow-2xs hover:scale-115 active:scale-95"
+              >
+                <WhatsAppIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               </a>
             </div>
           </div>
@@ -406,7 +455,7 @@ export function Navbar() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 sm:gap-2 h-8.5 xs:h-9 sm:h-10 px-2.5 xs:px-3 sm:px-4.5 lg:px-5 rounded-full bg-[#526A3A] hover:bg-[#43592D] text-white text-xs sm:text-[13px] font-semibold shadow-sm hover:shadow-md transition-all transform hover:scale-[1.02] active:scale-[0.98]"
             >
-              <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+              <WhatsAppIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 text-white" />
               <span className="hidden sm:inline">Order on WhatsApp</span>
               <span className="hidden xs:inline sm:hidden">Order</span>
               <ArrowRight className="w-3 h-3 hidden lg:inline text-white/80" />

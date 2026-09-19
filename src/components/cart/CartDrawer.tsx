@@ -5,8 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCartStore } from "@/store/cart-store";
 import { getCartWhatsAppUrl } from "@/lib/whatsapp";
-import { ShoppingBag, X, Plus, Minus, Trash2, ArrowRight, MessageCircle, Sparkles } from "lucide-react";
+import { ShoppingBag, X, Plus, Minus, Trash2, ArrowRight, Sparkles } from "lucide-react";
 import { BotanicalSprig } from "@/components/ui/BotanicalFlourish";
+import { WhatsAppIcon } from "@/components/ui/SocialIcons";
 
 export function CartDrawer() {
   const { items, isOpen, closeCart, updateQuantity, removeItem, clearCart, getItemCount, getSubtotal } =
@@ -203,7 +204,7 @@ export function CartDrawer() {
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full h-13 rounded-xl bg-brand-sage text-white font-medium text-base shadow-sm hover:bg-brand-sage-dark transition-all"
             >
-              <MessageCircle className="w-5 h-5" />
+              <WhatsAppIcon className="w-5 h-5" />
               <span>Order on WhatsApp</span>
             </a>
 

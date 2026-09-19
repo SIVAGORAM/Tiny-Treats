@@ -6,8 +6,9 @@ import { Product } from "@/types/product";
 import { useCartStore } from "@/store/cart-store";
 import { QuantitySelector } from "./QuantitySelector";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
-import { X, ShoppingBag, MessageCircle, Sparkles, Check, Heart, ShieldCheck, Leaf } from "lucide-react";
+import { X, ShoppingBag, Sparkles, Check, Heart, ShieldCheck, Leaf } from "lucide-react";
 import { BotanicalSprig } from "@/components/ui/BotanicalFlourish";
+import { WhatsAppIcon } from "@/components/ui/SocialIcons";
 
 interface ProductQuickViewProps {
   product: Product | null;
@@ -184,7 +185,7 @@ export function ProductQuickView({ product, isOpen, onClose }: ProductQuickViewP
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 h-11 rounded-xl bg-[#66723A] hover:bg-[#566331] text-white font-semibold text-xs shadow-xs hover:scale-[1.02] active:scale-[0.98] transition-all"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
                 <span>Enquire on WhatsApp</span>
               </a>
             </div>

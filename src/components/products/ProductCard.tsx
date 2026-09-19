@@ -5,8 +5,9 @@ import Image from "next/image";
 import { Product } from "@/types/product";
 import { useCartStore } from "@/store/cart-store";
 import { ProductQuickView } from "./ProductQuickView";
-import { ShoppingBag, Eye, Heart, Check, Sparkles, MessageCircle } from "lucide-react";
+import { ShoppingBag, Eye, Heart, Check, Sparkles } from "lucide-react";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/ui/SocialIcons";
 
 interface ProductCardProps {
   product: Product;
@@ -156,7 +157,7 @@ export function ProductCard({ product, priorityImage = false }: ProductCardProps
                 className="w-9 h-9 rounded-xl bg-[#66723A]/15 hover:bg-[#66723A] text-[#66723A] hover:text-white flex items-center justify-center transition-all border border-[#66723A]/25"
                 title="Direct WhatsApp Order"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
               </button>
 
               {/* Add to Cart button */}

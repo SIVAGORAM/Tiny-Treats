@@ -3,9 +3,10 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, MessageCircle, ChevronLeft, ChevronRight, Star, Heart, Leaf, Sparkles, Check } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Star, Heart, Leaf, Sparkles, Check } from "lucide-react";
 import { HERO_SLIDES } from "@/data/hero-slides";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { WhatsAppIcon } from "@/components/ui/SocialIcons";
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -190,7 +191,7 @@ export function Hero() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full sm:w-auto h-11 sm:h-12.5 px-5 sm:px-7 rounded-full bg-[#EDF3E6] hover:bg-[#E0ECD6] text-[#3D5222] font-semibold text-xs sm:text-sm border border-[#D7E4CB] shadow-2xs transition-all transform hover:scale-[1.02] active:scale-[0.98]"
               >
-                <MessageCircle className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#5A6E3B]" />
+                <WhatsAppIcon className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#5A6E3B]" />
                 <span>Order on WhatsApp</span>
               </a>
             </div>
