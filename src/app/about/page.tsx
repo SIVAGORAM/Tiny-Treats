@@ -471,7 +471,7 @@ export default function AboutPage() {
                 </Link>
 
                 <a
-                  href={getWhatsAppUrl("Hello Shweta! 👋 I read your story and would love to place an order for fresh homemade treats.")}
+                  href={getWhatsAppUrl("Hello Tiny Treats! 👋 I read your story and would love to place an order for fresh homemade treats.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 w-full sm:w-auto h-11 sm:h-12 px-7 rounded-full bg-[#526A3A] hover:bg-[#43592D] text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all transform hover:scale-[1.02] active:scale-[0.98]"

@@ -244,7 +244,7 @@ export function CartDrawer() {
             </div>
 
             <p className="text-center text-[10.5px] sm:text-[11px] text-brand-muted">
-              No online payment required now. You will chat directly with Shweta.
+              No online payment required now. You will chat directly with our Tiny Treats.
             </p>
           </div>
         )}

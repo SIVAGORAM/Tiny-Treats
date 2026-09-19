@@ -32,7 +32,7 @@ export function ProductQuickView({ product, isOpen, onClose }: ProductQuickViewP
     }, 600);
   };
 
-  const directWhatsAppMsg = `Hello Tiny Treats! 👋\n\nI'm interested in ordering:\n*${product.name}* (Qty: ${quantity}, Pack: ${product.weight || "Standard"})\n\nPlease let me know the availability and fresh batch timing. Thank you! ❤️`;
+  const directWhatsAppMsg = `*PRODUCT INQUIRY — Tiny Treats*\n────────────────────────────\nHello Tiny Treats! 👋\n\nI would like to check availability and order:\n• *${product.name}* (Qty: ${quantity}, Pack: ${product.weight || "Standard"})\n\nPlease let me know the availability and fresh batch schedule.\n\nThank you!`;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 overflow-y-auto animate-in fade-in duration-200">

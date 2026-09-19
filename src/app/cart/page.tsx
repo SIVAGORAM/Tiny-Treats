@@ -5,8 +5,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCartStore } from "@/store/cart-store";
 import { getCartWhatsAppUrl, getWhatsAppUrl } from "@/lib/whatsapp";
-import { ShoppingBag, ArrowRight, Trash2, Plus, Minus, MessageCircle, Sparkles } from "lucide-react";
+import { ShoppingBag, ArrowRight, Trash2, Plus, Minus, Sparkles } from "lucide-react";
 import { BotanicalDivider } from "@/components/ui/BotanicalFlourish";
+import { WhatsAppIcon } from "@/components/ui/SocialIcons";
 
 export default function CartPage() {
   const { items, updateQuantity, removeItem, clearCart, getSubtotal, getItemCount } =
@@ -199,7 +200,7 @@ export default function CartPage() {
               <div className="p-3.5 rounded-2xl bg-brand-cream border border-brand-sage/20 text-xs text-brand-sage flex items-start gap-2">
                 <Sparkles className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
                 <span>
-                  No immediate payment required. You will send this order directly to Shweta on WhatsApp to confirm delivery and baking timing.
+                  No online payment required now. You will chat directly with our Tiny Treats on WhatsApp to confirm delivery and baking schedule.
                 </span>
               </div>
 
@@ -209,7 +210,7 @@ export default function CartPage() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2.5 w-full h-14 rounded-2xl bg-brand-sage text-white font-semibold text-base shadow-subtle hover:bg-brand-sage-dark transition-all"
               >
-                <MessageCircle className="w-5 h-5" />
+                <WhatsAppIcon className="w-5 h-5 text-white" />
                 <span>Order on WhatsApp</span>
               </a>
             </div>

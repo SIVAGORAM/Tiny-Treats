@@ -18,41 +18,45 @@ export const DEFAULT_WHATSAPP_NUMBER =
 export function generateCartWhatsAppMessage(items: CartItem[], total: number): string {
   if (!items.length) {
     return encodeURIComponent(
-      "Hello Tiny Treats! 👋\n\nI'd like to check today's available freshly baked treats and order details. Thank you! ❤️"
+      "*ORDER INQUIRY — Tiny Treats*\n" +
+      "────────────────────────────\n" +
+      "Hello Tiny Treats! 👋\n\n" +
+      "I would like to check today's freshly baked treats availability and place an order.\n\n" +
+      "Thank you!"
     );
   }
 
-  let message = "Hello Tiny Treats! 👋\n\nI'd like to place an order for:\n\n";
+  const totalQuantity = items.reduce((sum, item) => sum + item.quantity, 0);
 
-  items.forEach((item) => {
-    const itemEmoji =
-      item.product.category === "cookies"
-        ? "🍪"
-        : item.product.category === "laddus"
-        ? "🥜"
-        : item.product.category === "seed-crackers"
-        ? "🌱"
-        : item.product.category === "breads"
-        ? "🍞"
-        : item.product.category === "cakes"
-        ? "🍰"
-        : "🍫";
+  let message =
+    "*ORDER INQUIRY — Tiny Treats*\n" +
+    "────────────────────────────\n" +
+    "Hello Tiny Treats! 👋\n\n" +
+    "I would like to place an order for the following treats:\n\n";
 
+  items.forEach((item, index) => {
+    const sNo = `${index + 1}.`;
     const variantName = item.variant ? ` (${item.variant.name})` : "";
-    const priceText =
-      item.variant?.price || item.product.price
-        ? `₹${((item.variant?.price || item.product.price) * item.quantity).toLocaleString("en-IN")}`
-        : "Price: On Request (Fresh Batch)";
+    const weightInfo = item.product.weight ? ` [${item.product.weight}]` : "";
+    const itemPrice = item.variant?.price || item.product.price;
+    const priceText = itemPrice
+      ? `₹${(itemPrice * item.quantity).toLocaleString("en-IN")}`
+      : "Price on Request (Fresh Batch)";
 
-    message += `${itemEmoji} ${item.product.name}${variantName} × ${item.quantity} — ${priceText}\n`;
+    message += `${sNo} *${item.product.name}*${variantName}${weightInfo}\n`;
+    message += `   • Quantity: *${item.quantity}*\n`;
+    message += `   • Price: *${priceText}*\n\n`;
   });
 
+  message += "────────────────────────────\n";
+  message += `*Total Items:* ${totalQuantity} ${totalQuantity === 1 ? "treat" : "treats"}\n`;
   if (total > 0) {
-    message += `\nEstimated Subtotal: ₹${total.toLocaleString("en-IN")}\n`;
+    message += `*Estimated Subtotal:* ₹${total.toLocaleString("en-IN")}\n`;
   }
 
   message +=
-    "\nPlease let me know the availability, baking lead time, and next steps.\n\nThank you! ❤️";
+    "\nPlease let me know the availability, baking schedule, and dispatch details.\n\n" +
+    "Thank you!";
 
   return encodeURIComponent(message);
 }
@@ -62,13 +66,17 @@ export function getWhatsAppUrl(customMessage?: string): string {
   const encodedMsg = customMessage
     ? encodeURIComponent(customMessage)
     : encodeURIComponent(
-        "Hello Tiny Treats! 👋\n\nI'd like to ask about your homemade treats and place an order. Thank you! ❤️"
+        "*ORDER INQUIRY — Tiny Treats*\n" +
+        "────────────────────────────\n" +
+        "Hello Tiny Treats! 👋\n\n" +
+        "I would like to ask about your homemade treats and place an order.\n\n" +
+        "Thank you!"
       );
-  return `https://wa.me/${number}?text=${encodedMsg}`;
+  return `https://api.whatsapp.com/send/?phone=${number}&text=${encodedMsg}`;
 }
 
 export function getCartWhatsAppUrl(items: CartItem[], total: number): string {
   const number = DEFAULT_WHATSAPP_NUMBER.replace(/[^0-9]/g, "");
   const encodedMsg = generateCartWhatsAppMessage(items, total);
-  return `https://wa.me/${number}?text=${encodedMsg}`;
+  return `https://api.whatsapp.com/send/?phone=${number}&text=${encodedMsg}`;
 }

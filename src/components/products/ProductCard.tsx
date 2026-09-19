@@ -34,7 +34,7 @@ export function ProductCard({ product, priorityImage = false }: ProductCardProps
 
   const handleWhatsAppInquiry = (e: React.MouseEvent) => {
     e.stopPropagation();
-    const msg = `Hello Tiny Treats! 👋\n\nI would like to order or check availability for:\n*${product.name}* (${product.weight || "Fresh Pack"})\n\nThank you! ❤️`;
+    const msg = `*PRODUCT INQUIRY — Tiny Treats*\n────────────────────────────\nHello Tiny Treats! 👋\n\nI would like to check availability and order:\n• *${product.name}* (${product.weight || "Fresh Pack"})\n\nThank you!`;
     window.open(getWhatsAppUrl(msg), "_blank", "noopener,noreferrer");
   };
 

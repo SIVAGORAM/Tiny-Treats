@@ -318,7 +318,7 @@ export function Footer() {
               {/* Direct Baker WhatsApp Concierge Button */}
               <div className="pt-1">
                 <a
-                  href={getWhatsAppUrl("Hello Shweta! 👋 I'd like to ask a question or place an order.")}
+                  href={getWhatsAppUrl("Hello Tiny Treats! 👋 I'd like to ask a question or place an order.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-[#66723A] to-[#526A3A] hover:from-[#526A3A] hover:to-[#43592D] text-white text-xs font-semibold shadow-xs hover:shadow-md transition-all group"

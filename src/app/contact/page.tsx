@@ -50,7 +50,7 @@ const orderSteps = [
   {
     num: "02",
     title: "Direct WhatsApp Message",
-    description: "Send your list or dietary requirements directly to baker Shweta for personal confirmation.",
+    description: "No online payment required now. You will chat directly with our Tiny Treats for personal confirmation.",
   },
   {
     num: "03",
@@ -176,10 +176,10 @@ export default function ContactPage() {
 
               <div>
                 <h2 className="font-serif text-lg sm:text-xl font-bold text-[#3A1E0E] group-hover:text-[#B9573F] transition-colors">
-                  Call Shweta Directly
+                  Call Tiny Treats Directly
                 </h2>
                 <p className="text-xs text-[#5A321B]/75 font-light leading-relaxed mt-1">
-                  Speak directly with the baker for celebration orders, dietary advice, and bulk boxes.
+                  Speak directly with Tiny Treats for celebration orders, dietary advice, and bulk boxes.
                 </p>
               </div>
 
@@ -244,7 +244,7 @@ export default function ContactPage() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#5A321B]/15 text-[#5A321B] border border-[#5A321B]/25">
-                  Bakery Location
+                  Kitchen Location
                 </span>
               </div>
 
