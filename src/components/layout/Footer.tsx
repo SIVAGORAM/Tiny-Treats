@@ -368,7 +368,9 @@ export function Footer() {
               Cookie Policy
             </Link>
             <span>·</span>
-            <CookiePreferencesTrigger className="hover:text-[#FFF8ED] transition-colors underline-offset-2 hover:underline cursor-pointer bg-transparent border-0 p-0 text-[11px] font-normal shadow-none text-[#FFF8ED]/60" />
+            <CookiePreferencesTrigger className="hover:text-[#FFF8ED] transition-colors underline-offset-2 hover:underline cursor-pointer bg-transparent border-0 p-0 text-[11px] font-normal shadow-none text-[#FFF8ED]/60 inline-flex items-center">
+              Cookie Settings
+            </CookiePreferencesTrigger>
           </div>
         </div>
 

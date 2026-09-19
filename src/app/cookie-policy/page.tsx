@@ -40,7 +40,9 @@ export default function CookiePolicyPage() {
             This Cookie Policy explains how Tiny Treats uses cookies, local storage, and related technologies to provide you with a fast, secure, and reliable shopping experience.
           </p>
           <div className="pt-2">
-            <CookiePreferencesTrigger />
+            <CookiePreferencesTrigger showIcon>
+              Manage Cookie Preferences
+            </CookiePreferencesTrigger>
           </div>
         </div>
 
