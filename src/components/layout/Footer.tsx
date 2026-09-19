@@ -22,6 +22,7 @@ import {
   LinkedInIcon,
   WhatsAppIcon,
 } from "@/components/ui/SocialIcons";
+import { CookiePreferencesTrigger } from "@/components/ui/CookiePreferencesTrigger";
 import {
   BRAND_PHONE,
   BRAND_EMAIL,
@@ -354,12 +355,20 @@ export function Footer() {
             <span className="font-sans text-xs text-[#FFF8ED]/60">• Made with love in Hyderabad</span>
           </div>
 
-          <div className="flex items-center gap-2.5 text-[11px] text-[#FFF8ED]/60">
-            <span className="hover:text-[#FFF8ED]/90 cursor-pointer">Privacy Policy</span>
+          <div className="flex flex-wrap items-center justify-center gap-2 text-[11px] text-[#FFF8ED]/60">
+            <Link href="/privacy-policy" className="hover:text-[#FFF8ED] transition-colors underline-offset-2 hover:underline">
+              Privacy Policy
+            </Link>
             <span>·</span>
-            <span className="hover:text-[#FFF8ED]/90 cursor-pointer">Terms</span>
+            <Link href="/terms-and-conditions" className="hover:text-[#FFF8ED] transition-colors underline-offset-2 hover:underline">
+              Terms & Conditions
+            </Link>
             <span>·</span>
-            <span className="hover:text-[#FFF8ED]/90 cursor-pointer">FSSAI Standards</span>
+            <Link href="/cookie-policy" className="hover:text-[#FFF8ED] transition-colors underline-offset-2 hover:underline">
+              Cookie Policy
+            </Link>
+            <span>·</span>
+            <CookiePreferencesTrigger className="hover:text-[#FFF8ED] transition-colors underline-offset-2 hover:underline cursor-pointer bg-transparent border-0 p-0 text-[11px] font-normal shadow-none text-[#FFF8ED]/60" />
           </div>
         </div>
 
