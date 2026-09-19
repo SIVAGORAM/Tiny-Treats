@@ -171,8 +171,8 @@ function MenuContent() {
               )}
             </div>
 
-            {/* Category Tabs */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+            {/* Category Tabs: Clean Multi-line Wrapping for all screen sizes */}
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-0.5">
               {CATEGORIES.map((cat) => {
                 const isActive = selectedCategory === cat.id;
                 const count = categoryCounts[cat.id] || 0;
@@ -180,7 +180,7 @@ function MenuContent() {
                   <button
                     key={cat.id}
                     onClick={() => handleCategoryChange(cat.id)}
-                    className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium transition-all shrink-0 shadow-2xs cursor-pointer ${
+                    className={`flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 sm:py-2 rounded-xl text-xs font-medium transition-all shadow-2xs cursor-pointer ${
                       isActive
                         ? "bg-[#5A321B] text-white shadow-xs font-semibold"
                         : "bg-white text-[#5A321B] border border-[#5A321B]/12 hover:bg-[#FFF8ED]"
@@ -199,9 +199,9 @@ function MenuContent() {
               })}
             </div>
 
-            {/* Dietary Filter Pills */}
-            <div className="flex items-center gap-1.5 overflow-x-auto pb-0.5 text-xs">
-              <span className="text-[#5A321B]/60 font-semibold uppercase tracking-wider text-[10px] mr-1 shrink-0">
+            {/* Dietary Filter Pills: Responsive Wrap */}
+            <div className="flex flex-wrap items-center gap-1.5 pt-1 text-xs">
+              <span className="text-[#5A321B]/60 font-semibold uppercase tracking-wider text-[10px] mr-0.5 shrink-0">
                 Dietary:
               </span>
               {[
@@ -216,7 +216,7 @@ function MenuContent() {
                   <button
                     key={diet.id}
                     onClick={() => setSelectedDietary(diet.id as DietaryFilter)}
-                    className={`px-3 py-1 rounded-lg text-[11px] font-medium transition-all shrink-0 cursor-pointer flex items-center gap-1.5 ${
+                    className={`px-2.5 sm:px-3 py-1 rounded-lg text-[11px] font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
                       isActive
                         ? "bg-[#B9573F] text-white font-semibold shadow-2xs"
                         : "bg-white text-[#5A321B]/80 border border-[#5A321B]/10 hover:bg-[#FFF8ED]"

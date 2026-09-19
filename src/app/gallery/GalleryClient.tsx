@@ -92,8 +92,8 @@ export function GalleryClient() {
           </div>
         </div>
 
-        {/* ── 3. Category Filter Tabs ── */}
-        <div className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-1 scrollbar-none px-1">
+        {/* ── 3. Category Filter Tabs: Responsive Multi-line Wrapping ── */}
+        <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 px-1">
           {galleryCategories.map((cat) => {
             const isActive = selectedCategory === cat.id;
             const count = categoryCounts[cat.id] || 0;
@@ -101,7 +101,7 @@ export function GalleryClient() {
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`flex items-center gap-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all shrink-0 shadow-2xs cursor-pointer ${
+                className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all shadow-2xs cursor-pointer ${
                   isActive
                     ? "bg-[#5A321B] text-white shadow-md font-semibold scale-102"
                     : "bg-white text-[#5A321B] border border-[#5A321B]/12 hover:bg-[#F3E2C4]/50"
@@ -109,7 +109,7 @@ export function GalleryClient() {
               >
                 <span>{cat.label}</span>
                 <span
-                  className={`text-[10px] px-1.5 py-0.5 rounded-full ${
+                  className={`text-[10px] px-1.5 py-0.2 rounded-full ${
                     isActive ? "bg-[#D99A45] text-[#3A1E0E] font-bold" : "bg-[#FFF8ED] text-[#5A321B]/70"
                   }`}
                 >
