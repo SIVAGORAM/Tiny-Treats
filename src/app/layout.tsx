@@ -99,6 +99,11 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${manrope.variable} ${caveat.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="icon" href="/favicon.png?v=2" type="image/png" />
+        <link rel="shortcut icon" href="/favicon.ico?v=2" />
+        <link rel="apple-touch-icon" href="/apple-icon.png?v=2" />
+      </head>
       <body className="min-h-full flex flex-col font-sans bg-[#FFF8ED] text-[#2B211B]">
         <OrganizationSchema />
         <Navbar />
