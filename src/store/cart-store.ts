@@ -8,38 +8,43 @@ export const useCartStore = create<CartStore>()(
     (set, get) => ({
       items: [],
       isOpen: false,
+      lastAddedItem: null,
+      showAddedToast: false,
 
-      openCart: () => set({ isOpen: true }),
+      openCart: () => set({ isOpen: true, showAddedToast: false }),
       closeCart: () => set({ isOpen: false }),
-      toggleCart: () => set((state) => ({ isOpen: !state.isOpen })),
+      toggleCart: () => set((state) => ({ isOpen: !state.isOpen, showAddedToast: false })),
+      dismissToast: () => set({ showAddedToast: false }),
 
-      addItem: (product: Product, quantity = 1, variant?: ProductVariant) => {
+      addItem: (product: Product, quantity = 1, variant?: ProductVariant, openImmediately = false) => {
         const variantId = variant?.id || "default";
         const itemId = `${product.id}-${variantId}`;
+        const newItem: CartItem = {
+          id: itemId,
+          product,
+          variant,
+          quantity,
+        };
 
         set((state) => {
           const existingItemIndex = state.items.findIndex((item) => item.id === itemId);
 
+          let updatedItems: CartItem[];
           if (existingItemIndex > -1) {
-            const updatedItems = [...state.items];
+            updatedItems = [...state.items];
             updatedItems[existingItemIndex] = {
               ...updatedItems[existingItemIndex],
               quantity: updatedItems[existingItemIndex].quantity + quantity,
             };
-            return { items: updatedItems, isOpen: true };
+          } else {
+            updatedItems = [...state.items, newItem];
           }
 
           return {
-            items: [
-              ...state.items,
-              {
-                id: itemId,
-                product,
-                variant,
-                quantity,
-              },
-            ],
-            isOpen: true,
+            items: updatedItems,
+            isOpen: openImmediately ? true : state.isOpen,
+            lastAddedItem: newItem,
+            showAddedToast: !openImmediately,
           };
         });
       },
@@ -64,7 +69,7 @@ export const useCartStore = create<CartStore>()(
       },
 
       clearCart: () => {
-        set({ items: [] });
+        set({ items: [], lastAddedItem: null, showAddedToast: false });
       },
 
       getItemCount: () => {

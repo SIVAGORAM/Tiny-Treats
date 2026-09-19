@@ -147,9 +147,18 @@ export function CartDrawer() {
                       </div>
 
                       <div className="flex items-center justify-between mt-2 pt-2 border-t border-brand-brown/5">
-                        <span className="font-serif font-bold text-brand-brown text-sm">
-                          {itemPrice > 0 ? `₹${(itemPrice * item.quantity).toLocaleString("en-IN")}` : "Price: TBC"}
-                        </span>
+                        <div className="flex flex-col">
+                          <span className="font-serif font-bold text-[#3D2314] text-xs sm:text-sm">
+                            {itemPrice > 0
+                              ? `₹${(itemPrice * item.quantity).toLocaleString("en-IN")}`
+                              : (item.product.priceLabel || "Price on Request")}
+                          </span>
+                          {item.product.weight && (
+                            <span className="text-[10px] text-[#8C6D53]/80 font-normal">
+                              Pack: {item.product.weight}
+                            </span>
+                          )}
+                        </div>
 
                         {/* Quantity Selector */}
                         <div className="flex items-center gap-1 bg-brand-beige/40 rounded-lg p-1 border border-brand-brown/10">
@@ -182,33 +191,59 @@ export function CartDrawer() {
 
         {/* Footer / WhatsApp Checkout */}
         {items.length > 0 && (
-          <div className="p-6 bg-white border-t border-brand-brown/10 space-y-4">
-            {/* Subtotal */}
-            <div className="flex items-baseline justify-between">
-              <span className="text-sm font-medium text-brand-muted">Estimated Subtotal</span>
-              <span className="font-serif text-2xl font-bold text-brand-brown">
-                {subtotal > 0 ? `₹${subtotal.toLocaleString("en-IN")}` : "Confirmed on WhatsApp"}
-              </span>
+          <div className="p-4 sm:p-5 bg-white border-t border-brand-brown/10 space-y-3 shrink-0 shadow-lg">
+            {/* Subtotal Card */}
+            <div className="flex items-center justify-between gap-2 p-3 rounded-2xl bg-[#FAF4E8] border border-[#EADBCA]">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#8C6D53] block">
+                  Estimated Subtotal
+                </span>
+                <span className="text-[11px] text-[#8C6D53]/80">
+                  {itemCount} {itemCount === 1 ? "treat" : "treats"} in basket
+                </span>
+              </div>
+              <div className="text-right shrink-0">
+                {subtotal > 0 ? (
+                  <span className="font-serif text-xl sm:text-2xl font-bold text-[#3D2314]">
+                    ₹{subtotal.toLocaleString("en-IN")}
+                  </span>
+                ) : (
+                  <span className="inline-flex items-center px-2.5 py-1 rounded-lg bg-white border border-[#EADBCA] text-xs font-semibold text-[#B9573F] shadow-2xs">
+                    Confirmed on WhatsApp
+                  </span>
+                )}
+              </div>
             </div>
 
             {/* Reassurance Note */}
-            <div className="flex items-center gap-2 text-xs text-brand-sage bg-brand-cream/80 p-2.5 rounded-xl border border-brand-sage/20">
-              <Sparkles className="w-4 h-4 shrink-0 text-brand-gold" />
+            <div className="flex items-center gap-2 text-[11px] sm:text-xs text-[#526A3A] bg-[#F0F5EB] p-2.5 rounded-xl border border-[#66723A]/25">
+              <Sparkles className="w-4 h-4 shrink-0 text-[#D99A45]" />
               <span>Small-batch & fresh to order. We confirm baking time on WhatsApp.</span>
             </div>
 
-            {/* WhatsApp Order Action */}
-            <a
-              href={whatsAppUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full h-13 rounded-xl bg-brand-sage text-white font-medium text-base shadow-sm hover:bg-brand-sage-dark transition-all"
-            >
-              <WhatsAppIcon className="w-5 h-5" />
-              <span>Order on WhatsApp</span>
-            </a>
+            {/* Actions: Order on WhatsApp + Add More Items */}
+            <div className="space-y-2">
+              <a
+                href={whatsAppUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full h-11 sm:h-12 rounded-xl bg-[#526A3A] hover:bg-[#43592D] text-white font-semibold text-sm shadow-md transition-all hover:scale-[1.01] active:scale-[0.99]"
+              >
+                <WhatsAppIcon className="w-4.5 h-4.5 text-white" />
+                <span>Order on WhatsApp</span>
+              </a>
 
-            <p className="text-center text-[11px] text-brand-muted">
+              <Link
+                href="/menu"
+                onClick={closeCart}
+                className="flex items-center justify-center gap-1.5 w-full h-9.5 rounded-xl bg-[#FAF0EC] hover:bg-[#F3E2C4] text-[#5A321B] font-semibold text-xs sm:text-sm border border-[#EADBCA] transition-all"
+              >
+                <Plus className="w-3.5 h-3.5 text-[#B9573F]" />
+                <span>Add More Items from Menu</span>
+              </Link>
+            </div>
+
+            <p className="text-center text-[10.5px] sm:text-[11px] text-brand-muted">
               No online payment required now. You will chat directly with Shweta.
             </p>
           </div>

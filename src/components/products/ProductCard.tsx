@@ -17,16 +17,19 @@ interface ProductCardProps {
 export function ProductCard({ product, priorityImage = false }: ProductCardProps) {
   const [quickViewOpen, setQuickViewOpen] = useState(false);
   const [isWishlisted, setIsWishlisted] = useState(false);
-  const [isAdded, setIsAdded] = useState(false);
-  const { addItem } = useCartStore();
+  const [justAdded, setJustAdded] = useState(false);
+  const { items, addItem } = useCartStore();
+
+  const inCartItem = items.find((item) => item.product.id === product.id);
+  const inCartQty = inCartItem ? inCartItem.quantity : 0;
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation();
     addItem(product, 1);
-    setIsAdded(true);
+    setJustAdded(true);
     setTimeout(() => {
-      setIsAdded(false);
-    }, 1200);
+      setJustAdded(false);
+    }, 1000);
   };
 
   const handleWhatsAppInquiry = (e: React.MouseEvent) => {
@@ -166,15 +169,20 @@ export function ProductCard({ product, priorityImage = false }: ProductCardProps
                 onClick={handleAddToCart}
                 aria-label={`Add ${product.name} to basket`}
                 className={`flex items-center justify-center gap-1.5 h-9 px-3.5 rounded-xl text-xs font-semibold shadow-2xs transition-all ${
-                  isAdded
+                  inCartQty > 0
+                    ? justAdded
+                      ? "bg-[#526A3A] text-white scale-95 ring-2 ring-[#9FD468]"
+                      : "bg-[#66723A] hover:bg-[#526A3A] text-white hover:scale-102 active:scale-95"
+                    : justAdded
                     ? "bg-[#66723A] text-white scale-95"
                     : "bg-[#B9573F] hover:bg-[#A34B35] text-white hover:scale-102 active:scale-95"
                 }`}
+                title={inCartQty > 0 ? "In basket — click to add another" : "Add to basket"}
               >
-                {isAdded ? (
+                {inCartQty > 0 ? (
                   <>
-                    <Check className="w-3.5 h-3.5" />
-                    <span>Added</span>
+                    <Check className="w-3.5 h-3.5 text-[#C0D880]" />
+                    <span>Added ({inCartQty})</span>
                   </>
                 ) : (
                   <>

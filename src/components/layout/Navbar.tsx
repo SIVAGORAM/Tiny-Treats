@@ -8,6 +8,7 @@ import { useCartStore } from "@/store/cart-store";
 import { MobileMenu } from "./MobileMenu";
 import { SearchModal } from "./SearchModal";
 import { CartDrawer } from "@/components/cart/CartDrawer";
+import { CartNotificationToast } from "@/components/cart/CartNotificationToast";
 import { getWhatsAppUrl, BRAND_SOCIALS } from "@/lib/whatsapp";
 import {
   InstagramIcon,
@@ -481,6 +482,9 @@ export function Navbar() {
 
       {/* Global Slide-in Cart Drawer */}
       <CartDrawer />
+
+      {/* Global Added-to-Cart Toast Notification with Dual Actions */}
+      <CartNotificationToast />
 
       {/* Mobile Navigation Drawer */}
       <MobileMenu

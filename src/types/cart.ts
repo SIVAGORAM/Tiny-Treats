@@ -10,10 +10,13 @@ export interface CartItem {
 export interface CartStore {
   items: CartItem[];
   isOpen: boolean;
+  lastAddedItem: CartItem | null;
+  showAddedToast: boolean;
   openCart: () => void;
   closeCart: () => void;
   toggleCart: () => void;
-  addItem: (product: Product, quantity?: number, variant?: ProductVariant) => void;
+  dismissToast: () => void;
+  addItem: (product: Product, quantity?: number, variant?: ProductVariant, openImmediately?: boolean) => void;
   removeItem: (itemId: string) => void;
   updateQuantity: (itemId: string, quantity: number) => void;
   clearCart: () => void;

@@ -42,7 +42,7 @@ export function generateCartWhatsAppMessage(items: CartItem[], total: number): s
     const priceText =
       item.variant?.price || item.product.price
         ? `₹${((item.variant?.price || item.product.price) * item.quantity).toLocaleString("en-IN")}`
-        : "Price: TBC";
+        : "Price: On Request (Fresh Batch)";
 
     message += `${itemEmoji} ${item.product.name}${variantName} × ${item.quantity} — ${priceText}\n`;
   });

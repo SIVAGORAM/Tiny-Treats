@@ -76,9 +76,12 @@ export const metadata: Metadata = {
     creator: "@tinytreatsbys",
   },
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/favicon.png",
+    apple: "/apple-icon.png",
   },
   robots: {
     index: true,
