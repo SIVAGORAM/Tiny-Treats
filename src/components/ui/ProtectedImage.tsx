@@ -38,11 +38,20 @@ export function ProtectedImage({
     }
   };
 
+  const { style, ...restProps } = props;
+
   return (
     <Image
-      {...props}
+      {...restProps}
       onContextMenu={handleContextMenu}
       onDragStart={handleDragStart}
+      style={{
+        userSelect: "none",
+        WebkitUserSelect: "none",
+        // @ts-expect-error CSS property WebkitUserDrag is vendor-specific
+        WebkitUserDrag: "none",
+        ...style,
+      }}
       className={`select-none pointer-events-auto [user-drag:none] [-webkit-user-drag:none] [-webkit-touch-callout:none] ${className}`}
     />
   );

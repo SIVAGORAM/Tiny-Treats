@@ -1,35 +1,39 @@
 import React from "react";
 import { BRAND_PHONE, BRAND_EMAIL, BRAND_SOCIALS } from "@/lib/whatsapp";
 import { CATEGORIES } from "@/data/products";
+import { JsonLd } from "./json-ld";
+import { SITE_CONFIG } from "@/lib/seo";
 
 export function BakerySchema() {
+  const baseUrl = SITE_CONFIG.siteUrl;
+
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://www.tinytreats.in/#website",
-        url: "https://www.tinytreats.in",
+        "@id": `${baseUrl}/#website`,
+        url: baseUrl,
         name: "Tiny Treats",
         alternateName: ["Tiny Treats by Swetha", "Tiny Treats Bakery"],
         description: "Small-batch homemade cookies, dry fruit laddus, healthy brownies and seed crackers crafted in Hyderabad.",
         publisher: {
-          "@id": "https://www.tinytreats.in/#bakery",
+          "@id": `${baseUrl}/#bakery`,
         },
         inLanguage: "en-IN",
       },
       {
         "@type": "Bakery",
-        "@id": "https://www.tinytreats.in/#bakery",
+        "@id": `${baseUrl}/#bakery`,
         name: "Tiny Treats by Swetha",
         alternateName: "Tiny Treats",
-        url: "https://www.tinytreats.in",
+        url: baseUrl,
         logo: {
           "@type": "ImageObject",
-          url: "https://www.tinytreats.in/favicon.png",
+          url: `${baseUrl}/favicon.png`,
           caption: "Tiny Treats Logo",
         },
-        image: "https://www.tinytreats.in/og/tiny-treats-og.jpg",
+        image: `${baseUrl}/og/tiny-treats-og.jpg`,
         telephone: BRAND_PHONE,
         email: BRAND_EMAIL,
         priceRange: "₹₹",
@@ -102,10 +106,6 @@ export function BakerySchema() {
     ],
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="bakery-schema" data={schema} />;
 }
+

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { Search, X, ArrowRight, Sparkles } from "lucide-react";
 import { PRODUCTS } from "@/data/products";
 import { useCartStore } from "@/store/cart-store";
@@ -96,7 +96,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 className="flex items-center gap-3 p-3 rounded-2xl bg-white border border-brand-brown/10 hover:border-brand-gold/50 hover:shadow-subtle transition-all group"
               >
                 <div className="relative w-14 h-14 rounded-xl overflow-hidden bg-brand-cream shrink-0">
-                  <Image
+                  <ProtectedImage
                     src={product.image}
                     alt={product.name}
                     fill

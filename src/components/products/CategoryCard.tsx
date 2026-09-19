@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { CategoryInfo } from "@/types/product";
 
@@ -32,13 +32,12 @@ export function CategoryCard({
     >
       {/* Top Visual Photography Banner with Rounded Corners */}
       <div className="relative aspect-[16/10] overflow-hidden bg-[#FAF3EA]">
-        <Image
+        <ProtectedImage
           src={image}
           alt={`${category.name} - Tiny Treats by Swetha`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 380px"
           className="object-cover object-center group-hover:scale-106 transition-transform duration-700 ease-out"
-          style={{ imageRendering: "-webkit-optimize-contrast" }}
         />
         {/* Soft Organic Edge Gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent pointer-events-none" />

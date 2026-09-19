@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { Leaf, Heart, Home, Sprout, Sparkles, Users, Star } from "lucide-react";
 
 export function BrandPromiseSection({
@@ -16,7 +16,7 @@ export function BrandPromiseSection({
       
       {/* 1. SEAMLESS TABLETOP PHOTOGRAPHY SIDES (DESKTOP & TABLET) */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
-        <Image
+        <ProtectedImage
           src="/story/story-hero-bg.jpg"
           alt="Artisan raw nuts and freshly baked almond cookies on a rustic linen table"
           fill

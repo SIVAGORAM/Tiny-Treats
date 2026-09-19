@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { Product } from "@/types/product";
 import { useCartStore } from "@/store/cart-store";
 import { QuantitySelector } from "./QuantitySelector";
@@ -62,7 +62,7 @@ export function ProductQuickView({ product, isOpen, onClose }: ProductQuickViewP
         {/* Left: Product Media */}
         <div className="relative w-full md:w-5/12 bg-[#F3E2C4]/40 h-44 sm:h-56 md:h-auto md:min-h-[400px] flex items-center justify-center p-4 overflow-hidden shrink-0">
           {product.image ? (
-            <Image
+            <ProtectedImage
               src={product.image}
               alt={product.name}
               fill

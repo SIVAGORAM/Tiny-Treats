@@ -3,6 +3,8 @@ import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Manrope, Caveat } from "next/font/google";
 import "./globals.css";
 import { BakerySchema } from "@/components/seo/BakerySchema";
+import { JsonLd, getOrganizationSchema, getHcmSoftwareSchema } from "@/components/seo/json-ld";
+import { GoogleAnalytics } from "@/components/seo/google-analytics";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { NavigationProgressBar } from "@/components/ui/NavigationProgressBar";
@@ -131,6 +133,11 @@ export default function RootLayout({
         {/* Offline Connectivity Detector Banner */}
         <OfflineBanner />
 
+        {/* Google Analytics 4 (GA4) Non-blocking Script */}
+        <GoogleAnalytics />
+
+        {/* Global Organization & Software Application JSON-LD Schemas */}
+        <JsonLd data={[getOrganizationSchema(), getHcmSoftwareSchema()]} />
         <BakerySchema />
         <Navbar />
 

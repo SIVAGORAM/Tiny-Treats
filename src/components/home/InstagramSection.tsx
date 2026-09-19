@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { InstagramIcon } from "@/components/ui/SocialIcons";
 import { BRAND_SOCIALS } from "@/lib/whatsapp";
 import { Heart, MessageCircle, ArrowUpRight } from "lucide-react";
@@ -81,13 +81,12 @@ export function InstagramSection() {
               className="group relative aspect-square rounded-2xl sm:rounded-3xl overflow-hidden bg-[#FAF3EA] border border-[#EADBCA] shadow-2xs hover:shadow-xl transition-all duration-500 cursor-pointer block"
             >
               {/* Photo */}
-              <Image
+              <ProtectedImage
                 src={post.image}
                 alt={post.caption}
                 fill
                 sizes="(max-width: 768px) 50vw, 280px"
                 className="object-cover group-hover:scale-108 transition-transform duration-700 ease-out"
-                style={{ imageRendering: "-webkit-optimize-contrast" }}
               />
 
               {/* Instagram Floating Icon on Corner */}

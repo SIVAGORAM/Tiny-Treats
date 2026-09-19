@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import {
   ArrowRight,
   Heart,
@@ -131,7 +131,7 @@ export default function AboutPage() {
 
                 {/* Main Artisan Photo Card */}
                 <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-[#FAF3EA] shadow-xl border-2 border-[#EADBCA] z-10 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
-                  <Image
+                  <ProtectedImage
                     src="/story/kitchen-baking-artisan.jpg"
                     alt="Swetha handcrafting wholesome treats in her home kitchen"
                     fill
@@ -154,7 +154,7 @@ export default function AboutPage() {
                 {/* Overlapping Polaroid Card */}
                 <div className="absolute -bottom-8 -left-4 sm:-left-8 w-44 sm:w-52 bg-white p-3 pb-4 rounded-2xl shadow-2xl border border-[#EADBCA] z-20 transform -rotate-6 hover:rotate-0 transition-transform duration-500">
                   <div className="relative aspect-square rounded-xl overflow-hidden bg-[#FAF3EA]">
-                    <Image
+                    <ProtectedImage
                       src="/gallery/banana-bread-fresh.jpg"
                       alt="Freshly baked banana bread loaf"
                       fill
@@ -256,7 +256,7 @@ export default function AboutPage() {
               >
                 {/* Photo Header */}
                 <div className="relative aspect-[16/11] overflow-hidden bg-[#FAF3EA]">
-                  <Image
+                  <ProtectedImage
                     src={item.image}
                     alt={item.title}
                     fill

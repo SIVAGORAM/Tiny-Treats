@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { Product } from "@/types/product";
 import { useCartStore } from "@/store/cart-store";
 import { ProductQuickView } from "./ProductQuickView";
@@ -47,7 +47,7 @@ export function ProductCard({ product, priorityImage = false }: ProductCardProps
         {/* ── Top Image Container ── */}
         <div className="relative aspect-4/3 w-full bg-[#F3E2C4]/30 overflow-hidden flex items-center justify-center">
           {product.image ? (
-            <Image
+            <ProtectedImage
               src={product.image}
               alt={product.name}
               fill

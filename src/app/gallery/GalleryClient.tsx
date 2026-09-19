@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from "react";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import Link from "next/link";
 import { GALLERY_ITEMS, GalleryItem } from "@/data/gallery";
 import {
@@ -130,7 +130,7 @@ export function GalleryClient() {
             >
               {/* Photo Area */}
               <div className="relative aspect-4/3 w-full bg-[#F3E2C4]/30 overflow-hidden flex items-center justify-center">
-                <Image
+                <ProtectedImage
                   src={item.image}
                   alt={item.title}
                   fill
@@ -241,7 +241,7 @@ export function GalleryClient() {
             </button>
 
             <div className="relative aspect-4/3 w-full bg-[#F3E2C4]/30">
-              <Image
+              <ProtectedImage
                 src={activeItem.image}
                 alt={activeItem.title}
                 fill

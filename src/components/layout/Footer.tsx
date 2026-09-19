@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import {
   Heart,
   Sparkles,
@@ -125,7 +125,7 @@ export function Footer() {
               href="/"
               className="inline-flex items-center bg-gradient-to-br from-[#FFFDF9] via-[#FFF8ED] to-[#F5EAD6] rounded-2xl px-4 py-1.5 sm:px-5 sm:py-2 shadow-md border-2 border-[#D99A45]/50 hover:border-[#D99A45] hover:scale-[1.02] transition-all duration-300 group"
             >
-              <Image
+              <ProtectedImage
                 src={logoImg}
                 alt="Tiny Treats by Swetha - No Junk, Just Goodness"
                 className="w-auto h-8 sm:h-10 md:h-11 max-w-[200px] sm:max-w-[240px] object-contain group-hover:brightness-105 transition-all"

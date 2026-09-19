@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { useCartStore } from "@/store/cart-store";
 import { ShoppingBag, ArrowRight, X, Sparkles, Plus } from "lucide-react";
 
@@ -40,10 +40,11 @@ export function CartNotificationToast() {
           {/* Thumbnail / Icon */}
           <div className="relative w-12 h-12 rounded-xl bg-white/10 border border-white/15 overflow-hidden shrink-0 flex items-center justify-center">
             {lastAddedItem.product.image ? (
-              <Image
+              <ProtectedImage
                 src={lastAddedItem.product.image}
                 alt={lastAddedItem.product.name}
                 fill
+                sizes="48px"
                 className="object-cover"
               />
             ) : (

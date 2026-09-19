@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { ArrowRight, MessageCircle, ShieldCheck, Sparkles, Award } from "lucide-react";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -97,7 +97,7 @@ export function StoryPreview() {
           {/* Left — Tall Image */}
           <div className="lg:col-span-4">
             <div className="relative aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4] rounded-2xl sm:rounded-3xl overflow-hidden group">
-              <Image
+              <ProtectedImage
                 src="/story/story-hands-dough.jpg"
                 alt="Hands lovingly kneading fresh whole wheat dough"
                 fill
@@ -123,7 +123,7 @@ export function StoryPreview() {
           {/* Center — Main Image + Stats */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             <div className="relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-auto lg:flex-1 min-h-[240px] sm:min-h-[300px] rounded-2xl sm:rounded-3xl overflow-hidden group">
-              <Image
+              <ProtectedImage
                 src="/story/story-kitchen-warmth.jpg"
                 alt="Freshly baked cookies cooling on a rack with honey and almonds"
                 fill

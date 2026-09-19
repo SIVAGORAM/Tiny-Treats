@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { ArrowRight, Camera, Sparkles, MessageCircle } from "lucide-react";
 import { GALLERY_ITEMS } from "@/data/gallery";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
@@ -48,7 +48,7 @@ export function GalleryPreview() {
             >
               {/* Image Area */}
               <div className="relative aspect-4/3 w-full bg-[#F3E2C4]/40 overflow-hidden">
-                <Image
+                <ProtectedImage
                   src={item.image}
                   alt={item.title}
                   fill

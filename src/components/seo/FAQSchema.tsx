@@ -1,4 +1,5 @@
 import React from "react";
+import { JsonLd } from "./json-ld";
 
 export function FAQSchema() {
   const faqs = [
@@ -37,10 +38,6 @@ export function FAQSchema() {
     })),
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="faq-schema" data={schema} />;
 }
+

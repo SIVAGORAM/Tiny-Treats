@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import Link from "next/link";
 import { useCartStore } from "@/store/cart-store";
 import { getCartWhatsAppUrl } from "@/lib/whatsapp";
@@ -110,7 +110,7 @@ export function CartDrawer() {
                     {/* Item Image */}
                     <div className="relative w-18 h-18 rounded-xl bg-brand-beige/40 overflow-hidden shrink-0 flex items-center justify-center text-2xl">
                       {item.product.image ? (
-                        <Image
+                        <ProtectedImage
                           src={item.product.image}
                           alt={item.product.name}
                           fill

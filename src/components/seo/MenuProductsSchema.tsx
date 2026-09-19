@@ -1,7 +1,11 @@
 import React from "react";
 import { PRODUCTS } from "@/data/products";
+import { JsonLd } from "./json-ld";
+import { SITE_CONFIG } from "@/lib/seo";
 
 export function MenuProductsSchema() {
+  const baseUrl = SITE_CONFIG.siteUrl;
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -13,9 +17,9 @@ export function MenuProductsSchema() {
       position: idx + 1,
       item: {
         "@type": "Product",
-        "@id": `https://www.tinytreats.in/menu#${p.id}`,
+        "@id": `${baseUrl}/menu#${p.id}`,
         name: p.name,
-        image: p.image.startsWith("http") ? p.image : `https://www.tinytreats.in${p.image}`,
+        image: p.image.startsWith("http") ? p.image : `${baseUrl}${p.image}`,
         description: p.shortDescription || p.name,
         category: p.categoryLabel || p.category,
         brand: {
@@ -37,10 +41,6 @@ export function MenuProductsSchema() {
     })),
   };
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+  return <JsonLd id="menu-products-schema" data={schema} />;
 }
+

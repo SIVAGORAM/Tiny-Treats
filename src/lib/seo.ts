@@ -1,7 +1,16 @@
 import type { Metadata } from "next";
 
+const resolvedDomain = (() => {
+  const envUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  if (envUrl && !envUrl.includes("localhost") && !envUrl.includes("127.0.0.1")) {
+    return envUrl.replace(/\/$/, "");
+  }
+  return "https://www.tinytreats.in";
+})();
+
 export const SITE_CONFIG = {
-  siteUrl: (process.env.NEXT_PUBLIC_SITE_URL || "https://www.tinytreats.in").replace(/\/$/, ""),
+  domain: resolvedDomain,
+  siteUrl: resolvedDomain,
   siteName: "Tiny Treats",
   defaultTitle: "Tiny Treats | Fresh Homemade Cookies, Laddus & Wholesome Treats Hyderabad",
   titleTemplate: "%s | Tiny Treats",

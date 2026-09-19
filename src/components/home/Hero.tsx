@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { ArrowRight, ChevronLeft, ChevronRight, Star, Heart, Leaf, Sparkles, Check } from "lucide-react";
 import { HERO_SLIDES } from "@/data/hero-slides";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
@@ -44,7 +44,7 @@ export function Hero() {
               currentSlide === idx ? "opacity-100 z-10" : "opacity-0 z-0"
             }`}
           >
-            <Image
+            <ProtectedImage
               src={s.image}
               alt={s.productTag}
               fill
@@ -100,7 +100,7 @@ export function Hero() {
                     currentSlide === idx ? "opacity-100 z-10" : "opacity-0 z-0"
                   }`}
                 >
-                  <Image
+                  <ProtectedImage
                     src={s.image}
                     alt={s.productTag}
                     fill

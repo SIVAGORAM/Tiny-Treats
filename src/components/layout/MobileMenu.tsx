@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { usePathname } from "next/navigation";
 import { X, ChevronRight, Phone, Search, Sparkles, Heart, Wheat, Star, ShieldCheck } from "lucide-react";
 import { InstagramIcon, FacebookIcon, XTwitterIcon, LinkedInIcon, WhatsAppIcon } from "@/components/ui/SocialIcons";
@@ -33,7 +33,7 @@ export function MobileMenu({ isOpen, onClose, onOpenSearch }: MobileMenuProps) {
       {/* Top Header Bar */}
       <div className="flex items-center justify-between px-5 py-3.5 border-b border-[#EADBCA] bg-[#FFF9F0]">
         <Link href="/" onClick={onClose} className="flex items-center">
-          <Image
+          <ProtectedImage
             src={logoImg}
             alt="Tiny Treats by Swetha - No Junk, Just Goodness"
             priority

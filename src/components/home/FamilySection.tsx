@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { ArrowRight, Heart, Sparkles, Coffee, Check, MessageCircle, Baby } from "lucide-react";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -87,13 +87,12 @@ export function FamilySection() {
               <div>
                 {/* Photo Banner with Stage Badge */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-[#FAF3EA]">
-                  <Image
+                  <ProtectedImage
                     src={item.image}
                     alt={item.title}
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
                     className="object-cover group-hover:scale-106 transition-transform duration-500"
-                    style={{ imageRendering: "-webkit-optimize-contrast" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
 

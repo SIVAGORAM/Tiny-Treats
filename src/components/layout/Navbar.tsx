@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { usePathname } from "next/navigation";
 import { useCartStore } from "@/store/cart-store";
 import { MobileMenu } from "./MobileMenu";
@@ -261,7 +261,7 @@ export function Navbar() {
             className="group flex items-center focus-visible:outline-ring rounded-lg shrink-0 py-0.5"
           >
             <div className="relative h-11 xs:h-12 sm:h-14 md:h-15 lg:h-16 w-auto flex items-center">
-              <Image
+              <ProtectedImage
                 src={logoImg}
                 alt="Tiny Treats by Swetha - No Junk, Just Goodness"
                 priority
