@@ -31,15 +31,6 @@ export function ProductQuickView({ product, isOpen, onClose }: ProductQuickViewP
     }, 600);
   };
 
-  const productCategoryEmoji =
-    product.category === "cookies"
-      ? "🍪"
-      : product.category === "laddus"
-      ? "🥜"
-      : product.category === "cakes" || product.category === "brownies"
-      ? "🍫"
-      : "🌾";
-
   const directWhatsAppMsg = `Hello Tiny Treats! 👋\n\nI'm interested in ordering:\n*${product.name}* (Qty: ${quantity}, Pack: ${product.weight || "Standard"})\n\nPlease let me know the availability and fresh batch timing. Thank you! ❤️`;
 
   return (
@@ -78,9 +69,11 @@ export function ProductQuickView({ product, isOpen, onClose }: ProductQuickViewP
               className="object-cover"
             />
           ) : (
-            <div className="text-center">
-              <span className="text-7xl block mb-2">{productCategoryEmoji}</span>
-              <span className="inline-block px-3 py-1 rounded-full bg-white/90 text-[#5A321B] text-xs font-semibold">
+            <div className="text-center space-y-3">
+              <div className="w-20 h-20 mx-auto rounded-3xl bg-white/80 border border-[#EADBCA] flex items-center justify-center text-[#B9573F] shadow-sm">
+                <Sparkles className="w-10 h-10 text-[#B9573F]" />
+              </div>
+              <span className="inline-block px-3 py-1 rounded-full bg-white/90 text-[#5A321B] text-xs font-semibold shadow-2xs">
                 {product.categoryLabel}
               </span>
             </div>

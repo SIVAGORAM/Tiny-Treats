@@ -121,22 +121,33 @@ export function CustomerReviews() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {REVIEW_PILLARS.map((pillar, idx) => (
-              <div
-                key={idx}
-                className="p-5 rounded-2xl bg-white border border-brand-brown/10 shadow-2xs hover:shadow-subtle transition-all duration-300 space-y-2.5"
-              >
-                <div className="w-10 h-10 rounded-xl bg-brand-cream border border-brand-brown/10 flex items-center justify-center text-xl shadow-2xs">
-                  {pillar.icon}
+            {REVIEW_PILLARS.map((pillar, idx) => {
+              const iconMap: Record<string, { icon: React.ComponentType<{ className?: string }>; color: string; bg: string }> = {
+                home: { icon: Heart, color: "text-[#B9573F]", bg: "bg-[#FAF0EC]" },
+                leaf: { icon: Sparkles, color: "text-[#66723A]", bg: "bg-[#F0F5EB]" },
+                sparkles: { icon: Star, color: "text-[#D99A45]", bg: "bg-[#FAF3EA]" },
+                heart: { icon: Heart, color: "text-[#B9573F]", bg: "bg-[#FAF0EC]" },
+              };
+              const IconComp = iconMap[pillar.icon]?.icon || Sparkles;
+              const style = iconMap[pillar.icon] || { color: "text-[#D99A45]", bg: "bg-[#FAF3EA]" };
+
+              return (
+                <div
+                  key={idx}
+                  className="p-5 rounded-2xl bg-white border border-brand-brown/10 shadow-2xs hover:shadow-subtle transition-all duration-300 space-y-2.5"
+                >
+                  <div className={`w-10 h-10 rounded-xl ${style.bg} border border-brand-brown/10 flex items-center justify-center shadow-2xs`}>
+                    <IconComp className={`w-5 h-5 ${style.color}`} />
+                  </div>
+                  <h4 className="font-serif text-base font-bold text-brand-brown">
+                    {pillar.title}
+                  </h4>
+                  <p className="text-[12px] text-brand-muted leading-relaxed font-light">
+                    {pillar.description}
+                  </p>
                 </div>
-                <h4 className="font-serif text-base font-bold text-brand-brown">
-                  {pillar.title}
-                </h4>
-                <p className="text-[12px] text-brand-muted leading-relaxed font-light">
-                  {pillar.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
@@ -149,8 +160,9 @@ export function CustomerReviews() {
               Real People. Real Feedback.
             </span>
 
-            <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-brand-cream">
-              Thank you for being part of the Tiny Treats family. ❤️
+            <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-brand-cream flex items-center justify-center gap-2 flex-wrap">
+              <span>Thank you for being part of the Tiny Treats family.</span>
+              <Heart className="w-5 h-5 text-[#E5B56E] fill-[#E5B56E] inline-block" />
             </h3>
 
             <p className="text-xs text-brand-cream/80 font-light leading-relaxed max-w-lg mx-auto">

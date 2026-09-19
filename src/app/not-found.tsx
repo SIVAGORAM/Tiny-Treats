@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function NotFound() {
   return (
     <div className="py-24 lg:py-36 bg-[#FFF8ED] text-center flex flex-col items-center justify-center px-4">
-      <div className="w-24 h-24 rounded-full bg-brand-cream border border-brand-brown/10 flex items-center justify-center text-5xl mb-6 shadow-2xs">
-        🍪
+      <div className="w-20 h-20 rounded-3xl bg-[#FAF0EC] border border-[#EADBCA] flex items-center justify-center text-[#B9573F] mb-6 shadow-sm">
+        <Sparkles className="w-10 h-10 text-[#B9573F]" />
       </div>
 
       <span className="text-xs font-bold uppercase tracking-widest text-brand-terracotta mb-2">

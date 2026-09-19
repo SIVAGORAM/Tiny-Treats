@@ -99,21 +99,21 @@ export const REVIEW_PILLARS: ReviewPillar[] = [
   {
     title: "Homemade Taste",
     description: "Customers appreciate the authentic fresh, homemade character and warmth baked into every single order.",
-    icon: "🏠",
+    icon: "home",
   },
   {
     title: "Wholesome Ingredients",
     description: "Our customers love the thoughtful combination of premium nuts, seeds, ancient grains and clean ingredients.",
-    icon: "🌱",
+    icon: "leaf",
   },
   {
     title: "Fresh & Delicious",
     description: "From crunchy crackers to soft artisan breads and melt-in-mouth laddus, every product is prepared with utmost care.",
-    icon: "✨",
+    icon: "sparkles",
   },
   {
     title: "Family Friendly",
     description: "Some of our happiest feedback comes from parents — especially when little ones discover their new favourite healthy snack.",
-    icon: "💛",
+    icon: "heart",
   },
 ];

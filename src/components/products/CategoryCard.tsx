@@ -43,9 +43,9 @@ export function CategoryCard({
         {/* Soft Organic Edge Gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent pointer-events-none" />
 
-        {/* Floating Category Emoji Pill (Top Left) */}
+        {/* Floating Category Badge Pill (Top Left) */}
         <div className="absolute top-3.5 left-3.5 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-white/40 shadow-md">
-          <span className="text-base leading-none">{emoji}</span>
+          <Sparkles className="w-3.5 h-3.5 text-[#D49942]" />
           <span className="text-[11px] font-bold text-[#3D2314] uppercase tracking-wider">
             {badge}
           </span>

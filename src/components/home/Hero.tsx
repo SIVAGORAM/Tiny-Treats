@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, MessageCircle, ChevronLeft, ChevronRight, Star, Heart } from "lucide-react";
+import { ArrowRight, MessageCircle, ChevronLeft, ChevronRight, Star, Heart, Leaf, Sparkles, Check } from "lucide-react";
 import { HERO_SLIDES } from "@/data/hero-slides";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -68,7 +68,7 @@ export function Hero() {
             
             {/* Eyebrow Badge */}
             <div className="inline-flex items-center gap-1.5 xs:gap-2 px-3 xs:px-3.5 py-1.5 rounded-full bg-white/95 border border-brand-brown/12 shadow-2xs text-[10.5px] xs:text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#5A3825]">
-              <span className="text-[#6B7E45] text-xs">🌿</span>
+              <Leaf className="w-3.5 h-3.5 text-[#6B7E45]" />
               <span key={`eyebrow-${slide.id}`} className="animate-in fade-in duration-300">
                 {slide.eyebrow}
               </span>
@@ -126,8 +126,8 @@ export function Hero() {
                 className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-3 sm:left-3 sm:right-3 z-20 flex items-center justify-between p-2 sm:p-2.5 rounded-xl bg-[#FAF3EA]/95 backdrop-blur-md border border-[#E7DAC7] shadow-md"
               >
                 <div className="flex items-center gap-2 min-w-0">
-                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#8FA36A]/20 flex items-center justify-center text-[#435424] text-xs shrink-0">
-                    🍃
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#8FA36A]/20 flex items-center justify-center text-[#435424] shrink-0">
+                    <Sparkles className="w-3.5 h-3.5 text-[#5A6E3B]" />
                   </div>
                   <div className="text-left truncate">
                     <h4 className="font-serif text-xs font-bold text-[#3D2314] truncate">
@@ -164,7 +164,9 @@ export function Hero() {
                   key={idx}
                   className="px-2.5 xs:px-3 py-1 xs:py-1.5 rounded-full bg-[#FAF3EA]/90 border border-[#E7DAC7] shadow-2xs flex items-center gap-1.5"
                 >
-                  <span className="text-xs">{b.icon}</span>
+                  <span className="w-3.5 h-3.5 rounded-full bg-[#8FA36A]/20 text-[#435424] flex items-center justify-center text-[9px] font-bold">
+                    ✓
+                  </span>
                   <span>{b.label}</span>
                 </span>
               ))}
@@ -193,43 +195,31 @@ export function Hero() {
               </a>
             </div>
 
-            {/* Slogan with Wavy Underline */}
-            <div className="pt-1.5 flex items-center justify-center sm:justify-start gap-1.5 xs:gap-2 text-[11px] xs:text-xs text-[#7C6B5E] flex-wrap">
-              <span className="font-script text-lg xs:text-xl sm:text-2xl font-bold text-[#B85843] relative inline-block">
+            {/* Slogan */}
+            <div className="pt-2 flex items-center justify-center sm:justify-start gap-2 text-xs text-[#7C6B5E] flex-wrap">
+              <span className="font-script text-xl sm:text-2xl font-bold text-[#B85843] inline-block">
                 No Junk, Just Goodness
-                <svg
-                  className="absolute -bottom-1.5 left-0 w-full h-2 text-[#B85843]/70"
-                  viewBox="0 0 120 8"
-                  fill="none"
-                >
-                  <path
-                    d="M1 5C20 1 40 7 60 4C80 1 100 6 119 3"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                </svg>
               </span>
-              <span className="pl-1 xs:pl-2">— Baked fresh in small batches</span>
+              <span className="text-[#7C6B5E]/85">— Baked fresh in small batches</span>
             </div>
 
             {/* Bottom Row: Customer Trust + Carousel Controls */}
-            <div className="pt-3.5 flex flex-col xs:flex-row items-center justify-between gap-3 border-t border-[#E7DAC7]/70">
+            <div className="pt-4 mt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-[#E7DAC7]/70">
               
-              {/* Customer Avatars & Stars */}
-              <div className="flex items-center gap-2.5">
-                <div className="flex -space-x-2">
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E8D9C5] border-2 border-white flex items-center justify-center text-xs font-bold text-[#5A3825] shadow-2xs">
-                    👩
+              {/* Customer Monogram Initials & Stars */}
+              <div className="flex items-center gap-3">
+                <div className="flex -space-x-2 shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-[#5A321B] text-[#FFF8ED] border-2 border-white flex items-center justify-center font-serif text-[11px] font-bold shadow-2xs">
+                    P
                   </div>
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#DAC8B0] border-2 border-white flex items-center justify-center text-xs font-bold text-[#5A3825] shadow-2xs">
-                    🧑
+                  <div className="w-8 h-8 rounded-full bg-[#B9573F] text-[#FFF8ED] border-2 border-white flex items-center justify-center font-serif text-[11px] font-bold shadow-2xs">
+                    A
                   </div>
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E8D9C5] border-2 border-white flex items-center justify-center text-xs font-bold text-[#5A3825] shadow-2xs">
-                    👧
+                  <div className="w-8 h-8 rounded-full bg-[#D99A45] text-[#3A1E0E] border-2 border-white flex items-center justify-center font-serif text-[11px] font-bold shadow-2xs">
+                    S
                   </div>
-                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#DAC8B0] border-2 border-white flex items-center justify-center text-xs font-bold text-[#5A3825] shadow-2xs">
-                    🧒
+                  <div className="w-8 h-8 rounded-full bg-[#66723A] text-[#FFF8ED] border-2 border-white flex items-center justify-center font-serif text-[11px] font-bold shadow-2xs">
+                    R
                   </div>
                 </div>
 
@@ -239,14 +229,14 @@ export function Hero() {
                       <Star key={i} className="w-3.5 h-3.5 fill-[#D99A45] text-[#D99A45]" />
                     ))}
                   </div>
-                  <p className="text-[10.5px] xs:text-[11px] text-[#7C6B5E] font-medium">
+                  <p className="text-xs text-[#7C6B5E] font-medium">
                     Loved by 500+ happy customers
                   </p>
                 </div>
               </div>
 
               {/* Slider Controls: Arrows & Dots */}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2.5 shrink-0">
                 <button
                   onClick={prevSlide}
                   aria-label="Previous treat"
@@ -255,7 +245,7 @@ export function Hero() {
                   <ChevronLeft className="w-4 h-4" />
                 </button>
 
-                <div className="flex items-center gap-1.5 px-1.5">
+                <div className="flex items-center gap-1.5 px-1">
                   {HERO_SLIDES.map((s, idx) => (
                     <button
                       key={s.id}
@@ -299,8 +289,8 @@ export function Hero() {
               key={`dpill-${slide.id}`}
               className="absolute bottom-6 xl:bottom-8 left-0 xl:left-4 z-20 flex items-center gap-3 p-3 xl:p-3.5 rounded-2xl bg-[#FAF3EA]/95 backdrop-blur-md border border-[#E7DAC7] shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all group max-w-[290px] xl:max-w-sm cursor-pointer animate-in fade-in duration-300"
             >
-              <div className="w-9 h-9 rounded-full bg-[#8FA36A]/20 flex items-center justify-center text-[#435424] text-base shrink-0">
-                🍃
+              <div className="w-9 h-9 rounded-full bg-[#8FA36A]/20 flex items-center justify-center text-[#435424] shrink-0">
+                <Sparkles className="w-4 h-4 text-[#5A6E3B]" />
               </div>
               <div className="flex-1 min-w-0 text-left">
                 <h4 className="font-serif text-xs xl:text-sm font-bold text-[#3D2314] truncate">
@@ -320,7 +310,7 @@ export function Hero() {
               <span className="font-script text-base xl:text-lg font-bold text-[#5A3825] block leading-none">
                 Made with Love
               </span>
-              <span className="text-[#B85843] text-xs mt-1 block">❤️</span>
+              <Heart className="w-3.5 h-3.5 text-[#B85843] fill-[#B85843] mx-auto mt-1" />
             </div>
 
           </div>

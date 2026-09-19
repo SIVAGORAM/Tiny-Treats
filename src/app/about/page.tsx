@@ -40,7 +40,7 @@ const timelineSteps = [
     subtitle: "The Kitchen Experiment",
     description:
       "It started in our home kitchen with a mother's desire to create mindful, nutritious snack alternatives for her own children's lunchboxes.",
-    icon: "🍪",
+    icon: Sparkles,
     badge: "Home Kitchen",
   },
   {
@@ -50,7 +50,7 @@ const timelineSteps = [
     subtitle: "Word of Mouth Spread",
     description:
       "Encouragement from loved ones and school parents who tasted the treats gave us the confidence to turn family recipes into a dedicated venture.",
-    icon: "💛",
+    icon: Heart,
     badge: "Community Love",
   },
   {
@@ -60,7 +60,7 @@ const timelineSteps = [
     subtitle: "17+ Handcrafted Treats",
     description:
       "Today, Tiny Treats brings homemade cookies, nutrient-dense laddus, artisan breads and crispy seed crackers to over 500+ happy homes.",
-    icon: "🌿",
+    icon: ShieldCheck,
     badge: "500+ Happy Families",
   },
 ];
@@ -95,7 +95,8 @@ const customerStories = [
     role: "Mother of two, Financial Analyst",
     city: "Hyderabad",
     stars: 5,
-    avatar: "👩",
+    initials: "P",
+    avatarBg: "bg-[#5A321B]",
     quote:
       "Tiny Treats completely solved our 4 PM snack dilemma. My kids adore the Almond Cookies and Protein Laddus, and I love having complete peace of mind knowing there is zero maida or chemical preservatives.",
     favorite: "Almond Cookies & Calcium Laddu",
@@ -105,7 +106,8 @@ const customerStories = [
     role: "Wellness Coach & Baker Enthusiast",
     city: "Hyderabad",
     stars: 5,
-    avatar: "👩‍🏫",
+    initials: "A",
+    avatarBg: "bg-[#B9573F]",
     quote:
       "The Seed Crackers and Banana Bread are simply outstanding. You can literally taste the authenticity and care in every single bite. It feels like treats baked by your own family.",
     favorite: "Crispy Seed Crackers & Banana Bread",
@@ -328,7 +330,9 @@ export default function AboutPage() {
                       <span className="font-serif text-4xl sm:text-5xl font-extrabold text-[#D49942]/70 group-hover:text-[#D49942] transition-colors">
                         {step.step}
                       </span>
-                      <span className="text-2xl">{step.icon}</span>
+                      <div className="w-8 h-8 rounded-full bg-[#FAF3EA] border border-[#EADBCA] flex items-center justify-center text-[#B85843] shadow-2xs">
+                        <step.icon className="w-4 h-4 text-[#B85843]" />
+                      </div>
                     </div>
                     <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-white text-[#B85843] border border-[#EADBCA] shadow-2xs">
                       {step.badge}
@@ -412,8 +416,8 @@ export default function AboutPage() {
                 {/* Customer Info Footer */}
                 <div className="pt-4 border-t border-[#F0E4D4] flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-[#FAF3EA] border border-[#EADBCA] flex items-center justify-center text-lg">
-                      {cust.avatar}
+                    <div className={`w-10 h-10 rounded-full ${cust.avatarBg} text-[#FFF8ED] border-2 border-white flex items-center justify-center font-serif text-sm font-bold shadow-2xs`}>
+                      {cust.initials}
                     </div>
                     <div>
                       <h4 className="text-sm font-bold text-[#3D2314]">{cust.name}</h4>

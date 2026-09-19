@@ -117,15 +117,9 @@ export function CartDrawer() {
                           className="object-cover"
                         />
                       ) : (
-                        <span>
-                          {item.product.category === "cookies"
-                            ? "🍪"
-                            : item.product.category === "laddus"
-                            ? "🥜"
-                            : item.product.category === "cakes-brownies"
-                            ? "🍫"
-                            : "🌱"}
-                        </span>
+                        <div className="w-8 h-8 rounded-lg bg-[#FAF0EC] flex items-center justify-center text-[#B9573F]">
+                          <Sparkles className="w-4 h-4 text-[#B9573F]" />
+                        </div>
                       )}
                     </div>
 

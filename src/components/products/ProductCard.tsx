@@ -34,15 +34,6 @@ export function ProductCard({ product, priorityImage = false }: ProductCardProps
     window.open(getWhatsAppUrl(msg), "_blank", "noopener,noreferrer");
   };
 
-  const productCategoryEmoji =
-    product.category === "cookies"
-      ? "🍪"
-      : product.category === "laddus"
-      ? "🥜"
-      : product.category === "cakes" || product.category === "brownies"
-      ? "🍫"
-      : "🌾";
-
   return (
     <>
       <article
@@ -61,9 +52,9 @@ export function ProductCard({ product, priorityImage = false }: ProductCardProps
               className="object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
             />
           ) : (
-            <span className="text-6xl transform group-hover:scale-110 transition-transform duration-300">
-              {productCategoryEmoji}
-            </span>
+            <div className="w-16 h-16 rounded-2xl bg-[#FAF0EC] border border-[#EADBCA] flex items-center justify-center text-[#B9573F] shadow-2xs group-hover:scale-110 transition-transform duration-300">
+              <Sparkles className="w-8 h-8 text-[#B9573F]" />
+            </div>
           )}
 
           {/* Gradient overlay for text contrast */}

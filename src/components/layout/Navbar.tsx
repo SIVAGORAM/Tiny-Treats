@@ -20,37 +20,50 @@ import {
   ChevronDown,
   ArrowRight,
   Sparkles,
+  ShieldCheck,
+  Star,
+  Coffee,
 } from "lucide-react";
 
 const menuCategories = [
   {
     name: "Signature Cookies",
     desc: "Almond & Ragi homemade crunchies",
-    icon: "🍪",
+    icon: Sparkles,
+    iconColor: "text-[#B9573F]",
+    bgColor: "bg-[#FAF0EC]",
     href: "/menu?category=cookies",
   },
   {
     name: "Nourishing Laddus",
     desc: "High protein, roasted nuts & seeds",
-    icon: "🥜",
+    icon: Heart,
+    iconColor: "text-[#D99A45]",
+    bgColor: "bg-[#FAF4E8]",
     href: "/menu?category=laddus",
   },
   {
     name: "Artisan Breads",
     desc: "100% Millet & multi-seed loaves",
-    icon: "🍞",
+    icon: Wheat,
+    iconColor: "text-[#66723A]",
+    bgColor: "bg-[#F0F5EB]",
     href: "/menu?category=breads",
   },
   {
     name: "Wholesome Cakes & Brownies",
     desc: "Date-sweetened, no refined sugar",
-    icon: "🍰",
+    icon: Star,
+    iconColor: "text-[#B9573F]",
+    bgColor: "bg-[#FAF0EC]",
     href: "/menu?category=cakes",
   },
   {
     name: "Crispy Seed Crackers",
     desc: "5-Seed savory blend, gluten-conscious",
-    icon: "🌱",
+    icon: ShieldCheck,
+    iconColor: "text-[#66723A]",
+    bgColor: "bg-[#F0F5EB]",
     href: "/menu?category=seed-crackers",
   },
 ];
@@ -98,7 +111,7 @@ export function Navbar() {
           {/* Left Brand Values: Responsive Scaling */}
           <div className="flex items-center gap-2 sm:gap-3.5 min-w-0 overflow-hidden font-medium">
             <div className="flex items-center gap-1.5 shrink-0 text-[#FFF3E0]">
-              <span className="text-[#E5B56E] text-xs">🍃</span>
+              <Sparkles className="w-3.5 h-3.5 text-[#E5B56E]" />
               <span className="truncate max-w-[200px] xs:max-w-[260px] sm:max-w-none">
                 Freshly baked homemade treats in small batches
               </span>
@@ -121,7 +134,7 @@ export function Navbar() {
             <span className="hidden lg:inline text-[#845E44] select-none">|</span>
 
             <div className="hidden lg:flex items-center gap-1.5 shrink-0 text-[#FFF3E0]">
-              <span className="text-[#E5B56E] text-xs">🌿</span>
+              <ShieldCheck className="w-3.5 h-3.5 text-[#E5B56E]" />
               <span>No Artificial Colours</span>
             </div>
           </div>
@@ -274,9 +287,9 @@ export function Navbar() {
                           onClick={() => setMenuDropdownOpen(false)}
                           className="flex items-center gap-3 p-2 rounded-xl hover:bg-[#FFF8ED] transition-colors group/item"
                         >
-                          <span className="text-xl shrink-0 group-hover/item:scale-110 transition-transform">
-                            {cat.icon}
-                          </span>
+                          <div className={`w-8 h-8 rounded-lg ${cat.bgColor} flex items-center justify-center shrink-0 group-hover/item:scale-110 transition-transform shadow-2xs`}>
+                            <cat.icon className={`w-4 h-4 ${cat.iconColor}`} />
+                          </div>
                           <div className="flex-1 min-w-0">
                             <p className="text-xs font-bold text-[#4A2E1C] group-hover/item:text-[#B9573F] transition-colors">
                               {cat.name}

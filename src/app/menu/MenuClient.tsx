@@ -206,23 +206,24 @@ function MenuContent() {
               </span>
               {[
                 { id: "all", label: "All Treats" },
-                { id: "no-maida", label: "🌾 No Maida" },
-                { id: "no-sugar", label: "🍯 No Refined Sugar" },
-                { id: "wellness", label: "⚡ Nourishment & Laddus" },
-                { id: "chocolate", label: "🍫 Pure Chocolate" },
+                { id: "no-maida", label: "No Maida" },
+                { id: "no-sugar", label: "No Refined Sugar" },
+                { id: "wellness", label: "Nourishment & Laddus" },
+                { id: "chocolate", label: "Pure Chocolate" },
               ].map((diet) => {
                 const isActive = selectedDietary === diet.id;
                 return (
                   <button
                     key={diet.id}
                     onClick={() => setSelectedDietary(diet.id as DietaryFilter)}
-                    className={`px-3 py-1 rounded-lg text-[11px] font-medium transition-all shrink-0 cursor-pointer ${
+                    className={`px-3 py-1 rounded-lg text-[11px] font-medium transition-all shrink-0 cursor-pointer flex items-center gap-1.5 ${
                       isActive
                         ? "bg-[#B9573F] text-white font-semibold shadow-2xs"
                         : "bg-white text-[#5A321B]/80 border border-[#5A321B]/10 hover:bg-[#FFF8ED]"
                     }`}
                   >
-                    {diet.label}
+                    {isActive && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+                    <span>{diet.label}</span>
                   </button>
                 );
               })}
@@ -256,7 +257,9 @@ function MenuContent() {
         <div>
           {filteredProducts.length === 0 ? (
             <div className="text-center py-12 px-4 bg-white rounded-2xl border-2 border-dashed border-[#5A321B]/20 max-w-md mx-auto space-y-3">
-              <span className="text-4xl block">🍪</span>
+              <div className="w-12 h-12 mx-auto rounded-full bg-[#FAF0EC] border border-[#EADBCA] flex items-center justify-center text-[#B9573F] shadow-2xs">
+                <Sparkles className="w-6 h-6 text-[#B9573F]" />
+              </div>
               <h3 className="font-serif text-lg font-bold text-[#3A1E0E]">
                 No treats matched your filters
               </h3>

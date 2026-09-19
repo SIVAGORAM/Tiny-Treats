@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Heart, Sparkles, ShieldCheck, Check, MessageCircle, Baby, Users } from "lucide-react";
+import { ArrowRight, Heart, Sparkles, Coffee, Check, MessageCircle, Baby } from "lucide-react";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 const familyStages = [
   {
     image: "/gallery/ragi-cookies-plate.jpg",
-    emoji: "🧒",
+    icon: Sparkles,
     stage: "TODDLERS & SCHOOL KIDS",
     title: "Crunchy Lunchbox Treats",
     description:
@@ -19,7 +19,7 @@ const familyStages = [
   },
   {
     image: "/gallery/calcium-laddu.jpg",
-    emoji: "🤱",
+    icon: Heart,
     stage: "NEW MOTHERS & WELLNESS",
     title: "Lactation & Nourishment Laddus",
     description:
@@ -31,7 +31,7 @@ const familyStages = [
   },
   {
     image: "/gallery/jowar-jeera-biscuits.jpg",
-    emoji: "☕",
+    icon: Coffee,
     stage: "EVERYDAY FAMILY TEATIME",
     title: "Artisan Breads & Savouries",
     description:
@@ -99,7 +99,7 @@ export function FamilySection() {
 
                   {/* Stage Pill */}
                   <div className="absolute top-3.5 left-3.5 flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md shadow-md text-[#3D2314] text-[10.5px] font-bold tracking-wider">
-                    <span>{item.emoji}</span>
+                    <item.icon className="w-3.5 h-3.5" style={{ color: item.accentColor }} />
                     <span>{item.stage}</span>
                   </div>
                 </div>

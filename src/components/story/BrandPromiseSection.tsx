@@ -227,21 +227,10 @@ export function BrandPromiseSection() {
         </div>
 
         {/* ========================================================================= */}
-        {/* 4. BOTTOM VALUE PILLARS STRIP WITH CORNER BRUSH ANNOTATIONS               */}
+        {/* 4. BOTTOM VALUE PILLARS STRIP                                             */}
         {/* ========================================================================= */}
-        <div className="relative pt-4 sm:pt-6">
+        <div className="pt-4 sm:pt-6 space-y-4">
           
-          {/* Bottom Right Script Note: Small Treats Big Smiles ♡ */}
-          <div className="hidden xl:block absolute right-0 -bottom-8 transform rotate-3 pointer-events-none">
-            <div className="relative text-center">
-              <span className="font-script text-2xl font-bold text-[#5A3825] block leading-tight">
-                Small Treats <br />
-                Big Smiles
-              </span>
-              <span className="text-[#B85843] text-lg block">♡</span>
-            </div>
-          </div>
-
           {/* Main 4 Pillars Banner Bar */}
           <div className="rounded-2xl sm:rounded-full bg-[#FAF3EA]/95 backdrop-blur-md border border-[#EADBCA] p-4 sm:p-5 shadow-xs max-w-5xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-[#EADBCA]">
@@ -299,6 +288,14 @@ export function BrandPromiseSection() {
               </div>
 
             </div>
+          </div>
+
+          {/* Centered Script Tagline */}
+          <div className="text-center pt-2">
+            <p className="font-script text-xl sm:text-2xl font-bold text-[#5A3825] inline-flex items-center gap-2">
+              <span>Small Treats Big Smiles</span>
+              <span className="text-[#B85843]">♡</span>
+            </p>
           </div>
         </div>
 

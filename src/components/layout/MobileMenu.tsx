@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { MessageCircle, X, ChevronRight, Phone, Search, Sparkles } from "lucide-react";
+import { MessageCircle, X, ChevronRight, Phone, Search, Sparkles, Heart, Wheat, Star, ShieldCheck } from "lucide-react";
 import { InstagramIcon, FacebookIcon } from "@/components/ui/SocialIcons";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
@@ -123,37 +123,52 @@ export function MobileMenu({ isOpen, onClose, onOpenSearch }: MobileMenuProps) {
             <Link
               href="/menu?category=cookies"
               onClick={onClose}
-              className="p-3 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2"
+              className="p-2.5 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2 transition-colors"
             >
-              <span>🍪</span> Cookies
+              <div className="w-6 h-6 rounded-lg bg-[#FAF0EC] flex items-center justify-center shrink-0">
+                <Sparkles className="w-3.5 h-3.5 text-[#B9573F]" />
+              </div>
+              <span className="font-semibold">Cookies</span>
             </Link>
             <Link
               href="/menu?category=laddus"
               onClick={onClose}
-              className="p-3 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2"
+              className="p-2.5 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2 transition-colors"
             >
-              <span>🥜</span> Laddus
+              <div className="w-6 h-6 rounded-lg bg-[#FAF4E8] flex items-center justify-center shrink-0">
+                <Heart className="w-3.5 h-3.5 text-[#D99A45]" />
+              </div>
+              <span className="font-semibold">Laddus</span>
             </Link>
             <Link
               href="/menu?category=breads"
               onClick={onClose}
-              className="p-3 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2"
+              className="p-2.5 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2 transition-colors"
             >
-              <span>🍞</span> Breads
+              <div className="w-6 h-6 rounded-lg bg-[#F0F5EB] flex items-center justify-center shrink-0">
+                <Wheat className="w-3.5 h-3.5 text-[#66723A]" />
+              </div>
+              <span className="font-semibold">Breads</span>
             </Link>
             <Link
               href="/menu?category=cakes"
               onClick={onClose}
-              className="p-3 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2"
+              className="p-2.5 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2 transition-colors"
             >
-              <span>🍰</span> Cakes & Brownies
+              <div className="w-6 h-6 rounded-lg bg-[#FAF0EC] flex items-center justify-center shrink-0">
+                <Star className="w-3.5 h-3.5 text-[#B9573F]" />
+              </div>
+              <span className="font-semibold">Cakes & Brownies</span>
             </Link>
             <Link
               href="/menu?category=seed-crackers"
               onClick={onClose}
-              className="p-3 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2 col-span-2"
+              className="p-2.5 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2 col-span-2 transition-colors"
             >
-              <span>🌱</span> Crispy Seed Crackers
+              <div className="w-6 h-6 rounded-lg bg-[#F0F5EB] flex items-center justify-center shrink-0">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#66723A]" />
+              </div>
+              <span className="font-semibold">Crispy Seed Crackers</span>
             </Link>
           </div>
         </div>

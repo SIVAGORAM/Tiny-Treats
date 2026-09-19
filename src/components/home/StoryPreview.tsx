@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, MessageCircle, ShieldCheck, Sparkles, Award } from "lucide-react";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 /* ────────────────────────────────────────────────────────────
@@ -187,16 +187,18 @@ export function StoryPreview() {
             {/* Promise Pills */}
             <div className="space-y-3">
               {[
-                { emoji: "🌾", text: "100% Maida Free" },
-                { emoji: "🛡️", text: "Zero Preservatives" },
-                { emoji: "🏅", text: "Premium Nuts & Seeds" },
+                { icon: Sparkles, text: "100% Maida Free", color: "text-[#D49942]" },
+                { icon: ShieldCheck, text: "Zero Preservatives", color: "text-[#66723A]" },
+                { icon: Award, text: "Premium Nuts & Seeds", color: "text-[#B9573F]" },
               ].map((item) => (
                 <div
                   key={item.text}
                   className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] hover:bg-white/[0.07] transition-colors duration-300"
                 >
-                  <span className="text-lg">{item.emoji}</span>
-                  <span className="text-xs sm:text-[13px] text-white/70 font-medium">
+                  <div className="w-7 h-7 rounded-lg bg-white/[0.06] flex items-center justify-center shrink-0">
+                    <item.icon className={`w-4 h-4 ${item.color}`} />
+                  </div>
+                  <span className="text-xs sm:text-[13px] text-white/80 font-medium">
                     {item.text}
                   </span>
                 </div>
