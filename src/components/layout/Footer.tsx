@@ -33,7 +33,7 @@ import {
 
 export function Footer() {
   return (
-    <footer className="relative bg-gradient-to-b from-[#341A0B] via-[#2A1408] to-[#1C0D05] text-[#FFF8ED] pt-5 sm:pt-7 pb-5 sm:pb-6 overflow-hidden border-t-2 border-[#D99A45]/40 font-sans select-none">
+    <footer className="relative bg-gradient-to-b from-[#341A0B] via-[#2A1408] to-[#1C0D05] text-[#FFF8ED] pt-5 sm:pt-7 pb-28 sm:pb-8 overflow-hidden border-t-2 border-[#D99A45]/40 font-sans select-none">
 
       {/* ── Warm Background Radial Glows & Textures ── */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[850px] h-[320px] bg-[radial-gradient(ellipse_at_top,rgba(217,154,69,0.2),transparent_70%)] pointer-events-none" />
@@ -341,36 +341,51 @@ export function Footer() {
         </div>
 
         {/* ========================================================================= */}
-        {/* 4. BOTTOM SIGNATURE & LEGAL BAR                                           */}
+        {/* 4. BOTTOM SIGNATURE, POLICIES & COPYRIGHT                                 */}
         {/* ========================================================================= */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#FFF8ED]/75 pt-1">
-          <p className="text-center md:text-left">
-            © 2026 Tiny Treats by Swetha. All rights reserved.
-          </p>
-
-          <div className="flex items-center gap-2 font-script text-base sm:text-lg text-[#D99A45]">
-            <span>Small Treats. Big Love.</span>
-            <Heart className="w-3.5 h-3.5 text-[#B9573F] fill-[#B9573F] inline" />
-            <span className="font-sans text-xs text-[#FFF8ED]/60">• Made with love in Hyderabad</span>
+        <div className="pt-2 sm:pt-3 space-y-4 max-w-2xl mx-auto text-center">
+          
+          {/* Brand Signature */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
+            <div className="flex items-center gap-1.5 font-script text-lg sm:text-xl text-[#D99A45]">
+              <span>Small Treats. Big Love.</span>
+              <Heart className="w-3.5 h-3.5 text-[#B9573F] fill-[#B9573F] shrink-0" />
+            </div>
+            <span className="hidden sm:inline text-[#FFF8ED]/40">•</span>
+            <span className="text-[11px] sm:text-xs text-[#FFF8ED]/70 font-light">
+              Handcrafted with love in Hyderabad
+            </span>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-2 text-[11px] text-[#FFF8ED]/60">
-            <Link href="/privacy-policy" className="hover:text-[#FFF8ED] transition-colors underline-offset-2 hover:underline">
+          {/* Legal & Policy Buttons (Clean 2x2 on mobile, flex row on desktop) */}
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-2 max-w-sm sm:max-w-none mx-auto w-full text-xs">
+            <Link
+              href="/privacy-policy"
+              className="h-9 px-3 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] active:scale-[0.98] border border-white/[0.1] text-[#FFF8ED]/90 hover:text-white transition-all flex items-center justify-center text-center font-medium"
+            >
               Privacy Policy
             </Link>
-            <span>·</span>
-            <Link href="/terms-and-conditions" className="hover:text-[#FFF8ED] transition-colors underline-offset-2 hover:underline">
+            <Link
+              href="/terms-and-conditions"
+              className="h-9 px-3 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] active:scale-[0.98] border border-white/[0.1] text-[#FFF8ED]/90 hover:text-white transition-all flex items-center justify-center text-center font-medium"
+            >
               Terms & Conditions
             </Link>
-            <span>·</span>
-            <Link href="/cookie-policy" className="hover:text-[#FFF8ED] transition-colors underline-offset-2 hover:underline">
+            <Link
+              href="/cookie-policy"
+              className="h-9 px-3 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] active:scale-[0.98] border border-white/[0.1] text-[#FFF8ED]/90 hover:text-white transition-all flex items-center justify-center text-center font-medium"
+            >
               Cookie Policy
             </Link>
-            <span>·</span>
-            <CookiePreferencesTrigger className="hover:text-[#FFF8ED] transition-colors underline-offset-2 hover:underline cursor-pointer bg-transparent border-0 p-0 text-[11px] font-normal shadow-none text-[#FFF8ED]/60 inline-flex items-center">
+            <CookiePreferencesTrigger className="h-9 px-3 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] active:scale-[0.98] border border-white/[0.1] text-[#FFF8ED]/90 hover:text-white transition-all cursor-pointer flex items-center justify-center text-center font-medium w-full">
               Cookie Settings
             </CookiePreferencesTrigger>
           </div>
+
+          {/* Copyright Line */}
+          <p className="text-[11px] sm:text-xs text-[#FFF8ED]/60 font-light pt-1">
+            © 2026 Tiny Treats by Swetha. All rights reserved.
+          </p>
         </div>
 
       </div>

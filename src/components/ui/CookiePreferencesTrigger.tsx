@@ -7,16 +7,22 @@ interface CookiePreferencesTriggerProps {
   className?: string;
   children?: React.ReactNode;
   showIcon?: boolean;
+  onClick?: () => void;
 }
 
 export function CookiePreferencesTrigger({
   className,
   children,
   showIcon = false,
+  onClick,
 }: CookiePreferencesTriggerProps) {
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
     if (typeof window !== "undefined") {
       window.dispatchEvent(new CustomEvent("open_cookie_preferences"));
+    }
+    if (onClick) {
+      onClick();
     }
   };
 

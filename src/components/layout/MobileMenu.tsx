@@ -4,8 +4,9 @@ import React from "react";
 import Link from "next/link";
 import { ProtectedImage } from "@/components/ui/ProtectedImage";
 import { usePathname } from "next/navigation";
-import { X, ChevronRight, Phone, Search, Sparkles, Heart, Wheat, Star, ShieldCheck } from "lucide-react";
+import { X, ChevronRight, Phone, Search, Sparkles, Heart, Wheat, Star, ShieldCheck, FileText, Cookie, SlidersHorizontal } from "lucide-react";
 import { InstagramIcon, FacebookIcon, XTwitterIcon, LinkedInIcon, WhatsAppIcon } from "@/components/ui/SocialIcons";
+import { CookiePreferencesTrigger } from "@/components/ui/CookiePreferencesTrigger";
 import logoImg from "@/../public/logo.png";
 import { getWhatsAppUrl, BRAND_SOCIALS } from "@/lib/whatsapp";
 
@@ -44,7 +45,7 @@ export function MobileMenu({ isOpen, onClose, onOpenSearch }: MobileMenuProps) {
         <button
           onClick={onClose}
           aria-label="Close navigation menu"
-          className="w-9 h-9 flex items-center justify-center rounded-full bg-[#F4EBE0] text-[#4A2E1C] hover:bg-[#EFE3D3] transition-colors"
+          className="w-9 h-9 flex items-center justify-center rounded-full bg-[#F4EBE0] text-[#4A2E1C] hover:bg-[#EFE3D3] transition-colors cursor-pointer"
         >
           <X className="w-4 h-4" />
         </button>
@@ -107,7 +108,7 @@ export function MobileMenu({ isOpen, onClose, onOpenSearch }: MobileMenuProps) {
         </div>
 
         {/* Categories Quick Jump */}
-        <div className="pt-2">
+        <div className="pt-1">
           <div className="flex items-center justify-between mb-2.5 px-1">
             <p className="text-[11px] font-bold tracking-wider text-[#8C6D53] uppercase">
               Treat Categories
@@ -169,10 +170,66 @@ export function MobileMenu({ isOpen, onClose, onOpenSearch }: MobileMenuProps) {
             </Link>
           </div>
         </div>
+
+        {/* Legal & Privacy Policies Section for Mobile */}
+        <div className="pt-1">
+          <div className="flex items-center justify-between mb-2.5 px-1">
+            <p className="text-[11px] font-bold tracking-wider text-[#8C6D53] uppercase">
+              Policies & Privacy
+            </p>
+            <span className="text-[10px] text-[#526A3A] font-semibold flex items-center gap-1">
+              <ShieldCheck className="w-3 h-3" /> Transparency
+            </span>
+          </div>
+          <div className="grid grid-cols-2 gap-2 text-xs font-medium">
+            <Link
+              href="/privacy-policy"
+              onClick={onClose}
+              className="p-2.5 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2 transition-colors"
+            >
+              <div className="w-6 h-6 rounded-lg bg-[#FAF0EC] flex items-center justify-center shrink-0">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#B9573F]" />
+              </div>
+              <span className="font-semibold truncate">Privacy Policy</span>
+            </Link>
+
+            <Link
+              href="/terms-and-conditions"
+              onClick={onClose}
+              className="p-2.5 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2 transition-colors"
+            >
+              <div className="w-6 h-6 rounded-lg bg-[#FAF4E8] flex items-center justify-center shrink-0">
+                <FileText className="w-3.5 h-3.5 text-[#D99A45]" />
+              </div>
+              <span className="font-semibold truncate">Terms & Conditions</span>
+            </Link>
+
+            <Link
+              href="/cookie-policy"
+              onClick={onClose}
+              className="p-2.5 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2 transition-colors"
+            >
+              <div className="w-6 h-6 rounded-lg bg-[#FAF0EC] flex items-center justify-center shrink-0">
+                <Cookie className="w-3.5 h-3.5 text-[#B9573F]" />
+              </div>
+              <span className="font-semibold truncate">Cookie Policy</span>
+            </Link>
+
+            <CookiePreferencesTrigger
+              onClick={onClose}
+              className="p-2.5 bg-white border border-[#EADBCA]/70 rounded-xl text-[#4A2E1C] hover:bg-[#FFF8ED] flex items-center gap-2 transition-colors text-left cursor-pointer w-full"
+            >
+              <div className="w-6 h-6 rounded-lg bg-[#F0F5EB] flex items-center justify-center shrink-0">
+                <SlidersHorizontal className="w-3.5 h-3.5 text-[#66723A]" />
+              </div>
+              <span className="font-semibold truncate">Cookie Settings</span>
+            </CookiePreferencesTrigger>
+          </div>
+        </div>
       </div>
 
       {/* Bottom Actions */}
-      <div className="p-4 border-t border-[#EADBCA] bg-white space-y-3">
+      <div className="p-4 border-t border-[#EADBCA] bg-white space-y-3 shrink-0">
         <a
           href={getWhatsAppUrl("Hello Tiny Treats! 👋 I would like to check availability and place an order.")}
           target="_blank"
