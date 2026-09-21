@@ -128,7 +128,7 @@ export function Footer() {
               <ProtectedImage
                 src={logoImg}
                 alt="Tiny Treats by Swetha - No Junk, Just Goodness"
-                className="w-auto h-8 sm:h-10 md:h-11 max-w-[200px] sm:max-w-[240px] object-contain group-hover:brightness-105 transition-all"
+                className="w-auto h-8 sm:h-10 md:h-11 max-w-[200px] sm:max-w-[240px] object-contain mix-blend-multiply group-hover:brightness-105 transition-all"
               />
             </Link>
 
